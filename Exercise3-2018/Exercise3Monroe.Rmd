@@ -1,0 +1,262 @@
+---
+title: "Exercise 3"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Solution with the `tidyverse` (mainly `dplyr`)
+
+Let's load the tidyverse and read in the data:
+
+```{r}
+library(tidyverse)
+rawdata <- read_csv("CentreCountyPrecinctResults2016GeneralElection.txt")
+rawdata
+```
+
+This solution creates three dataframes that it joins together in the last step: the total votes, the two-party shares, and the rolloffs. Each of these dataframes should ultimately have 91 rows.
+
+### Total vote table
+
+The total vote numbers are already in the data, we just need to `filter` rows down to just the 91 we need, and then `select` the columns we need.
+
+```{r}
+Tot <- rawdata %>% 
+  filter(Contest=="BALLOTS CAST - TOTAL") %>% # filter to the rows with total votes
+  select(PrecNo,PrecName,Tot=Count) #select the id columns and the counts. Rename the counts to Tot
+Tot
+```
+
+### Ballot rolloff
+
+Now we'll calculate the rolloff data. Ultimately, the output is 91 rows, 1 row per precinct, with four columns containing the rolloff in the non-presidential races in that precinct. To get there, we need an intermediate table of 91 rows with the total votes per statewide contest, including President, by precinct. So the trickiest step is the one where we `spread' the data from its "long" format to a "wide" format with these variables. 
+
+The following code is presented as one long pipeline with one input and one output. The identical code is repeated below in this notebook, with output printed for each intermediate step.
+
+```{r}
+Rolloffs <- rawdata %>%                  # Start with the raw data
+  select(PrecNo, Contest, Count) %>%     # For rolloff we need the data by precinct & contest
+  mutate(Con=substr(Contest,1,3)) %>%    # For cleanliness, create an abbreviated contest variable
+  filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %>%  # Pick the rows with just the statewide contests
+  group_by(PrecNo,Con) %>%               # Group into Precinct-Contest units
+  summarise(ConTot=sum(Count)) %>%       # Calculate total vote by Precinct-Contest
+  spread(Con, ConTot) %>%               # Spread the data by Contest
+  mutate(ROSen=100*(1-UNI/PRE),         # Rolloff for Senator (UNI TED STATES SENATOR)
+         ROAtt=100*(1-ATT/PRE),         # Rolloff for Attorney General (ATT ORNEY GENERAL)
+         ROAud=100*(1-AUD/PRE),         # Rolloff for Auditor General (AUD ITOR GENERAL)
+         ROTre=100*(1-STA/PRE)) %>%     # Rolloff for Treasurer (STA TE TREASURER)
+  select(PrecNo,ROSen,ROAtt,ROAud,ROTre) # Keep just the Precinct Number and Rolloff variables
+Rolloffs
+```
+
+
+### Democratic Share of Two-Party Vote
+
+This is similar to rolloff in that we need to calculate two intermediate quantities along the way: total vote for Republican and Democrat in each race, by precinct. With rolloff, we needed to spread the data to create contest data by precinct. With party shares, we need to spread the data to create contest-party data by precinct, so we need to create a contest-party key indicator variable before spreading.
+
+```{r}
+DemTwoPartyVotes <- rawdata %>%            # Start with the raw data
+  select(PrecNo,Party,Contest,Count) %>%   # All we need is Precinct, the "Contest", and the "Count"
+  mutate(Con=substr(Contest,1,3),Pty=substr(Party,1,3)) %>% # Create abbreviated Party & Contest variables
+  select(PrecNo,Pty,Con,Count) %>%         # Get rid of the unabbreviated variables
+  filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %>%  # Pick just the rows with elections of interest
+  filter(Pty %in% c('DEM','REP')) %>%      # Pick just Democratic and Republican candidates
+  mutate(ConPty = paste(Con,Pty,sep="")) %>%  #### CREATE CONTEST-PARTY TO ACT AS KEY FOR SPREAD
+  select(PrecNo,ConPty,Count) %>%          # Get rid of columns we don't need.
+  spread(ConPty,Count) %>%                 ##### SPREAD THE DATA BY THE CONTEST-PARTY KEY
+  mutate(D2Pre=100*(PREDEM/(PREDEM+PREREP)),     # D2Pre = Dem share of 2 party vote for President
+         D2Sen=100*(UNIDEM/(UNIDEM+UNIREP)),     # D2Sen = Dem share of 2 party vote for US Senator
+         D2Att=100*(ATTDEM/(ATTDEM+ATTREP)),     # D2Att = Dem share of 2 party vote for Attorney Genl
+         D2Aud=100*(AUDDEM/(AUDDEM+AUDREP)),     # D2Aud = Dem share of 2 party vote for Auditor Genl
+         D2Tre=100*(STADEM/(STADEM+STAREP))) %>% # D2Tre = Dem share of 2 party vote for St Treasurer
+  select(PrecNo,D2Pre,D2Sen,D2Att,D2Aud,D2Tre)  # Get rid of columns we don't need
+DemTwoPartyVotes
+```
+
+
+### Merged Data
+
+Now we merge the tables and format the Precinct Number and Name as requested in the Exercise. The main verb here is `*_join.` Any of `left_join`, `right_join`, or `inner_join` will work in this case to match data from each table by the only matching variable, PrecNo. (These verbs differ in how they treat rows in which the join variables are missing or duplicated in one or the other table, but in this case all three tables have exactly 91 rows with unique PrecNo, so the effect is identical.)
+
+```{r}
+Ex3Data <- Tot %>%                            # Start with the Tot data_frame
+  left_join(DemTwoPartyVotes) %>%             # Merge the DemTwoParty table (on shared PrecNo)
+  left_join(Rolloffs) %>%                     # Merge the Rolloff table (on shared PrecNo)
+  mutate(PrecNo=as.integer(PrecNo)) %>%       # Turn PrecNo into a number
+  mutate(PrecName=str_sub(PrecName,start=4L)) # Strip the redundant number off of the Precinct names
+Ex3Data
+```
+
+### With intermediate steps
+
+Here we repeat the exact steps from above, but with a "print" statement at each step to see all of the intermediate results.
+
+```{r}
+Tot <- rawdata %>% 
+  filter(Contest=="BALLOTS CAST - TOTAL") %T>% print()  %>% # filter to the rows with total votes
+  select(PrecNo,PrecName,Tot=Count) #select the id columns and the counts. Rename the counts to Tot
+Tot
+```
+
+
+```{r}
+Rolloffs <- rawdata %>%                  # Start with the raw data
+  select(PrecNo, Contest, Count) %T>% print()  %>%  # For rolloff we need the data by precinct & contest
+  mutate(Con=substr(Contest,1,3)) %T>% print()  %>% # For cleanliness, create abbreviated contest variable
+  filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %T>% print() %>% # Pick the rows w statewide contests
+  group_by(PrecNo,Con) %T>% print() %>%               # Group into Precinct-Contest units
+  summarise(ConTot=sum(Count)) %T>% print() %>%       # Calculate total vote by Precinct-Contest
+  spread(Con, ConTot) %>%               # Spread the data by Contest
+  mutate(ROSen=100*(1-UNI/PRE),         # Rolloff for Senator (UNI TED STATES SENATOR)
+         ROAtt=100*(1-ATT/PRE),         # Rolloff for Attorney General (ATT ORNEY GENERAL)
+         ROAud=100*(1-AUD/PRE),         # Rolloff for Auditor General (AUD ITOR GENERAL)
+         ROTre=100*(1-STA/PRE)) %T>% print()  %>%     # Rolloff for Treasurer (STA TE TREASURER)
+  select(PrecNo,ROSen,ROAtt,ROAud,ROTre) # Keep just the Precinct Number and Rolloff variables
+Rolloffs
+```
+
+
+
+```{r}
+DemTwoPartyVotes <- rawdata %>%            # Start with the raw data
+  select(PrecNo,Party,Contest,Count) %T>% print() %>%   # All we need is Precinct, Contest, & "Count"
+  mutate(Con=substr(Contest,1,3),Pty=substr(Party,1,3)) %T>% print() %>% # Abbreviated Party & Contest
+  select(PrecNo,Pty,Con,Count) %T>% print() %>%         # Get rid of the unabbreviated variables
+  filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %T>% print() %>%  # Pick rows w elections of interest
+  filter(Pty %in% c('DEM','REP')) %T>% print() %>%      # Pick just Democratic and Republican candidates
+  mutate(ConPty = paste(Con,Pty,sep="")) %T>% print() %>%  #### CREATE CONTEST-PARTY AS KEY FOR SPREAD
+  select(PrecNo,ConPty,Count) %T>% print() %>%          # Get rid of columns we don't need.
+  spread(ConPty,Count) %T>% print() %>%                 ##### SPREAD THE DATA BY THE CONTEST-PARTY KEY
+  mutate(D2Pre=100*(PREDEM/(PREDEM+PREREP)),     # D2Pre = Dem share of 2 party vote for President
+         D2Sen=100*(UNIDEM/(UNIDEM+UNIREP)),     # D2Sen = Dem share of 2 party vote for US Senator
+         D2Att=100*(ATTDEM/(ATTDEM+ATTREP)),     # D2Att = Dem share of 2 party vote for Attorney Genl
+         D2Aud=100*(AUDDEM/(AUDDEM+AUDREP)),     # D2Aud = Dem share of 2 party vote for Auditor Genl
+         D2Tre=100*(STADEM/(STADEM+STAREP))) %T>% print() %>% # D2Tre = Dem share, 2 pty vote St Treasurer
+  select(PrecNo,D2Pre,D2Sen,D2Att,D2Aud,D2Tre)  # Get rid of columns we don't need
+DemTwoPartyVotes
+```
+
+
+```{r}
+Ex3Data <- Tot %>%                                # Start with the Tot data_frame
+  left_join(DemTwoPartyVotes) %T>% print() %>%    # Merge the DemTwoParty table (on shared PrecNo)
+  left_join(Rolloffs) %>%                         # Merge the Rolloff table (on shared PrecNo)
+  mutate(PrecNo=as.integer(PrecNo)) %T>% print() %>%       # Turn PrecNo into a number
+  mutate(PrecName=str_sub(PrecName,start=4L)) # Strip the redundant number off of the Precinct names
+Ex3Data
+```
+
+# Solution with `data.table`
+
+We will proceed with the same general strategy as with the tidyverse solution, creating three tables -- total votes, rolloffs, and two party shares -- that we then merge in the final step.
+
+First we read in the raw data (this time using the `fread` command to read into a `data.table`).
+
+```{r}
+library(data.table)
+rawdata.dt <- fread("CentreCountyPrecinctResults2016GeneralElection.txt")
+rawdata.dt
+```
+
+### Total vote table
+
+Creating the total vote table requires just picking the right rows and relabeling the Count variable.
+
+```{r}
+Tot.dt <- rawdata.dt[Contest=="BALLOTS CAST - TOTAL",.(PrecNo,PrecName, Tot=Count)]
+Tot.dt
+```
+
+### Rolloff table
+
+As with the tidyverse solution, there are two nontrivial steps here. The first is the grouped summary step (the third assignment below), where vote counts are summed by Precinct Number and Contest. This is more or less the core process in `data.table`, so its implementation is very compact. The second is the `dcast` command which does the equivalent of what `spread` does in the tidyverse. The notation here uses a formula (here `PrecNo ~ Con`) to define the "key" on which the table is cast.
+
+```{r}
+# Create data.table with just vars PrecNo, Count, and Con (abbreviated Contest)
+NeededColumnsRows.dt <- rawdata.dt[,.(PrecNo,Count,Con=substr(Contest,1,3))] # pick columns, abbreviate
+NeededColumnsRows.dt <- NeededColumnsRows.dt[Con %in% c("PRE","UNI","ATT","AUD","STA"),] # pick rows
+NeededColumnsRows.dt   #  2093 rows, 3 columns
+
+# Create grouped summary data.table with Total votes by Precinct-Contest 
+PrecinctContestsLong.dt <- NeededColumnsRows.dt[,.(ConTot = sum(Count)), by=.(PrecNo,Con)]
+PrecinctContestsLong.dt <- PrecinctContestsLong.dt[,.(PrecNo,Con,ConTot)] # could be "chained" w above
+PrecinctContestsLong.dt     # 455 rows, 6 columns
+
+# "Cast" the data by Contest (spread from long to wide)
+PrecinctContestsWide.dt <- dcast(PrecinctContestsLong.dt, PrecNo ~ Con, value.var = "ConTot")
+PrecinctContestsWide.dt     # 91 rows, 6 columns
+
+# Calculate Rolloff Variables
+Rolloffs.dt <- PrecinctContestsWide.dt[,.(PrecNo,                 # Keep Precinct Number
+                                          ROSen=100*(1-UNI/PRE),  # Rolloff for US Senator
+                                          ROAtt=100*(1-ATT/PRE),  # Rolloff for Attorney General
+                                          ROAud=100*(1-AUD/PRE),  # Rolloff for Auditor General 
+                                          ROTre=100*(1-STA/PRE))] # Rolloff for Treasurer
+Rolloffs.dt
+```
+
+### Two-party Shares Table
+
+In the `tidyverse` version, we had to create a single column of Contest-Party indicators to act as a key. With `data.table` we can use two keys, just listing them on the right side of the formula (here, `PrecNo ~ Con + Pty`), and the keys from all pairings are constructed automatically. So this is a couple of commands more compact in `data.table.`
+
+```{r}
+# Create data.table with just vars PrecNo, Count, and Con (abbreviated Contest)
+NeededColumnsRows.dt <- rawdata.dt[,.(PrecNo,Pty=substr(Party,1,3),Con=substr(Contest,1,3), Count)] # pick columns, abbreviate
+NeededColumnsRows.dt <- NeededColumnsRows.dt[Pty %in% c("DEM","REP") & Con %in% c("PRE","UNI","ATT","AUD","STA"),] # pick rows
+NeededColumnsRows.dt   #  910 rows, 3 columns
+
+# "Cast" the data by Party & Contest (spread from long to wide)
+#    Note that data.table has no problem automatically creating a key based on two columns
+PrecPartyContestsWide.dt <- dcast(NeededColumnsRows.dt, PrecNo ~ Con + Pty, value.var = "Count")
+PrecPartyContestsWide.dt     # 91 rows, 6 columns
+
+# Calculate Democratic Two-Party Share Variables
+DemTwoPartyShares.dt <- PrecPartyContestsWide.dt[,.(PrecNo,                 # Keep Precinct Number
+                         D2Pre=100*(PRE_DEM/(PRE_DEM+PRE_REP)),# D2Pre = Dem 2 party share, President
+                         D2Sen=100*(UNI_DEM/(UNI_DEM+UNI_REP)),# D2Pre = Dem 2 party share, US Senator
+                         D2Att=100*(ATT_DEM/(ATT_DEM+ATT_REP)),# D2Pre = Dem 2 party share, Attorney Gen
+                         D2Aud=100*(AUD_DEM/(AUD_DEM+AUD_REP)),# D2Pre = Dem 2 party share, Auditor Gen
+                         D2Tre=100*(STA_DEM/(STA_DEM+STA_REP)))]# D2Pre = Dem 2 party share, State Treas
+DemTwoPartyShares.dt
+                                        
+```
+
+```{r}
+Ex3Data.dt <- merge(Tot.dt,Rolloffs.dt, by="PrecNo")              # Merge Total with Rolloffs
+Ex3Data.dt <- merge(Ex3Data.dt,DemTwoPartyShares.dt, by="PrecNo") # Merge that with Dem 2-party Shares
+Ex3Data.dt[,PrecNo := as.integer(PrecNo)]                         # Make Precinct number a number
+Ex3Data.dt[,PrecName := substr(PrecName,4,stop=40L)]              # Strip duplicate info from Name
+Ex3Data.dt
+```
+
+# Some simple plots of some results (base R)
+
+Plotting presidential vote by size of precinct, we see that smaller precincts are more variable as well as more Republican.
+
+```{r}
+plot(Ex3Data$Tot,Ex3Data$D2Pre,cex=Ex3Data$Tot/500, pch=19, col=rgb(0,0,0,.5), main="2016 Two-Party Presidential Vote, Centre County (PA) Precincts",xlab="Total Precinct Vote",ylab="Democratic Two-Party Share",ylim=c(0,100))
+CountyDVPre <- sum(rawdata$Count[rawdata$Contest=="PRESIDENTIAL ELECTORS" & rawdata$Party=="DEMOCRATIC"], na.rm=TRUE)
+CountyRVPre <- sum(rawdata$Count[rawdata$Contest=="PRESIDENTIAL ELECTORS" & rawdata$Party=="REPUBLICAN"], na.rm=TRUE)
+CountyD2Pre <- 100*CountyDVPre/(CountyDVPre+CountyRVPre)
+lines(c(0,5000),c(CountyD2Pre,CountyD2Pre), col="blue")
+lines(c(0,5000),c(50,50), col="gray")
+rug(Ex3Data$Tot) 
+
+```
+
+Here, we examine rolloff from President to Auditor, plotted again against precinct size. We see most precincts relatively close to the County Average (of 3.86%), but with some deviations, including one negative value. 
+
+In the precinct of "Rush East," there were 97 total votes cast, with 95 cast for Auditor (50.5% for the Democrat), but only 91 votes cast for President (35.2% for the Democrat, Hillary Clinton). Such outliers are more likely with relative small number of voters.
+
+```{r}
+plot(Ex3Data$Tot,Ex3Data$ROAud,cex=1, pch=19, col=rgb(0,0,0,.5), main="Ballot Rolloff, President to Auditor General",sub= "Centre County (PA) Precincts",xlab="Total Precinct Vote",ylab="Democratic Two-Party Share", ylim=c(-10,10))
+CountyVPre <- sum(rawdata$Count[rawdata$Contest=="PRESIDENTIAL ELECTORS"], na.rm=TRUE)
+CountyVAud <- sum(rawdata$Count[rawdata$Contest=="AUDITOR GENERAL"], na.rm=TRUE)
+#CountyRVPre <- sum(rawdata$Count[rawdata$Contest=="PRESIDENTIAL ELECTORS" & rawdata$Party=="REPUBLICAN"], na.rm=TRUE)
+CountyROAud <- 100*(1-CountyVAud/CountyVPre)
+lines(c(0,5000),c(CountyROAud,CountyROAud), col="red")
+lines(c(0,5000),c(0,0), col="gray")
+rug(Ex3Data$Tot) 
+
+```
