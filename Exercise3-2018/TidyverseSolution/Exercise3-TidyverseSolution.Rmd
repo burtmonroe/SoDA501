@@ -1,8 +1,14 @@
 ---
 title: "SoDA 501, Exercise 3 - Solution with the `tidyverse`"
 output:
-  html_notebook:
-    df_print: paged
+#  github_document:
+ #   html_preview: false
+ #   df_print: paged
+ html_notebook:
+   code_folding: hide
+   highlight: tango
+   theme: united
+   toc: yes
 ---
 
 This document addresses one solution to the data-wrangling exercise described in Exercise3.pdf. This asks you to take the raw data on 2016 Centre County, PA, precinct level votes in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
