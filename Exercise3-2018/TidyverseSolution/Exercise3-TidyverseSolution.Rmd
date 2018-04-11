@@ -1,19 +1,22 @@
 ---
-title: "SoDA 501, Exercise 3 - Solution with the `tidyverse`"
+title: "SoDA 501, Exercise 3 - `tidyverse' Solution"
 output:
-#  github_document:
- #   html_preview: false
- #   df_print: paged
  html_notebook:
-   code_folding: hide
+   code_folding: show
    highlight: tango
    theme: united
    toc: yes
 ---
 
-This document addresses one solution to the data-wrangling exercise described in Exercise3.pdf. This asks you to take the raw data on 2016 Centre County, PA, precinct level votes in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
+This document addresses one solution to the data-wrangling exercise described in [Exercise3.pdf](https://burtmonroe.github.io/SoDA501/Exercise3-2018/Exercise3.pdf). For the accompanying R Notebook with executable code, download the R Notebook from the pulldown menu on the upper right.  
 
-# Solution with the `tidyverse` (mainly `dplyr`)
+The input to the exercise is the raw data on 2016 Centre County, PA, precinct level votes found in ["CentreCountyPrecinctResults2016GeneralElection.txt"](https://burtmonroe.github.io/SoDA501/Exercise3-2018/CentreCountyPrecinctResults2016GeneralElection.txt), which were retrieved from [http://centrecountypa.gov/Index.aspx?NID=802](http://centrecountypa.gov/Index.aspx?NID=802).
+
+The exercise asks you to extract the data on votes cast by precinct in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
+
+This solution uses the R `tidyverse`. For alternative solutions see [https://burtmonroe.github.io/SoDA501/Exercise3-2018](https://burtmonroe.github.io/SoDA501/Exercise3-2018).
+
+# Solving with the `tidyverse` (mainly `dplyr`)
 
 Let's load the tidyverse, read in the data, and look at the first 50 rows:
 
@@ -25,6 +28,8 @@ head(rawdata, n=50)
 ```
 
 These data have, roughly, 39 rows for each of 91 precincts in Centre County, PA, identified by the variables `PrecNo` (which ranges from `0001` to `0091`) and `PrecName` (which ranges from `01 BELLEFONTE NORTH` to `91 FERGUSON NORTH CENTRAL`). Each precinct starts with three rows for summary information, identified in the `Contest` variable by values `REGISTERED VOTERS - TOTAL`, `BALLOTS CAST - TOTAL`, `VOTER TURNOUT - TOTAL`, followed by five rows with information on straight ticket voting for each of five parties (which can be ignored for our purposes here). From there, each row contains information for a single candidate in a particular contest. We care specifically about the statewide contests that are held in every precinct here: President (`Contest=="PRESIDENTIAL ELECTORS"`), US Senator (`Contest=="UNITED STATES SENATOR"`), Attorney General (`Contest=="ATTORNEY GENERAL"`), Auditor General (`Contest=="AUDITOR GENERAL"`), and Treasurer (`Contest=="STATE TREASURER"`). All of our calculations are based on the number in the `Count` variable.
+
+## Solve in three pieces
 
 This solution creates three dataframes (tables) that it joins together in the last step: the total votes, the two-party shares, and the rolloffs. Each of these dataframes should ultimately have 91 rows.
 
@@ -89,7 +94,7 @@ head(DemTwoPartyVotes)
 ```
 
 
-### Final output table: Merged Data
+## Final output table: Merged Data
 
 Now we merge the tables and format the Precinct Number and Name as requested in the Exercise. The main verb here is `*_join.` Any of `left_join`, `right_join`, or `inner_join` will work in this case to match data from each table by the only matching variable, PrecNo. (These verbs differ in how they treat rows in which the join variables are missing or duplicated in one or the other table, but in this case all three tables have exactly 91 rows with unique PrecNo, so the effect is identical.)
 
@@ -102,7 +107,7 @@ Ex3Data <- Tot %>%                            # Start with the Tot data_frame
 Ex3Data
 ```
 
-### With intermediate steps
+## Solution repeated with intermediate steps displayed
 
 Here we repeat the exact steps from above, but with a "glimpse" statement at each step to see all of the intermediate results.
 
@@ -122,7 +127,7 @@ Rolloffs <- rawdata %>%                  # Start with the raw data
   filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %T>% glimpse() %>% # Pick rows w statewide contests
   group_by(PrecNo,Con) %T>% glimpse() %>%               # Group into Precinct-Contest units
   summarise(ConTot=sum(Count)) %T>% glimpse() %>%       # Calculate total vote by Precinct-Contest
-  spread(Con, ConTot) %>%               # Spread the data by Contest
+  spread(Con, ConTot) %T>% glimpse() %>%               # Spread the data by Contest
   mutate(ROSen=100*(1-UNI/PRE),         # Rolloff for Senator (UNI TED STATES SENATOR)
          ROAtt=100*(1-ATT/PRE),         # Rolloff for Attorney General (ATT ORNEY GENERAL)
          ROAud=100*(1-AUD/PRE),         # Rolloff for Auditor General (AUD ITOR GENERAL)
