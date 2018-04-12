@@ -1,6 +1,6 @@
 # Social Data Analytics 501 @ PSU
 
-## Website: https://burtmonroe.github.io/SoDA501
+## Website: (https://burtmonroe.github.io/SoDA501)
 
 ## Syllabus
 
