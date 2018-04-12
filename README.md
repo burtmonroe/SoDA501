@@ -6,7 +6,7 @@
 
 ### Guest Speakers (2018)
 
-## Materials (Slides, Tutorials, Examples, Explainers)
+## [Materials (Slides, Tutorials, Examples, Explainers)](https://burtmonroe.github.io/SoDA501/Exercises/)
 
 * Social Scientific Concepts in the Data Layer
   * Measurement validity and reliability
@@ -52,7 +52,7 @@
   * Advanced data science tools (Scala, Julia, Haskell, Clojure, ...)
   
 
-## Exercises
+## [Exercises](https://burtmonroe.github.io/SoDA501/Exercises/)
 
 ### Exercise 1 (2018) - Michel, et al. 2011 Replication (Google Ngrams)
 
@@ -60,7 +60,7 @@
 
 ### Exercise 3 (2018) - Data Wrangling
 
-1. [Tidyverse (R) Solution](https://burtmonroe.github.io/SoDA501/Exercise3-2018/TidyverseSolution)
-2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercise3-2018/data.tableSolution)
+1. [Tidyverse (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution)
+2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/data.tableSolution)
 3. pandas (Python) Solution
 4. Trifacta Wrangler Solution
