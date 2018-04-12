@@ -19,7 +19,7 @@
 
 * Ethics and scientific responsibility (privacy, bias, transparency, reproducibility)
 
-* Data wrangling and representation
+* Data wrangling and manipulation
   * Data formats, open data, APIs
   * Web scraping
   * Locality sensitive hashing
