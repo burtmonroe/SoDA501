@@ -6,7 +6,7 @@
 
 ### Guest Speakers (2018)
 
-## [Materials (Slides, Tutorials, Examples, Explainers)](https://burtmonroe.github.io/SoDA501/Exercises/)
+## [Materials](https://burtmonroe.github.io/SoDA501/Exercises/) (Slides, Tutorials, Examples, Explainers)
 
 * Social Scientific Concepts in the Data Layer
   * Measurement validity and reliability
