@@ -1,0 +1,336 @@
+---
+title: "Split-Apply-Combine and Map-Reduce in R"
+output:
+  html_notebook:
+    code_folding: show
+    highlight: tango
+    theme: united
+    toc: yes
+  html_document:
+    df_print: paged
+    toc: yes
+---
+
+## Split-Apply-Combine and Data Wrangling
+
+### Grouped summaries in the `tidyverse`
+
+The main data-wrangling use of "split-apply-combine" is for "grouped summaries." The best introduction to this is Grolemund and Wickham's [*R for Data Science*](https://r4ds.had.co.nz), Chapter 5, where they are introducing data transformations through the tidyverse tool **dplyr**. (The popularization of "split-apply-combine" as an organizing principle for data-wrangling and data analysis is due to [Wickham 2014](https://www.jstatsoft.org/article/view/v040i01), which introduced the `dplyr` predecessor `plyr`.) 
+
+So, let's load the tidyverse and work with that first. (Install the tidyverse package if necessary.)
+
+```{r}
+library(tidyverse)
+```
+
+For our main running example, we'll use the mtcars data that comes with R.
+
+```{r}
+mtcars
+```
+
+We'll use this to see how to calculate grouped summaries. Say we want to know the average mileage of cars within groups of 4-, 6-, and 8-cylinder cars. The main verbs are `group_by` and `summarise`.
+
+```{r}
+by_cyl <- group_by(mtcars,cyl)
+summarise(by_cyl,mean_mpg = mean(mpg))
+```
+
+The true tidyverse-ian way to do this is to use the **purrr/magrittr** "pipe", `%>%`, to avoid creating and naming the intermediate `by_cyl` object (or nesting functions inside one another). Picture the thing on the left (mtcars) passing through the pipes to each transformation as it moves to the right (by default, the object/result on the left becomes the first implied argument of the function on the right):
+
+```{r}
+mtcars %>% group_by(cyl) %>% summarise(mean_mpg=mean(mpg))
+```
+
+### Grouped summaries in base R
+
+We can accomplish the above in base R. We can get the same information, in slightly different format with:
+
+```{r}
+stack(                                          # COMBINE - many ways to do this
+  lapply(                                       # APPLY
+    split(mtcars$mpg, f=list(cyl = mtcars$cyl)), # SPLIT
+    mean  # computation to apply
+) )
+```
+
+Note that the base R way to do this nests / composes the functions: COMBINE(APPLY(SPLIT))). But we *can* use the tidyverse pipe even with the base R commands to make the SPLIT->APPLY->COMBINE pipeline clearer:
+
+```{r}
+split(mtcars$mpg, f=list(cyl = mtcars$cyl)) %>% # SPLIT
+  lapply(mean) %>%  # APPLY
+  stack # COMBINE
+```
+
+There are also more direct functions that do similar jobs, at least when it's this simple. The most straightforward is the `aggregate` function:
+
+```{r}
+aggregate(mtcars$mpg, by=list(cyl = mtcars$cyl), FUN=mean)
+```
+
+### Grouped summaries with `data.table`
+
+We can also do this operation easily with **data.table**, a library organized around a more computationally efficient alternative to the base R `data.frame`. (Install the `data.table` library if necessary.)
+
+```{r}
+library(data.table)
+mtcars.dt <- data.table(mtcars)
+mtcars.dt[,mean(mpg),by=list(cyl)]
+```
+
+Again, note the different format for output. Consider data.table when you're scaling up, as its memory and computation advantages become more relevant than in this tiny example.
+
+## Split-Apply-Combine and Map-Reduce
+
+Split-Apply-Combine is also a reasonable metaphor for what's happening in map-reduce sorts of operations.
+
+A map operation can be thought of as replacing a type of `for` loop. It applies some operation, or set of operations, to every element of a vector or list. Most definitions of map functions also require the output to have the same *cardinality* as the output. That is, if there are 10 things being mapped, they should map to 10 things. 
+
+```{r}
+x <- 1:10
+rt.x <- rep(NA,10)
+for (i in x) {rt.x[i] <- sqrt(x[i])}
+rt.x
+```
+
+Of course this isn't necessary. R already uses "vectorized" operations to naturally create map functions from one vector to another vector:
+
+```{r}
+rt.x <- sqrt(x)
+rt.x
+```
+
+But bear with me for a bit.
+
+The tidyverse provides a `map` function via **purrr**:
+
+```{r}
+x %>% map(sqrt)
+```
+
+The generic map function takes a vector or list as an input and outputs a *list*. There are two ways to produce a vector output, either use the map variant that outputs a vector of the desired type (in this case, `map_dbl`), or just `unlist` the list.
+
+```{r}
+x %>% map_dbl(sqrt)
+```
+
+```{r}
+x %>% map(sqrt) %>% unlist
+```
+
+The map function becomes more interesting when the function that you wish to apply is more complicated, and/or you wish to apply it over a list of more complex objects.
+
+Let's say we want to evaluate the idea that cars with higher weight get lower gas mileage, but we also think that this impact is lessened in cars with higher number of cylinders. So, we decide we want to estimate a regression of mpg on weight, separately for cars with 4, 6, and 8 cylinders. The `map` function shines at this:
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(~ lm(mpg ~ wt, data = .x)) %>%  # APPLY - estimate a linear model of mileage on weight for each
+  map(coef) %>%                       # APPLY - extract coefficients for each linear model object
+  map_dbl("wt")                       # APPLY - extract the weight coefficient from each 
+```
+
+Let's break that down, to see what happens at each step. For some of these steps, we'll pipe each output through the `str` function, which gives you a display of the internal guts of the object it is passed (similar to what we see in the "Environment" window of RStudio). First we `split` the data:
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl)   %>%                  # SPLIT into subsets by number of cylinders
+  str()
+```
+
+That leaves us with a list of three data.frames. Now we estimate the regression on each subset:
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(~ lm(mpg ~ wt, data = .x))      # APPLY - estimate a linear model of mileage on weight for each
+```
+
+That leaves us with a list of `lm` (linear model) objects. Run the `coef` function on each of those to access the coefficients:
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(~ lm(mpg ~ wt, data = .x)) %>%  # APPLY - estimate a linear model of mileage on weight for each
+  map(coef)                           # APPLY - extract the coefficients
+```
+
+Now we have a list of coefficient vectors. Extract the `wt` element from each:
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(~ lm(mpg ~ wt, data = .x)) %>%  # APPLY - estimate a linear model of mileage on weight for each
+  map(coef) %>%                       # APPLY - extract coefficients for each linear model object
+  map_dbl("wt")                       # APPLY - extract the weight coefficient from each 
+```
+
+The `map` function has many more capabilities. A good place to learn about these is the "Iteration" chapter of *R for Data Science*.
+
+The `reduce` function is used to COMBINE a list or vector of objects into one. The `purrr` `reduce` function is passed a list/vector object and a *binary* function, that is a function that takes, or can take, two arguments, like `+` or `intersect`. It applies this function to the first two elements of the list/vector, then to that result and the next element, then to that result and the next element, and so on. So, typically the binary function is *associative* and this is equivalent to applying the function to all elements simultaneously. The easiest example is `+` or `sum`, in that $A+B+C+D+E = (((A+B)+C)+D)+E$. So, all of these produce the same answer:
+
+```{r}
+x <- sum(c(1,2,3,4,5))
+x
+x <- 1+2+3+4+5
+x
+x <- `+`(`+`(`+`(`+`(1,2),3),4),5)
+x
+x <- `+`(1,2) %>% `+`(.,3) %>% `+`(.,4) %>% `+`(.,5)
+x
+x <- reduce(c(1,2,3,4,5),`+`)
+x
+x <- c(1,2,3,4,5) %>% reduce(`+`)
+x
+x <- reduce(c(1,2,3,4,5),sum)
+x
+x <- c(1,2,3,4,5) %>% reduce(sum)
+x
+```
+
+So, `reduce` can follow `map` to complete a SPLIT-APPLY-COMBINE pipeline. It's a little silly, but say we wanted to find the smallest intercept from the map pipeline above. The `min` function is associative -- $\text{min}(A,B,C) = \text{min}(\text{min}(A,B),C)$ -- so it is a candidate for `reduce`.
+
+```{r}
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(~ lm(mpg ~ wt, data = .x)) %>%  # APPLY - estimate a linear model of mileage on weight for each
+  map(coef) %>%                       # APPLY - extract coefficients for each linear model object
+  map_dbl("(Intercept)")  %>%         # APPLY - extract the weight coefficient from each 
+  reduce(min)
+```
+
+It is also worth noting that the `purrr` library is generally designed to make it easier to use R's **functional programming** capabilities.
+
+In R, functions are **first-class objects** in that they can be passed as arguments to other functions, and, in turn, R has **higher-order functions** that can take other functions as arguments. For example, in the block of code above, the `coef` function is passed as an argument to the `map` function, and the `min` function is passed as an argument to the `reduce` function.
+
+R also has **anonymous functions**, functions that don't have to be named. In the code block above, look at the argument passed to the first map function: `~ lm(mpg ~ wt, data = .x)`. That's a function that can be read "for any given input data `.x`, run a linear model of its `mpg` variable on its `weight` variable." We could be more heavy-handed about it and create `namedfunction` (as below), but the anonymous function allows us to define this specialized function when it's used and then throw it away.
+
+```{r}
+namedfunction <- function(x) {
+  lm(mpg ~ wt, data=x)
+}
+
+mtcars %>%                            # Data about cars
+  split(.$cyl) %>%                    # SPLIT into subsets by number of cylinders
+  map(namedfunction) %>%              # APPLY - estimate a linear model of mileage on weight for each
+  map(coef) %>%                       # APPLY - extract coefficients for each linear model object
+  map_dbl("(Intercept)")  %>%         # APPLY - extract the weight coefficient from each 
+  reduce(min)
+```
+
+Functional programming can be an important part of data analysis at scale. The primary "purely functional" language used in data science is Haskell, while other languages are hybrids that have support for the functional programming paradigm within them -- e.g., R, Python, Java, Julia, Scala, Clojure.
+
+## From `map` and `reduce` to Hadoop's "MapReduce"
+
+Let's look at a "Hadoopy" MapReduce-style map-reduce operation. Let's start with the canonical "count words."
+
+There are lots of ways to deal with strings, but we'll keep within the tidyverse and use functions from **stringr**. Let's use those to build a preprocessing function we'll apply to lines and output a vector of normalized words:
+
+```{r}
+cleanandsplitline <- function(line) {
+  splitline <- line %>%
+    str_to_lower %>%
+    str_replace_all("[[:punct:]]", "") %>%
+    str_replace_all("\\s\\s+","\\s")   %>%
+    str_split("\\s",simplify=FALSE)     %>%
+    unlist
+  splitline
+}
+text <- "The quick brown fox jumps over the lazy dog."
+text %>% cleanandsplitline
+```
+
+In MapReduce, the mapper emits a key-value pair for every observation. So, we might accomplish this here by emitting a one-row dataframe for every word, the word as the key and "1" as the value. (I `bind_rows` here to clean up the output.) 
+```{r}
+text <- "The quick brown fox jumps over the lazy dog."
+mapoutput <- text %>% cleanandsplitline %>% map(~data_frame(key=.,value=1)) %>% bind_rows
+mapoutput
+```
+
+Hadoop then sorts these outputs by key to send to reducers which aggregate by key. 
+
+```{r}
+mapoutput %>% split(.$key) %>% map_dbl(~reduce(.$value,`+`))
+```
+
+We can now count the frequency of words with two map-reduce operations. Let's look at a more interesting example with lots of rows, Trump's inaugural "State of the Union" (technically an Address to Congress).
+
+```{r}
+trump <- readLines("trumpsotu2017.txt")
+text <- trump[trump!=""]
+wordcounts <- map(text,cleanandsplitline) %>%   # SPLIT text lines into individual words
+  map(~data_frame(key=., value=1)) %>%          # MAP: APPLY map word -> <key,value> = <word,1>
+  reduce(bind_rows) %>%                         # REDUCE: COMBINE into one stream of <key,value> pairs
+  split(.$key) %>%                              # SPLIT (SORT) into groups by unique keys (by word)
+  map_dbl(~reduce(.$value,`+`)) %>%             # MAP-REDUCE: (APPLY) sum values by key & COMBINE
+  sort(decreasing=TRUE)
+wordcounts[1:50] # For space, just display the top 50.
+```
+
+At the expense of obscuring the second map-reduce abstraction, let's make that a little bit clearer by using our `group_by` and `summarise` verbs:
+
+```{r}
+trump <- readLines("trumpsotu2017.txt")
+text <- trump[trump!=""]
+wordcounts <- map(text,cleanandsplitline) %>%   # SPLIT text lines into individual words
+  map(~data_frame(key=., value=1)) %>%          # MAP: APPLY map word -> <key,value> = <word,1>
+  reduce(bind_rows) %>%                         # REDUCE: COMBINE into one stream of <key,value> pairs
+  group_by(key) %>%                             # SPLIT (SORT) into groups by unique keys (by word)
+  summarise(count=sum(value)) %>%               # MAP-REDUCE: APPLY sum values by key & COMBINE
+  arrange(-count)                               # just for clarity, sort by count
+wordcounts[1:50,]
+```
+
+(And just so we're super clear, it's not necessary to pull back to the MapReduce level of abstraction for a problem this small on one computer.)
+
+```{r}
+trump <- readLines("trumpsotu2017.txt")
+text <- trump[trump!=""]
+wordcounts <- text %>% 
+  str_c(sep=" ",collapse=" ") %>%   # concatenate into one long line
+  cleanandsplitline %>%      # clean that line and split into a word vector
+  as.factor %>%              # make that a "factor" (categorical variable)
+  summary(maxsum=50)      # summary will give sorted vector of counts # look at first 50
+wordcounts
+```
+
+Now, let's make a Hadoopy calculation of a more statistical quantity, (sample) variance.
+
+The (unbiased) estimator for sample variance of random variable $x$ is $$\begin{aligned}
+s^2 &= \frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2\\ &= \frac{1}{n-1}\bigg(\sum_{i=1}^{n}x_i^2 - \frac{1}{n}\big(\sum_{i=1}^{n}x_i\big)^2 \bigg)\end{aligned}$$
+
+There is a big difference computationally between the first equation and the second. The first one requires two passes through the data: one to calculate the mean, $\bar{x}$, and then a second to calculate each observation's squared distance from the mean. The second requires only one pass through the data, and each data point's contribution to the calculation can be calculated without reference to the others.
+
+So, we need three quantities: the sum of $x_i$, the sum of $x_i^2$, and the count of $x_i$ ($n$). All of these are associative and can be map-reduced. In the word count example, the mapper converted each word in a line of text into a key-value pair of \<word,1\> and the "1"s were grouped by word and summed. This works similarly, except we'll map each observed $x_i$ into three key-value pairs: \< xi, $x_i$ \>, \< xi2, $x_i^2$ \>, and \< n, 1 \>, which will then be grouped by key and summed in the reducer.
+
+```{r}
+
+x <- mtcars$mpg
+
+## For reference, the answer with the variance function
+var(x)
+
+## Calculation with map -> reduce -> group_by -> summarize
+mapper <- function(x=0) {
+  df <- data_frame(key=c("xi","xi2","n"), value = c(x,x^2,1))
+  df
+  }
+
+varsums <- x %>%
+  map(mapper) %>%
+  reduce(bind_rows) %>%
+  group_by(key) %>%
+  summarise(sums = sum(value))
+(1/(varsums$sums[1]-1))*(varsums$sums[3]-(varsums$sums[2]^2)/varsums$sums[1])
+
+## Calculation with map -> reduce -> split -> map(reduce) [That last step maps a reduce function]
+varsums <- x %>%
+  map(mapper) %>%
+  reduce(bind_rows) %>%
+  split(.$key) %>%
+  map(~reduce(.$value,`+`))
+(1/(varsums[['n']]-1))*(varsums[['xi2']]-(varsums[['xi']]^2)/varsums[['n']])
+  
+```
+
+Hopefully, that gives some flavor of how this sort of thing might be useful at scale.
