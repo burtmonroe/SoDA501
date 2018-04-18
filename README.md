@@ -6,7 +6,7 @@
 
 ### Guest Speakers (2018)
 
-## [Materials](https://burtmonroe.github.io/SoDA501/Exercises/) (Slides, Tutorials, Examples, Explainers)
+## [Materials](https://burtmonroe.github.io/SoDA501/Materials/) (Slides, Tutorials, Examples, Explainers)
 
 * Social Scientific Concepts in the Data Layer
   * Measurement validity and reliability
@@ -27,6 +27,7 @@
   * Record linkage, entity resolution
   * Split-Apply-Combine and Map-Reduce
     * [Split-Apply-Combine & Map-Reduce in R](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_R/)
+    * [The Logic of MapReduce in Hadoop Streaming](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_MapReduce)
   * Regularization, shrinkage, priors (Primer)
   * Kernels, convolution, smoothing
 
