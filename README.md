@@ -26,6 +26,7 @@
   * Data compression, dimensionality reduction
   * Record linkage, entity resolution
   * Split-Apply-Combine and Map-Reduce
+    * [Split-Apply-Combine & Map-Reduce in R](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_R/)
   * Regularization, shrinkage, priors (Primer)
   * Kernels, convolution, smoothing
 
