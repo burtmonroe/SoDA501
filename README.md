@@ -6,6 +6,15 @@
 
 ### Guest Speakers (2018)
 
+* Feb 1: Bing Pan (RPTM), "Big Data and Forecasting in Tourism."
+* Feb 8: Clio Andris (GEOG),  "What AirBnB and Yelp Can Teach Us about Human Behavior in Cities."
+* Feb 15: Conrad Tucker (IE), "Cybersecurity Policies and their Impact on Dynamic Data Driven Application Systems." (postponed)
+* Feb 22: David Reitter (IST), "Alignment in Web-Based Dialogue: Studies in Big Data Computational Linguistics."
+* Mar 15: Daniel DellaPosta (SOC), "Network Closure and Integration in the Mid-20th Century Mafia."
+* Mar 29: Naomi Altman (STAT), "Generalizing Principal Components Analysis."
+* Apr 5: Prasenjit Mitra (IST), "Twitter as a Lifeline: Human-annotated Twitter Corpora for NLP of Crisis-related Messages."
+* Apr 19: (Speaker postponed)
+
 ## [Materials](https://burtmonroe.github.io/SoDA501/Materials/) (Slides, Tutorials, Examples, Explainers)
 
 * Social Scientific Concepts in the Data Layer
