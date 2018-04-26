@@ -7,4 +7,4 @@
 
 ## Figures
 
-* [The Social Data Stack](https://burtmonroe.github.io/SoDA501/Materials/socialstack.png)
+* [The Social Data Stack](https://burtmonroe.github.io/SoDA501/Materials/sodastack.png)
