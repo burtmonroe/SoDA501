@@ -29,13 +29,14 @@
 * Split-Apply-Combine / Map-Reduce
 * Linkage
 * Borrowed slides
-  * Information retrieval: Manning and Shutze: Chapters 1, 2, & 6
-  * Embeddings: Jurafsky & Martin, Chapters 15 & 16
-  * Hadoop, MapReduce: (some of) Leskovec, et al, Chapter 2
-  * Locality-sensitive hashing: (some of) Leskovec, et al. Chapter 3
-  * PageRank: (some of) Leskovec, et al. Chapter 5
-  * Entity Resolution: (some of) Getoor & Machanavajjhala, "Entity Resolution: Tutorial"
+  * Information retrieval: [Manning, et al.](https://nlp.stanford.edu/IR-book/): Chapters 1, 2, & 6
+  * Embeddings: [Jurafsky & Martin](https://web.stanford.edu/~jurafsky/slp3/), Chapters 15 & 16
+  * Hadoop, MapReduce: (some of) [Leskovec, et al.](http://www.mmds.org), Chapter 2
+  * Locality-sensitive hashing: (some of) [Leskovec, et al.](http://www.mmds.org) Chapter 3
+  * PageRank: (some of) [Leskovec, et al.](http://www.mmds.org) Chapter 5
+  * Entity Resolution: (some of) Getoor & Machanavajjhala, ["Entity Resolution: Tutorial"](http://vldb.org/pvldb/vol5/p2018_lisegetoor_vldb2012.pdf)
   * Tidyverse: (some of) Wickham,
-* Websites / videos / tools showed in class
-  * Markov Chains Explained Visually
-  * Trifacta Wrangler
+* Websites / videos / tools shown in class
+  * Penn State [Office of Research Protections](https://www.research.psu.edu/orp), [IRB](https://www.research.psu.edu/irb) & [Common Rule Changes](https://www.research.psu.edu/irb/commonrulechanges)
+  * [Markov Chains Explained Visually](http://setosa.io/ev/markov-chains/)
+  * [Trifacta Wrangler](https://www.trifacta.com/products/wrangler/)
