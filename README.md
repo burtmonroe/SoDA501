@@ -66,11 +66,7 @@
 
 ## [Exercises](https://burtmonroe.github.io/SoDA501/Exercises/)
 
-### Exercise 1 (2018) - Michel, et al. 2011 Replication (Google Ngrams)
-
-### Exercise 2 (2018) - Penney 2016 Replication (Wikipedia / Google Trends)
-
-### Exercise 3 (2018) - Data Wrangling
+### [Data Wrangling Exercise (Exercise 3, 2018)](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/)
 
 1. [Tidyverse (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution)
 2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/data.tableSolution)
