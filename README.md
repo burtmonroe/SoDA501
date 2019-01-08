@@ -3,7 +3,7 @@
 ## https://burtmonroe.github.io/SoDA501
 
 ## Syllabus
-* PDF of partial Spring 2019 syllabus
+* [PDF of partial Spring 2019 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2019.pdf)
 * [PDF of complete Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
 
 ### Guest Speakers (2019)
