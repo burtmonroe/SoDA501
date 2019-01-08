@@ -1,6 +1,7 @@
 # Exercises
 
-## Exercise #1 - 2019 - Squinting at Google Trends and Google Ngrams - Due Monday, Jan 14.
+## Exercise #1 - 2019 - Squinting at Google Trends and Google Ngrams
+Due Monday, Jan 14 (which is defined operationally as before Tuesday, 7:00 am)
 
 ### Part A:
 
