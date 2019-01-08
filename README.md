@@ -3,7 +3,31 @@
 ## https://burtmonroe.github.io/SoDA501
 
 ## Syllabus
+* PDF of partial Spring 2019 syllabus
 * [PDF of complete Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
+
+### Guest Speakers (2019)
+
+* Jan 8: No speaker
+* Jan 15: No speaker
+* Jan 22: No speaker
+* Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters
+* Jan 29:
+* Feb 5:
+* Feb 12:
+* Feb 19:
+* Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan)
+* Feb 26:
+* Mar 5: SPRING BREAK
+* Mar 12: No speaker
+* Mar 19:
+* Mar 25 (MONDAY): C-SoDA Speaker, Amelia Hoover Green (Politics, Drexel)
+* Mar 26:
+* Apr 2:
+* Apr 9:
+* Apr 10 (WEDNESDAY): C-SoDA Speaker, Yu-Ru Lin (Computing & Information, Pittsburgh)
+* Apr 16:
+* Apr 23: No speaker
 
 ### Guest Speakers (2018)
 
@@ -56,15 +80,18 @@
   * Hierarchy
   
 * Tools
-  * Bash, Git, cluster computing (ACI, XSEDE), cloud computing
+  * Bash, Git, cluster computing (ACI, XSEDE), cloud computing (AWS, Azure, Jetstream)
   * R
   * Python
   * "Big data" tools (Hadoop, Spark, ...)
   * Deep learning tools (TensorFlow, H2O, Keras, ...)
   * Advanced data science tools (Scala, Julia, Haskell, Clojure, ...)
   
+* Glossary
 
 ## [Exercises](https://burtmonroe.github.io/SoDA501/Exercises/)
+
+### [Squinting at Google Trends & Google Ngrams (Exercise 1, 2019)](https://burtmonroe.github.io/SoDA501/Exercises/)
 
 ### [Data Wrangling Exercise (Exercise 3, 2018)](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/)
 
