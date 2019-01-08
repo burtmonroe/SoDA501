@@ -1,14 +1,16 @@
 # Exercises
 
-# Exercise #1 - 2019 - Squinting at Google Trends and Google Ngrams - Due Monday, Jan 14.
+## Exercise #1 - 2019 - Squinting at Google Trends and Google Ngrams - Due Monday, Jan 14.
 
-## Part A:
+### Part A:
 
 Consider the following search on Google Trends: https://trends.google.com/trends/explore?date=all&geo=US&q=islam (relative use of the search term "islam" in the US for all time available.
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"islam","geo":"US","time":"2004-01-01 2019-01-07"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=islam","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
-You can see what appears to be a seasonal pattern. I want you and your partner to discuss what you think the cause of that is and try to think of comparison search terms that would follow a related pattern if that were the cause. It doesn't have to be identical ... you might think of something that should move in the opposite direction or be the same but shifted 3 months. But of course just finding seasonality isn't hard. How about https://trends.google.com/trends/explore?date=all&geo=US&q=islam,oranges :
+You can see what appears to be a seasonal pattern. I want you and your partner to discuss what you think the cause of that is and try to think of comparison search terms that would follow a related pattern if that were the cause. It doesn't have to be identical ... you might think of something that should move in the opposite direction or be the same but shifted 3 months. But of course just finding seasonality isn't hard. 
+
+How about https://trends.google.com/trends/explore?date=all&geo=US&q=islam,oranges :
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"islam","geo":"US","time":"2004-01-01 2019-01-07"},{"keyword":"oranges","geo":"US","time":"2004-01-01 2019-01-07"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=islam,oranges","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 
@@ -20,17 +22,17 @@ In any case ... does it look like you were right? Keep trying.
 
 Write a paragraph giving your and your partner's best explanation for the pattern, and a small set of comparison terms (1-4) that you think best support your case. 
 
-## Part B:
+### Part B:
 
 Consider this from Google Books. Use of the term "lol" appears to have peaked in English language books around 1660:
 
 https://books.google.com/ngrams/graph?content=lol&year_start=1650&year_end=2000&corpus=15&smoothing=0&share=&direct_url=t1%3B%2Clol%3B%2Cc0
 
-<iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=lol&year_start=1650&year_end=2000&corpus=15&smoothing=0&share=&direct_url=t1%3B%2Clol%3B%2Cc0" width=900 height=500 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
-
 What the hell is going on here? Use any evidence you want, or just conjecture. Write another paragraph with you and your partner's best explanation.
 
+----
 
+##Archive
 
 ### Data Wrangling Exercise (Exercise 3 - 2018)
 
