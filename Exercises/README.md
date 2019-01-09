@@ -5,18 +5,18 @@ Due Monday, Jan 14 (which is defined operationally as before Tuesday, 7:00 am)
 
 ### Part A:
 
-Consider the following search on Google Trends: [https://trends.google.com/trends/explore?date=all&geo=US&q=islam] (relative use of the search term "islam" in the US for all time available.
+Consider the following search on Google Trends: <https://trends.google.com/trends/explore?date=all&geo=US&q=islam> (relative use of the search term "islam" in the US for all time available.
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"islam","geo":"US","time":"2004-01-01 2019-01-07"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=islam","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 You can see what appears to be a seasonal pattern. I want your team to discuss what you think the cause of that is and try to think of comparison search terms that would follow a related pattern if that were the cause. It doesn't have to be identical ... you might think of something that should move in the opposite direction or be the same but shifted 3 months. But of course just finding seasonality isn't hard. 
 
-How about [https://trends.google.com/trends/explore?date=all&geo=US&q=islam,oranges] :
+How about <https://trends.google.com/trends/explore?date=all&geo=US&q=islam,oranges> :
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"islam","geo":"US","time":"2004-01-01 2019-01-07"},{"keyword":"oranges","geo":"US","time":"2004-01-01 2019-01-07"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=islam,oranges","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 
 
-Or [https://trends.google.com/trends/explore?date=all&geo=US&q=islam,basketball] :
+Or <https://trends.google.com/trends/explore?date=all&geo=US&q=islam,basketball> :
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"islam","geo":"US","time":"2004-01-01 2019-01-07"},{"keyword":"basketball","geo":"US","time":"2004-01-01 2019-01-07"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=islam,basketball","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
