@@ -3,6 +3,9 @@
 ##Jingle-jangle terms
 
 
+Computational social science
+
+
 Data mining
 
 
@@ -72,6 +75,9 @@ Formal theory - used in political science to mean theorizing through mathematica
 Grid computing
 
 
+Hadoop
+
+
 Intelligence augmentation (IA) 
 
 
@@ -79,6 +85,12 @@ Intelligent infrastructure (II)
 
 
 NES / ANES - (American) National Election Study
+
+
+Natural language processing
+
+
+NLP (See "natural language processing")
 
 
 Nowcasting
