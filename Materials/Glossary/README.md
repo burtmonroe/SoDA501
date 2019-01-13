@@ -1,114 +1,115 @@
-#SoDA 501 Glossary
+# SoDA 501 Glossary
 
-##Jingle-jangle terms
+## Jingle-jangle / disputed terms
 
 
-Computational social science
+**Computational social science**
 
 
-Data mining
+**Data mining**
 
 
-Indirect effects
+**Indirect effects**
 
 
-IR - usually in this field "information retrieval." Also used for "international relations", "infrared"
+**IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
 
 
-Map/reduce
+**Map/reduce**
 
 
-Matching
+**Matching**
 
 
-Online - could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
+**Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
 
 
-Social
+**Social**
 
 
-Streaming / stream processing - could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
+**Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
-Transportability
+**Transportability**
 
 
-Unfolding problem
+**Unfolding problem**
 
 
-Variety - One of the conventional "three Vs" of "Big Data"
+**Variety** One of the conventional "three Vs" of "Big Data"
 
 
 
-##Field terms
+## Field terms
 
-Algorithmic confounding
+**Algorithmic confounding**
 
 
-Backpropagation
+**Backpropagation**
 
 
-Bias-variance tradeoff
+**Bias-variance tradeoff**
 
 
-Causal effect
+**Causal effect**
 
 
-CCES - Comparative Congressional Election Study
+**Cloud-edge interactions**
 
 
-Cloud-edge interactions
+**Cross-validation**
 
 
-Cross-validation
+**Curse of dimensionality**
 
 
-Curse of dimensionality
+**Data-intensive**
 
 
-Data-intensive
+**Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
 
 
-Formal theory - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
+**Grid computing**
 
 
-Grid computing
+**Hadoop**
 
 
-Hadoop
+**Intelligence augmentation (IA)**
 
 
-Intelligence augmentation (IA) 
+**Intelligent infrastructure (II)**
 
 
-Intelligent infrastructure (II)
+**Natural language processing**
 
 
-NES / ANES - (American) National Election Study
+**NLP** (See "natural language processing")
 
 
-Natural language processing
+**Nowcasting**
 
 
-NLP (See "natural language processing")
+**Out-of-sample prediction**
 
 
-Nowcasting
+**Provenance (of data)**
 
 
-Out-of-sample prediction
+**Repurposing (of data)**
 
 
-Provenance (of data)
+**User-attribute inference**
 
 
-Repurposing (of data)
+**Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
 
 
-User-attribute inference
+## Random acronyms
 
+**ANES** American National Election Study
 
-Vinculation - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
+**CCES** - Comparative Congressional Election Study
 
-
+**NES** / ANES - (American) National Election Study
 
