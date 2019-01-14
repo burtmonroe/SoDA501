@@ -13,7 +13,7 @@
 * Jan 22: No speaker
 * Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters
 * Jan 29: Sarah Rajtmajer (IST / Informatics)
-* Feb 5:
+* Feb 5: Scott Yabiku (SOC) (2:40 start)
 * Feb 12: Kenneth (Ting-Hao) Huang (IST / Informatics)
 * Feb 19:
 * Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan)
