@@ -3,7 +3,13 @@
 ## Jingle-jangle / disputed terms
 
 
+**Big data**
+
+
 **Computational social science**
+
+
+**Curse of dimensionality**
 
 
 **Data mining**
@@ -13,6 +19,9 @@
 
 
 **IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
+
+
+**Linkage ("record linkage")**
 
 
 **Map/reduce**
@@ -34,6 +43,9 @@
 
 
 **Unfolding problem**
+
+
+**"V"s of big data** Traditional "three Vs of big data" - volume, velocity, variety. There are many "fourth V's" including Monroe's "five Vs of big data social science"
 
 
 **Variety** One of the conventional "three Vs" of "Big Data"
@@ -60,10 +72,13 @@
 **Cross-validation**
 
 
-**Curse of dimensionality**
-
-
 **Data-intensive**
+
+
+**De-anonymization**
+
+
+**Drift**
 
 
 **Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
