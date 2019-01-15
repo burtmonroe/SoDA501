@@ -6,6 +6,9 @@
 ## Jingle-jangle / disputed terms
 
 
+**AI/Artificial Intelligence**
+
+
 **Big data**
 
 
@@ -16,6 +19,9 @@
 
 
 **Data mining**
+
+
+**Data science**
 
 
 **Indirect effects**
