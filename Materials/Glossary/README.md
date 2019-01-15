@@ -27,7 +27,7 @@
 **Map/reduce**
 
 
-**Matching**
+**Matching** In causal inference, matching is a process for analysis of observational data, under which treated units are matched with control units that are otherwise similar by some measure on observable pretreatment variables. In information sciences, matching is another term for "record linkage."
 
 
 **Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
@@ -42,7 +42,7 @@
 **Transportability**
 
 
-**Unfolding problem**
+**Unfolding** Lots of disciplines have something they call "unfolding" (e.g., music, biochemistry). Here, it's most likely to refer to a type of data analysis closely related to multidimensional scaling, which maps individuals and objects over which they have preferences in the same space. The next most likely usage is as "deconvolution", the reversing of a convolution operation.
 
 
 **"V"s of big data** Traditional "three Vs of big data" - volume, velocity, variety. There are many "fourth V's" including Monroe's "five Vs of big data social science"
@@ -125,6 +125,8 @@
 **ANES** American National Election Study
 
 **CCES** - Comparative Congressional Election Study
+
+**ERGM** Exponential Random Graph Model. A generative model of link formation in networks.
 
 **NES** / ANES - (American) National Election Study
 
