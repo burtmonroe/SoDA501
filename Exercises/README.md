@@ -37,7 +37,7 @@ What the hell is going on here? Use any evidence you want, or just conjecture. W
 
 
 ## Exercise #2 - 2019 - Michel et al. Replication
-Due Monday, Jan 14 (which is defined operationally as before Tuesday, 7:00 am)
+Due Monday, Jan 28 (which is defined operationally as before Tuesday, 7:00 am)
 
 Complete the replication and discussion of Michel, et al., in Bit by Bit, Chapter 2, Exercise 6, parts (a) through (g).
 
