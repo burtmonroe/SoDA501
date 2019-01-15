@@ -1,5 +1,8 @@
 # SoDA 501 Glossary
 
+> **Jingle-jangle fallacies** refer to the erroneous assumptions that two different things are the same because they bear the same name (jingle fallacy) or that two identical or almost identical things are different because they are labeled differently (jangle fallacy). <https://en.wikipedia.org/wiki/Jingle-jangle_fallacies>
+
+
 ## Jingle-jangle / disputed terms
 
 
