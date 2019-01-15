@@ -45,7 +45,7 @@ Technical note: So that we don't have anyone blowing up their hard drives / band
 
 You'll do this in assigned teams of three.
 
-Submit your team's answer, and the code, as an R Notebook. (Create an R Markdown file, .Rmd, with output: html_notebook, which will create a notebook file, .nb.html . Submit - or provide in a github repository - both files. If your code works directly on the two data files as downloaded, assume they are in the same directory as your code and don't submit them. If your code works directly on a small subset cleaned outside of R, submit those altered files. There are two excellent sources / tutorials / resources on R Markdown and R Notebooks: <https://rmarkdown.rstudio.com> and [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown) )
+Submit your team's answer, and the code, as an R Notebook. (Create an R Markdown file, .Rmd, with output: html_notebook, which will create a notebook file, .nb.html . Submit - or provide in a github repository - both files. If your code works directly on the two data files as downloaded, assume they are in the same directory as your code and don't submit them. If your code works directly on a small subset cleaned outside of R, submit those altered files. If you used code in another language (like Python or bash) at some point, submit that too. Here are two excellent sources / tutorials / resources on R Markdown and R Notebooks: <https://rmarkdown.rstudio.com> and [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown) )
 
 ----
 
