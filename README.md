@@ -13,20 +13,20 @@
 * Jan 22: No speaker
 * Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters
 * Jan 29: Sarah Rajtmajer (IST / Informatics)
-* Feb 5: Scott Yabiku (SOC) (2:40 start)
+* Feb 5: Scott Yabiku (Sociology) (2:40 start)
 * Feb 12: (CLASS CANCELLED BY WEATHER)
 * Feb 19: Kenneth (Ting-Hao) Huang (IST / Informatics)
 * Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan)
 * Feb 26:
 * Mar 5: SPRING BREAK
 * Mar 12: No speaker
-* Mar 19:
+* Mar 19: Anthony Robinson (Geography) (1:00 start)
 * Mar 26:
 * Apr 1: (MONDAY): C-SoDA Speaker, Amelia Hoover Green (Politics, Drexel) / ICS Symposium Day
-* Apr 2:
-* Apr 9:
+* Apr 2: 
+* Apr 9: Corina Graif (Criminology / Sociology)
 * Apr 10 (WEDNESDAY): C-SoDA Speaker, Yu-Ru Lin (Computing & Information, Pittsburgh)
-* Apr 16: Amulya Yadav (IST/Informatics)
+* Apr 16: Amulya Yadav (IST / Informatics)
 * Apr 23: No speaker
 
 ### Guest Speakers (2018)
