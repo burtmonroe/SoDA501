@@ -1,9 +1,14 @@
 # Materials
 
-## Tutorials
+## Tutorials / Notebooks
 
+* Regular expressions
 * [Split-Apply-Combine and Map Reduce in R (R Notebook)](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_R/)
 * [The Logic of MapReduce in Hadoop Streaming (Bash Notebook)](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_MapReduce)
+* Locality-sensitive hashing
+* Text data
+* Geographic and space-time data
+* Network data
 
 ## Explainers
 * Locality-sensitive hashing
@@ -28,6 +33,8 @@
 * Eigenstuff
 * Split-Apply-Combine / Map-Reduce
 * Linkage
+* Social data structures: space, time, network, hierarchy
+* Social data channels: text, image, audio, video
 * Borrowed slides
   * Information retrieval: [Manning, et al.](https://nlp.stanford.edu/IR-book/): Chapters 1, 2, & 6
   * Embeddings: [Jurafsky & Martin](https://web.stanford.edu/~jurafsky/slp3/), Chapters 15 & 16
