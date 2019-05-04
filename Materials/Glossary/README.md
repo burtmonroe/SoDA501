@@ -43,6 +43,9 @@
 **ANN** -- (see "neural net")
 
 
+**Anonymous function**
+
+
 **API** Application programming interface.
 
 
@@ -403,6 +406,9 @@
 **Frobenius norm**
 
 
+**Functional programming**
+
+
 **Games with a purpose / gamification**
 
 
@@ -430,6 +436,9 @@
 **Graph**
 
 
+**Graph mining**
+
+
 **Graphical database**
 
 
@@ -445,10 +454,16 @@
 **Hash / hashing**
 
 
+**HDFS**
+
+
 **Hidden layer / hidden nodes**
 
 
 **HITS**
+
+
+**Hive**
 
 
 **Homophily**
@@ -577,6 +592,9 @@
 **LASSO**
 
 
+**Latency**
+
+
 **Latent Dirichlet Allocation (LDA)**
 
 
@@ -584,6 +602,9 @@
 
 
 **Latent Semantic Indexing (LSI)**
+
+
+**Latent variables**
 
 
 **Layer**
@@ -608,6 +629,9 @@
 
 
 **Linkage ("record linkage")**
+
+
+**Literate programming**
 
 
 **Load / loadings**
@@ -745,6 +769,12 @@
 **Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
 
 
+**Open data**
+
+
+**Open science**
+
+
 **Orthogonal**
 
 
@@ -835,7 +865,7 @@
 **Random projections**
 
 
-**RDD** (see "regression discontinuity design")
+**RDD** in context of causal inference with observational data, see "regression discontinuity design." In context of computing with Spark, see "resilient distributed dataset."
 
 
 **Record linkage** - (see "linkage")
@@ -899,6 +929,9 @@
 
 
 **Repurposing (of data)**
+
+
+**Resilient distributed dataset (RDD)**
 
 
 **Respondent-driven sampling**
@@ -970,6 +1003,9 @@
 **Softmax**
 
 
+**Spark**
+
+
 **Sparse matrix**
 
 
@@ -983,6 +1019,9 @@
 
 
 **Split-Apply-Combine (SAC)**
+
+
+**SQL**
 
 
 **Statistical disclosure limitations**
