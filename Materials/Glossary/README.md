@@ -556,6 +556,9 @@
 **Image filter / image kernel**
 
 
+**Incidence matrix**
+
+
 **Independent Component Analysis (ICA)**
 
 
@@ -763,6 +766,9 @@
 **Mixture model**
 
 
+**Modifiable Areal Unit Problem (MAUP)**
+
+
 **Moments**
 
 
@@ -904,6 +910,9 @@
 **Pattern recognition**
 
 
+**Persistence**
+
+
 **Pickle (pkl)**
 
 
@@ -978,6 +987,8 @@
 
 **RDD** in context of causal inference with observational data, see "regression discontinuity design." In context of computing with Spark, see "resilient distributed dataset."
 
+
+**RDS (R Data Serialization format)**
 
 **Record linkage** - (see "linkage")
 
@@ -1108,6 +1119,9 @@
 **SGD** (see "stochastic gradient descent")
 
 
+**Shapefile**
+
+
 **Shell**
 
 
@@ -1147,6 +1161,9 @@
 **Spatial**
 
 
+**Spatial autocorrelation**
+
+
 **Spider trap**
 
 
@@ -1160,6 +1177,9 @@
 
 
 **Stationarity**
+
+
+**Statistical conclusion validity**
 
 
 **Statistical disclosure limitations**
@@ -1292,6 +1312,9 @@
 
 
 **Virtualization**
+
+
+**Voronoi diagram / tesselation** aka "proximity polygons"
 
 
 **Web driver**
