@@ -7,13 +7,25 @@
 **A/B testing**
 
 
+**Activation function**
+
+
 **Adjacency matrix**
+
+
+**Admixture model** (see "mixed membership model")
+
+
+**Adversarial (learning, examples)**
 
 
 **AI** (see "artificial intelligence")
 
 
 **AIC**
+
+
+**Algorithmic bias / algorithmic fairness / machine bias**
 
 
 **Algorithmic confounding**
@@ -28,19 +40,34 @@
 **AUC**
 
 
+**Autoencoder**
+
+
 **B-tree**
 
 
 **Backpropagation**
 
 
+**Bag of words**
+
+
+**Bagging**
+
+
+**Balance**
+
+
 **Bayes / Bayesian (statistics, estimation, theory)**
+
+
+**Bias**
 
 
 **Bias-variance tradeoff**
 
 
-**BIC**
+**BIC** Bayesian Information Criterion
 
 
 **Big data**
@@ -52,10 +79,37 @@
 **Bit sampling**
 
 
+**Boosting**
+
+
+**Bot**
+
+
 **Breadth-first search**
 
 
-**Causal (effect, inference, mechanism, graph)**
+**Calibration**
+
+
+**Canonical correlation analysis (CCA)**
+
+
+**Case-folding**
+
+
+**Causal discovery**
+
+
+**Causal effect**
+
+
+**Causal inference**
+
+
+**Causal graph**
+
+
+**CCA** (see "canonical correlation analysis")
 
 
 **Citizen science**
@@ -67,10 +121,13 @@
 **Cloud**
 
 
+**Cluster analysis**
+
+
+**Cluster computing**
+
+
 **Clustered sampling**
-
-
-**Clustering**
 
 
 **CNN** (see "convolutional neural net")
@@ -97,6 +154,9 @@
 **Correlation**
 
 
+**Correspondence analysis**
+
+
 **Cosine similarity**
 
 
@@ -121,6 +181,12 @@
 **DAG** (see Directed acyclic graph)
 
 
+**Data deluge**
+
+
+**Data exhaust**
+
+
 **Data-intensive**
 
 
@@ -139,7 +205,16 @@
 **Deep learning**
 
 
+**Degeneracy (of labels; of ERGMs)**
+
+
 **Degree**
+
+
+**Degree centrality**
+
+
+**Difference-in-differences (DID)**
 
 
 **Differential privacy**
@@ -202,22 +277,73 @@
 **ERGM** (see "Exponential Random Graph Model.") 
 
 
+**Euclidean (distance, norm)**
+
+
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
+
+
+**Feature**
+
+
+**Feature engineering**
+
+
+**Feature extraction**
+
+
+**Feature learning**
+
+
+**Feature selection**
+
+
+**Hamming distance**
+
+
+**Hypothesis space**
+
+
+**F1**
+
+
+**Factor analysis (FA)**
+
+
+**Factorization (of a matrix)**
 
 
 **Filter**
 
 
+**Fixed effects**
+
+
 **Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
 
 
+**Fourier (transform, operator)**
+
+
+**Frobenius norm**
+
+
 **Games with a purpose / gamification**
+
+
+**Generalization error**
+
+
+**Generative model**
 
 
 **Gibbs sampling**
 
 
 **GPU**
+
+
+**Gradient boosting**
 
 
 **Gradient descent** see also "stochastic gradient descent"
@@ -235,10 +361,19 @@
 **Hadoop**
 
 
+**Hash / hashing**
+
+
 **Hidden layer / hidden nodes**
 
 
 **HITS**
+
+
+**Homophily**
+
+
+**Honeytrap (for web scrapers)**
 
 
 **Human computing / human-in-the-loop computation**
@@ -247,10 +382,22 @@
 **ICA** (see Independent Component Analysis)
 
 
-**Image filter**
+**Identification / identification problem**
 
 
-**Independent Component Analysis / ICA**
+**Ill-posed (problem)**
+
+
+**Image**
+
+
+**Image filter / image kernel**
+
+
+**Independent Component Analysis (ICA)**
+
+
+**Index**
 
 
 **Indirect effects**
@@ -271,40 +418,7 @@
 **Inner product**
 
 
-**Intelligence augmentation (IA)**
-
-
-**Intelligent infrastructure (II)**
-
-
-**IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
-
-
-**Factorization (of a matrix)**
-
-
-**Factor analysis (FA)**
-
-
-**F1**
-
-
-**Hamming distance**
-
-
-**Hash / hashing**
-
-
-**Homophily**
-
-
-**Honeytrap (for web scrapers)**
-
-
-**Identification / identification problem**
-
-
-**Index**
+**Interrupted time series**
 
 
 **Inverse (of a matrix)**
@@ -313,16 +427,31 @@
 **Inverted index**
 
 
+**IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
+
+
 **Jaccard similarity**
+
+
+**Johnson-Lindenstrauss lemma**
 
 
 **Kernel**
 
 
+**Kernel density estimation**
+
+
+**Kernel PCA**
+
+
+**Kernel smoothing**
+
+
 **Kernel trick**
 
 
-**Key
+**Key**
 
 
 **Key-value pair**
@@ -331,10 +460,10 @@
 **KL-divergence**
 
 
-**L1-norm**
+**L1-norm / L1 regulariation**
 
 
-**L2-norm**
+**L2-norm / L2 regularization**
 
 
 **Laplace (distribution / prior)**
@@ -354,7 +483,24 @@
 
 **Latent Semantic Indexing (LSI)**
 
+
+**Layer**
+
+
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
+
+
+**Leave-one-out cross-validation (LOOCV)**
+
+
+**Lemmatization / lemma**
+
+
+**Linear subspace**
+
+
+**Linear transformation**
+
 
 **Link**
 
@@ -362,10 +508,25 @@
 **Linkage ("record linkage")**
 
 
+**Load / loadings**
+
+
 **Locality-sensitive hashing**
 
 
 **Locally linear embedding**
+
+
+**Logistic regression / logit**
+
+
+**Loss function**
+
+
+**Machine bias** (see "algorithmic bias")
+
+
+**Manifest**
 
 
 **Manifold**
@@ -383,13 +544,37 @@
 **Matching** In causal inference, matching is a process for analysis of observational data, under which treated units are matched with control units that are otherwise similar by some measure on observable pretreatment variables. In information sciences, matching is another term for "record linkage."
 
 
+**Max norm**
+
+
+**MaxEnt**
+
+
 **MCMC** (see "Markov Chain Monte Carlo")
+
+
+**MDS** (see "multidimensional scaling")
+
+
+**Measurement model**
 
 
 **MinHash**
 
 
+**Mixed membership model** (also called an "admixture model")
+
+
+**Mixture model**
+
+
 **Moments**
+
+
+**Multidimensional scaling (MDS)**
+
+
+**Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
 
 
 **Naive Bayes (classifier)**
@@ -398,7 +583,13 @@
 **Named entity recognition / NER**
 
 
+**Natural experiment**
+
+
 **Natural language processing**
+
+
+**Nearest neighbors**
 
 
 **Negative sampling**
@@ -410,10 +601,19 @@
 **Neural net / artifical neural net (ANN)**
 
 
+**N-gram**
+
+
 **NLP** (See "natural language processing")
 
 
+**No free lunch theorem**
+
+
 **Node**
+
+
+**Non-negative matrix factorization (NMF)**
 
 
 **Norm / normal / normalize / normalization**
@@ -428,13 +628,40 @@
 **Observational (data, design)**
 
 
+**OLS**
+
+
+**One-hot**
+
+
 **Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
+
+
+**Orthogonal**
 
 
 **Out-of-sample prediction**
 
 
+**Over-determined**
+
+
+**Over-fitting*
+
+
 **PageRank**
+
+
+**Parsing**
+
+
+**Pattern recognition**
+
+
+**PMI** Pointwise mutual information. (See "mutual information")
+
+
+**POS (in NLP)** Part of speech. A "POS tagger" attempts to annotate the tokens/words of input sentences / text with their part of speech.
 
 
 **Posting**
@@ -446,7 +673,13 @@
 **Potential outcomes model**
 
 
+**PPMI** Positive pointwise mutual information. (See "mutual information")
+
+
 **Precision**
+
+
+**Prediction**
 
 
 **Principal Component Analysis (PCA)**
@@ -461,7 +694,16 @@
 **Procrustes (analysis)**
 
 
+**Projection**
+
+
 **Provenance (of data)**
+
+
+**Quasi-experiment**
+
+
+**Random forests**
 
 
 **Random projections**
@@ -479,6 +721,9 @@
 **Recommender system**
 
 
+**Reconstruction error**
+
+
 **Recurrent neural net (RNN)**
 
 
@@ -488,10 +733,19 @@
 **Regression discontinuity design (RDD)**
 
 
+**Regression trees**
+
+
 **Regularization / regularize**
 
 
+**Reinforcement learning**
+
+
 **Relation / relational data / relational database**
+
+
+**ReLU**
 
 
 **Repurposing (of data)**
@@ -504,6 +758,9 @@
 
 
 **RNN** (see "recurrent neural net")
+
+
+**robots.txt**
 
 
 **ROC curve**
@@ -521,16 +778,31 @@
 **Scatter matrix**
 
 
+**Segmentation**
+
+
+**Semi-supervised learning**
+
+
 **SEO** Search engine optimization.
 
 
 **SGD** (see "stochastic gradient descent")
 
 
+**Sigmoid (activation function)**
+
+
 **Social**
 
 
 **Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
+
+
+**Social science**
+
+
+**Softmax**
 
 
 **Sparse matrix**
@@ -542,10 +814,16 @@
 **Spider trap**
 
 
+**Spillover**
+
+
 **Split-Apply-Combine (SAC)**
 
 
 **Statistical disclosure limitations**
+
+
+**Stemming / stem**
 
 
 **Stochastic gradient descent / SGD**
@@ -557,7 +835,13 @@
 **Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
+**Supervised learning**
+
+
 **Support vector machine (SVM)**
+
+
+**SUTVA**
 
 
 **SVM** (see "support vector machine")
@@ -572,6 +856,12 @@
 **Tidy data / tidyverse**
 
 
+**Tikhonov regularization**
+
+
+**Trace**
+
+
 **Training data/set; test data/set; validation data/set**
 
 
@@ -581,10 +871,16 @@
 **Transportability**
 
 
+**Treatment / treatment effect**
+
+
 **Uncertainty**
 
 
 **Unfolding** Lots of disciplines have something they call "unfolding" (e.g., music, biochemistry). Here, it's most likely to refer to a type of data analysis closely related to multidimensional scaling, which maps individuals and objects over which they have preferences in the same space. The next most likely usage is as "deconvolution", the reversing of a convolution operation.
+
+
+**Unsupervised learning**
 
 
 **User-attribute inference**
@@ -620,4 +916,5 @@
 **Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
 
 
+**Weights**
 
