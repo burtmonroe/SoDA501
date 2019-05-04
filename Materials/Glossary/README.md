@@ -4,10 +4,31 @@
 
 
 
-**AI/Artificial Intelligence**
+**A/B testing**
+
+
+**Adjacency matrix**
+
+
+**AI** (see "artificial intelligence")
+
+
+**AIC**
 
 
 **Algorithmic confounding**
+
+
+**ANN** -- (see "neural net")
+
+
+**Artificial intelligence (AI)**
+
+
+**AUC**
+
+
+**B-tree**
 
 
 **Backpropagation**
@@ -19,13 +40,25 @@
 **Bias-variance tradeoff**
 
 
+**BIC**
+
+
 **Big data**
 
 
 **Big-O notation**
 
 
-**Causal effect**
+**Bit sampling**
+
+
+**Breadth-first search**
+
+
+**Causal (effect, inference, mechanism, graph)**
+
+
+**Citizen science**
 
 
 **Classification / classifier**
@@ -40,6 +73,15 @@
 **Clustering**
 
 
+**CNN** (see "convolutional neural net")
+
+
+**Community / community detection**
+
+
+**Compression**
+
+
 **Computational social science**
 
 
@@ -49,13 +91,31 @@
 **Convolution**
 
 
+**Convolutional neural net (CNN)**
+
+
+**Correlation**
+
+
+**Cosine similarity**
+
+
 **Counterfactual**
+
+
+**Covariance / covariance matrix**
+
+
+**Cross product**
 
 
 **Curse of dimensionality**
 
 
 **Cross-validation**
+
+
+**Crowd-sourcing**
 
 
 **DAG** (see Directed acyclic graph)
@@ -73,22 +133,55 @@
 **De-anonymization**
 
 
+**Decomposition*
+
+
 **Deep learning**
+
+
+**Degree**
 
 
 **Differential privacy**
 
 
+**Dimensionality reduction**
+
+
 **Directed acyclic graph / DAG**
 
 
+**Dissimilarity**
+
+
+**Distance**
+
+
+**Dot product**
+
+
 **Drift**
+
+
+**Edit distance**
+
+
+**Edge**
+
+
+**Eigen- (value, vector, decomposition)**
+
+
+**Eigenvector centrality**
 
 
 **Elastic net**
 
 
 **EM algorithm**
+
+
+**Embarrassingly parallel / parallelizable**
 
 
 **Embedding(s)**
@@ -118,10 +211,19 @@
 **Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
 
 
+**Games with a purpose / gamification**
+
+
 **Gibbs sampling**
 
 
+**GPU**
+
+
 **Gradient descent** see also "stochastic gradient descent"
+
+
+**Gram matrix**
 
 
 **Graph**
@@ -136,7 +238,16 @@
 **Hidden layer / hidden nodes**
 
 
+**HITS**
+
+
+**Human computing / human-in-the-loop computation**
+
+
 **ICA** (see Independent Component Analysis)
+
+
+**Image filter**
 
 
 **Independent Component Analysis / ICA**
@@ -157,13 +268,19 @@
 **Information theory**
 
 
-**IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
+**Inner product**
 
 
 **Intelligence augmentation (IA)**
 
 
 **Intelligent infrastructure (II)**
+
+
+**IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
+
+
+**Factorization (of a matrix)**
 
 
 **Factor analysis (FA)**
@@ -178,6 +295,24 @@
 **Hash / hashing**
 
 
+**Homophily**
+
+
+**Honeytrap (for web scrapers)**
+
+
+**Identification / identification problem**
+
+
+**Index**
+
+
+**Inverse (of a matrix)**
+
+
+**Inverted index**
+
+
 **Jaccard similarity**
 
 
@@ -187,7 +322,19 @@
 **Kernel trick**
 
 
+**Key
+
+
+**Key-value pair**
+
+
 **KL-divergence**
+
+
+**L1-norm**
+
+
+**L2-norm**
 
 
 **Laplace (distribution / prior)**
@@ -199,10 +346,17 @@
 **LASSO**
 
 
-**L1-norm**
+**Latent Dirichlet Allocation (LDA)**
 
 
-**L2-norm**
+**Latent Semantic Analysis (LSA)**
+
+
+**Latent Semantic Indexing (LSI)**
+
+**LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
+
+**Link**
 
 
 **Linkage ("record linkage")**
@@ -212,6 +366,9 @@
 
 
 **Locally linear embedding**
+
+
+**Manifold**
 
 
 **Map/reduce, MapReduce**
@@ -229,7 +386,13 @@
 **MCMC** (see "Markov Chain Monte Carlo")
 
 
-**Naive Bayes (classifier)
+**MinHash**
+
+
+**Moments**
+
+
+**Naive Bayes (classifier)**
 
 
 **Named entity recognition / NER**
@@ -238,10 +401,19 @@
 **Natural language processing**
 
 
+**Negative sampling**
+
+
 **NER** (see "named entity recognition")
 
 
+**Neural net / artifical neural net (ANN)**
+
+
 **NLP** (See "natural language processing")
+
+
+**Node**
 
 
 **Norm / normal / normalize / normalization**
@@ -253,10 +425,19 @@
 **NP-hard**
 
 
+**Observational (data, design)**
+
+
 **Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
 
 
 **Out-of-sample prediction**
+
+
+**PageRank**
+
+
+**Posting**
 
 
 **Post-stratification**
@@ -283,13 +464,28 @@
 **Provenance (of data)**
 
 
-**Record linkage** - see "linkage."
+**Random projections**
+
+
+**RDD** (see "regression discontinuity design")
+
+
+**Record linkage** - (see "linkage")
 
 
 **Recall**
 
 
 **Recommender system**
+
+
+**Recurrent neural net (RNN)**
+
+
+**Regression**
+
+
+**Regression discontinuity design (RDD)**
 
 
 **Regularization / regularize**
@@ -307,12 +503,25 @@
 **Ridge regression**
 
 
+**RNN** (see "recurrent neural net")
+
+
+**ROC curve**
+
+
 **Rotation**
 
 
 **SAC** (see "Split-Apply-Combine")
 
+
 **Sampling**
+
+
+**Scatter matrix**
+
+
+**SEO** Search engine optimization.
 
 
 **SGD** (see "stochastic gradient descent")
@@ -322,6 +531,15 @@
 
 
 **Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
+
+
+**Sparse matrix**
+
+
+**Sparsity**
+
+
+**Spider trap**
 
 
 **Split-Apply-Combine (SAC)**
@@ -339,6 +557,15 @@
 **Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
+**Support vector machine (SVM)**
+
+
+**SVM** (see "support vector machine")
+
+
+**Tensor**
+
+
 **Test data / test set** (see "training data")
 
 
@@ -346,6 +573,9 @@
 
 
 **Training data/set; test data/set; validation data/set**
+
+
+**Transition matrix**
 
 
 **Transportability**
@@ -366,10 +596,25 @@
 **Validation / validity**
 
 
+**Variance**
+
+
+**Variational inference**
+
+
 **Variety** One of the conventional "three Vs" of "Big Data"
 
 
 **Varimax**
+
+
+**Vector quantization (VQ)**
+
+
+**Vector space / vector space model**
+
+
+**Vertex**
 
 
 **Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
