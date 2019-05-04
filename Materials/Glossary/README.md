@@ -7,6 +7,9 @@
 **A/B testing**
 
 
+**ACI** Advanced Cyber-infrastructure. The cluster computing resources provided on Penn State's campus by ICS.
+
+
 **Activation function**
 
 
@@ -40,7 +43,10 @@
 **Algorithmic confounding**
 
 
-**ANN** -- (see "neural net")
+**Amplified asking**
+
+
+**ANN** -- Artificial neural net (see "neural net")
 
 
 **Anonymous function**
@@ -52,10 +58,16 @@
 **Artificial intelligence (AI)**
 
 
-**AUC**
+**AUC** Area under curve.
 
 
 **Autoencoder**
+
+
+**awk**
+
+
+**AWS** Amazon Web Services.
 
 
 **B-tree**
@@ -73,7 +85,16 @@
 **Balance**
 
 
+**bash**
+
+
+**Batch**
+
+
 **Bayes / Bayesian (statistics, estimation, theory)**
+
+
+**Between-subjects design**
 
 
 **Bias**
@@ -94,7 +115,13 @@
 **Bit sampling**
 
 
+**Blocking**
+
+
 **Blue-team dynamics** (see "red-team dynamics")
+
+
+**Boolean**
 
 
 **Boosting**
@@ -130,6 +157,9 @@
 **CCA** (see "canonical correlation analysis")
 
 
+**Chunk**
+
+
 **Citizen science**
 
 
@@ -149,6 +179,9 @@
 
 
 **CNN** (see "convolutional neural net")
+
+
+**Coding**
 
 
 **Column-oriented database**
@@ -215,6 +248,9 @@
 
 
 **Crowd-sourcing**
+
+
+**csv**
 
 
 **DAG** (see Directed acyclic graph)
@@ -334,6 +370,9 @@
 **Embedding(s)**
 
 
+**Enriched asking**
+
+
 **Ensembling / ensembles**
 
 
@@ -349,10 +388,16 @@
 **Environment**
 
 
+**Epoch**
+
+
 **ERGM** (see "Exponential Random Graph Model.") 
 
 
 **Euclidean (distance, norm)**
+
+
+**Exceed OnDemand** Software -- remote access client for X-windowing, recommended / provided by ICS for use on the ACI systems. Not to be confused with "XSEDE", the consortium of remote computing resources funded by NSF (and generally facilitiated by ICS-ACI).
 
 
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
@@ -368,6 +413,9 @@
 
 
 **Factor analysis (FA)**
+
+
+**Factorial design**
 
 
 **Factorization (of a matrix)**
@@ -418,7 +466,13 @@
 **Generative model**
 
 
+**GIA**
+
+
 **Gibbs sampling**
+
+
+**GIS**
 
 
 **GPU**
@@ -484,6 +538,9 @@
 **ICA** (see Independent Component Analysis)
 
 
+**ICS** Penn State's Institute for CyberScience. Administer the ACI (advanced cyber infrastructure) systems on campus.
+
+
 **IDE** Integrated development environment.
 
 
@@ -523,6 +580,9 @@
 **Inner product**
 
 
+**Integrated**
+
+
 **Internal validity**
 
 
@@ -545,6 +605,9 @@
 
 
 **JSON**
+
+
+**Kagglification**
 
 
 **Kernel**
@@ -619,6 +682,9 @@
 **Lemmatization / lemma**
 
 
+**Lifelong learning**
+
+
 **Linear subspace**
 
 
@@ -644,6 +710,9 @@
 
 
 **Logistic regression / logit**
+
+
+**Longitudinal**
 
 
 **Loss function**
@@ -697,7 +766,19 @@
 **Moments**
 
 
+**Moore-Penrose pseudoinverse**
+
+
+**MPI**
+
+
+**MTurk**
+
+
 **Multidimensional scaling (MDS)**
+
+
+**Multithreaded**
 
 
 **Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
@@ -742,6 +823,12 @@
 **Non-negative matrix factorization (NMF)**
 
 
+**Non-parametric**
+
+
+**Non-stationary**
+
+
 **Norm / normal / normalize / normalization**
 
 
@@ -760,7 +847,10 @@
 **Observational (data, design)**
 
 
-**OLS**
+**OCR** Optical character recognition. The task of turning images into alphabetic (or similar) characters.
+
+
+**OLS** Ordinary least squares
 
 
 **One-hot**
@@ -781,6 +871,9 @@
 **Orthogonalize**
 
 
+**Orthonormal**
+
+
 **OSEMN workflow**
 
 
@@ -796,10 +889,22 @@
 **PageRank**
 
 
+**Parallel worlds design**
+
+
+**Parametric**
+
+
 **Parsing**
 
 
+**Pasteur's quadrant**
+
+
 **Pattern recognition**
+
+
+**Pickle (pkl)**
 
 
 **Pipe operator**
@@ -859,10 +964,16 @@
 **Quasi-experiment**
 
 
+**Query**
+
+
 **Random forests**
 
 
 **Random projections**
+
+
+**Raster**
 
 
 **RDD** in context of causal inference with observational data, see "regression discontinuity design." In context of computing with Spark, see "resilient distributed dataset."
@@ -925,6 +1036,9 @@
 **Replicability**
 
 
+**Representation (of data)**
+
+
 **Reproducibility**
 
 
@@ -937,7 +1051,7 @@
 **Respondent-driven sampling**
 
 
-**RESTful**
+**RESTful / REST API**
 
 
 **Ridge regression**
@@ -964,10 +1078,19 @@
 **Scatter matrix**
 
 
+**Schema**
+
+
+**Script**
+
+
 **Segmentation**
 
 
 **Selection bias**
+
+
+**Semi-parametric**
 
 
 **Semi-structured data**
@@ -985,10 +1108,16 @@
 **SGD** (see "stochastic gradient descent")
 
 
+**Shell**
+
+
 **Sigmoid (activation function)**
 
 
 **Smoothing**
+
+
+**SNA** Social network analysis
 
 
 **Social**
@@ -1006,10 +1135,16 @@
 **Spark**
 
 
+**Sparse coding**
+
+
 **Sparse matrix**
 
 
 **Sparsity**
+
+
+**Spatial**
 
 
 **Spider trap**
@@ -1024,10 +1159,16 @@
 **SQL**
 
 
+**Stationarity**
+
+
 **Statistical disclosure limitations**
 
 
 **Stemming / stem**
+
+
+**STM** Structured Topic Model
 
 
 **Stochastic gradient descent / SGD**
@@ -1066,6 +1207,9 @@
 **Tikhonov regularization**
 
 
+**Topic model**
+
+
 **Trace**
 
 
@@ -1082,6 +1226,15 @@
 
 
 **Treatment / treatment effect**
+
+
+**t-SNE**
+
+
+**tsv**
+
+
+**Turkers**
 
 
 **Uncertainty**
@@ -1120,6 +1273,9 @@
 **Varimax**
 
 
+**Vector**
+
+
 **Vector quantization (VQ)**
 
 
@@ -1138,7 +1294,18 @@
 **Virtualization**
 
 
+**Web driver**
+
+
 **Weights**
 
 
+**Within-subjects design**
+
+
 **XML**
+
+
+**XSEDE** "Extreme Science and Engineering Discovery Environment"
+
+
