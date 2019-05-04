@@ -10,13 +10,22 @@
 **Activation function**
 
 
+**Active learning**
+
+
 **Adjacency matrix**
 
 
 **Admixture model** (see "mixed membership model")
 
 
+**Administrative records**
+
+
 **Adversarial (learning, examples)**
+
+
+**Aggregation**
 
 
 **AI** (see "artificial intelligence")
@@ -32,6 +41,9 @@
 
 
 **ANN** -- (see "neural net")
+
+
+**API** Application programming interface.
 
 
 **Artificial intelligence (AI)**
@@ -77,6 +89,9 @@
 
 
 **Bit sampling**
+
+
+**Blue-team dynamics** (see "red-team dynamics")
 
 
 **Boosting**
@@ -133,6 +148,9 @@
 **CNN** (see "convolutional neural net")
 
 
+**Column-oriented database**
+
+
 **Community / community detection**
 
 
@@ -142,7 +160,25 @@
 **Computational social science**
 
 
+**Confusion matrix**
+
+
 **Conjugate prior**
+
+
+**Concurrent validity**
+
+
+**Construct validity**
+
+
+**Content validity**
+
+
+**Control (group, variable)**
+
+
+**Convergent validty**
 
 
 **Convolution**
@@ -187,13 +223,25 @@
 **Data exhaust**
 
 
-**Data-intensive**
-
-
 **Data mining**
 
 
 **Data science**
+
+
+**Data structure**
+
+
+**Data wrangling / cleaning / scrubbing)
+
+
+**Database**
+
+
+**Database management system**
+
+
+**Data-intensive**
 
 
 **De-anonymization**
@@ -214,6 +262,12 @@
 **Degree centrality**
 
 
+**Dehydrated data**
+
+
+**Delimited file**
+
+
 **Difference-in-differences (DID)**
 
 
@@ -226,10 +280,25 @@
 **Directed acyclic graph / DAG**
 
 
+**Discriminant validity**
+
+
 **Dissimilarity**
 
 
 **Distance**
+
+
+**Distributed computing/processing**
+
+
+**Distributed sensors**
+
+
+**Dropout**
+
+
+**Document-oriented database**
 
 
 **Dot product**
@@ -274,6 +343,9 @@
 **Entropy**
 
 
+**Environment**
+
+
 **ERGM** (see "Exponential Random Graph Model.") 
 
 
@@ -281,6 +353,21 @@
 
 
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
+
+
+**External validity**
+
+
+**F1**
+
+
+**Face validity**
+
+
+**Factor analysis (FA)**
+
+
+**Factorization (of a matrix)**
 
 
 **Feature**
@@ -298,25 +385,13 @@
 **Feature selection**
 
 
-**Hamming distance**
-
-
-**Hypothesis space**
-
-
-**F1**
-
-
-**Factor analysis (FA)**
-
-
-**Factorization (of a matrix)**
-
-
 **Filter**
 
 
 **Fixed effects**
+
+
+**Flat file**
 
 
 **Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
@@ -355,7 +430,13 @@
 **Graph**
 
 
+**Graphical database**
+
+
 **Grid computing**
+
+
+**Hamming distance**
 
 
 **Hadoop**
@@ -379,7 +460,16 @@
 **Human computing / human-in-the-loop computation**
 
 
+**Hyperparameters**
+
+
+**Hypothesis space**
+
+
 **ICA** (see Independent Component Analysis)
+
+
+**IDE** Integrated development environment.
 
 
 **Identification / identification problem**
@@ -418,6 +508,9 @@
 **Inner product**
 
 
+**Internal validity**
+
+
 **Interrupted time series**
 
 
@@ -434,6 +527,9 @@
 
 
 **Johnson-Lindenstrauss lemma**
+
+
+**JSON**
 
 
 **Kernel**
@@ -457,7 +553,13 @@
 **Key-value pair**
 
 
+**Key-value store**
+
+
 **KL-divergence**
+
+
+**Leakage (of data)**
 
 
 **L1-norm / L1 regulariation**
@@ -619,6 +721,12 @@
 **Norm / normal / normalize / normalization**
 
 
+**NoSQL**
+
+
+**Notebooks**
+
+
 **Nowcasting**
 
 
@@ -640,6 +748,12 @@
 **Orthogonal**
 
 
+**Orthogonalize**
+
+
+**OSEMN workflow**
+
+
 **Out-of-sample prediction**
 
 
@@ -658,6 +772,15 @@
 **Pattern recognition**
 
 
+**Pipe operator**
+
+
+**Pipelines**
+
+
+**Placebo / placebo test**
+
+
 **PMI** Pointwise mutual information. (See "mutual information")
 
 
@@ -665,6 +788,9 @@
 
 
 **Posting**
+
+
+**PostSQL**
 
 
 **Post-stratification**
@@ -724,7 +850,16 @@
 **Reconstruction error**
 
 
+**Record**
+
+
+**Record linkage** (see "linkage")
+
+
 **Recurrent neural net (RNN)**
+
+
+**Red-team dynamics / blue-team dynamics**
 
 
 **Regression**
@@ -736,6 +871,12 @@
 **Regression trees**
 
 
+**Regex** (see "regular expression")
+
+
+**Regular expressions**
+
+
 **Regularization / regularize**
 
 
@@ -745,13 +886,25 @@
 **Relation / relational data / relational database**
 
 
+**Reliability**
+
+
 **ReLU**
+
+
+**Replicability**
+
+
+**Reproducibility**
 
 
 **Repurposing (of data)**
 
 
 **Respondent-driven sampling**
+
+
+**RESTful**
 
 
 **Ridge regression**
@@ -781,16 +934,28 @@
 **Segmentation**
 
 
+**Selection bias**
+
+
+**Semi-structured data**
+
+
 **Semi-supervised learning**
 
 
 **SEO** Search engine optimization.
 
 
+**Serialization (of data)**
+
+
 **SGD** (see "stochastic gradient descent")
 
 
 **Sigmoid (activation function)**
+
+
+**Smoothing**
 
 
 **Social**
@@ -835,6 +1000,9 @@
 **Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
+**Structured data**
+
+
 **Supervised learning**
 
 
@@ -865,6 +1033,9 @@
 **Training data/set; test data/set; validation data/set**
 
 
+**Transfer learning**
+
+
 **Transition matrix**
 
 
@@ -880,10 +1051,16 @@
 **Unfolding** Lots of disciplines have something they call "unfolding" (e.g., music, biochemistry). Here, it's most likely to refer to a type of data analysis closely related to multidimensional scaling, which maps individuals and objects over which they have preferences in the same space. The next most likely usage is as "deconvolution", the reversing of a convolution operation.
 
 
+**Unicode**
+
+
 **Unsupervised learning**
 
 
 **User-attribute inference**
+
+
+**UTF-8**
 
 
 **"V"s of big data** Traditional "three Vs of big data" - volume, velocity, variety. There are many "fourth V's" including Monroe's "five Vs of big data social science"
@@ -910,11 +1087,19 @@
 **Vector space / vector space model**
 
 
+**Version control**
+
+
 **Vertex**
 
 
 **Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
 
 
+**Virtualization**
+
+
 **Weights**
 
+
+**XML**
