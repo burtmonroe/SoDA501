@@ -22,6 +22,9 @@
 **Big data**
 
 
+**Big-O notation**
+
+
 **Causal effect**
 
 
@@ -307,6 +310,8 @@
 **Rotation**
 
 
+**SAC** (see "Split-Apply-Combine")
+
 **Sampling**
 
 
@@ -317,6 +322,9 @@
 
 
 **Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
+
+
+**Split-Apply-Combine (SAC)**
 
 
 **Statistical disclosure limitations**
@@ -332,6 +340,9 @@
 
 
 **Test data / test set** (see "training data")
+
+
+**Tidy data / tidyverse**
 
 
 **Training data/set; test data/set; validation data/set**
