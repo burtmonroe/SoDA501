@@ -64,6 +64,9 @@
 **Artificial intelligence (AI)**
 
 
+**Association**
+
+
 **AUC** Area under curve.
 
 
@@ -97,6 +100,9 @@
 **bash**
 
 
+**Basis**
+
+
 **Batch**
 
 
@@ -104,6 +110,9 @@
 
 
 **Beam**
+
+
+**Berkeley Data Analytics Stack (BDAS)**
 
 
 **Between-subjects design**
@@ -187,6 +196,9 @@
 **CCA** (see "canonical correlation analysis")
 
 
+**Change of basis**
+
+
 **Characteristic matrix**
 
 
@@ -224,6 +236,9 @@
 
 
 **Column-oriented database / column store**
+
+
+**Common Rule / Revised Common Rule**
 
 
 **Community / community detection**
@@ -268,6 +283,9 @@
 **Convolutional neural net (CNN)**
 
 
+**Core-sets**
+
+
 **Correlation**
 
 
@@ -307,7 +325,13 @@
 **csv**
 
 
+**CUR decomposition**
+
+
 **DAG** (see Directed acyclic graph)
+
+
+**Data augmentation**
 
 
 **Data deluge**
@@ -316,10 +340,25 @@
 **Data exhaust**
 
 
+**Data fusion**
+
+
+**Data mapping**
+
+
 **Data mining**
 
 
+**Data privacy**
+
+
 **Data science**
+
+
+**Data squashing**
+
+
+**Data streams**
 
 
 **Data structure**
@@ -394,6 +433,9 @@
 **Distributed computing/processing**
 
 
+**Distributed data collection**
+
+
 **Distributed sensors**
 
 
@@ -419,6 +461,9 @@
 
 
 **Drift**
+
+
+**Duplicate detection**
 
 
 **Ecological momentary assessment**
@@ -460,7 +505,7 @@
 **Entity**
 
 
-**Entity disambiguation**
+**Entity resolution / disambiguation**
 
 
 **Entropy**
@@ -526,6 +571,9 @@
 **Feature selection**
 
 
+**Feedforward networks**
+
+
 **Field**
 
 
@@ -533,6 +581,9 @@
 
 
 **Filter**
+
+
+**First class object**
 
 
 **Fixed effects**
@@ -559,6 +610,9 @@
 **Games with a purpose / gamification**
 
 
+**Gaussian**
+
+
 **Generalization error**
 
 
@@ -580,6 +634,9 @@
 **Git**
 
 
+**GloVe**
+
+
 **Gold standard**
 
 
@@ -587,6 +644,9 @@
 
 
 **Google Correlate**
+
+
+**Google Flu**
 
 
 **Google Ngram Viewer**
@@ -616,10 +676,16 @@
 **Graphical database**
 
 
+**Graphical models**
+
+
 **Grid computing**
 
 
 **Ground truth**
+
+
+**H2O**
 
 
 **Hamming distance**
@@ -646,6 +712,9 @@
 **Hidden layer / hidden nodes**
 
 
+**Hidden Markov model (HMM)**
+
+
 **Hierarchical**
 
 
@@ -662,6 +731,9 @@
 
 
 **Human computing / human-in-the-loop computation**
+
+
+**Human subjects**
 
 
 **Hyperparameters**
@@ -697,6 +769,9 @@
 **Image filter / image kernel**
 
 
+**Imputation**
+
+
 **Incidence matrix**
 
 
@@ -721,7 +796,16 @@
 **Information theory**
 
 
+**Informed consent**
+
+
+**Ingestion (of data)**
+
+
 **Inner product**
+
+
+**Instance construction**
 
 
 **Integrated / integration**
@@ -740,6 +824,9 @@
 
 
 **IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
+
+
+**IRB** Institutional Review Board.
 
 
 **Jaccard similarity**
@@ -763,10 +850,19 @@
 **Jupyter / Jupyter notebooks**
 
 
+**k-means**
+
+
+**k-NN (k Nearest Neighbors)**
+
+
 **k-shingle**
 
 
 **Kagglification**
+
+
+**Keras**
 
 
 **Kernel**
@@ -809,6 +905,9 @@
 
 
 **Laplacian (of a network)**
+
+
+**Laplacian eigenmaps**
 
 
 **LASSO**
@@ -868,6 +967,9 @@
 **Linkage ("record linkage")**
 
 
+**Linked data**
+
+
 **Literate programming**
 
 
@@ -892,7 +994,7 @@
 **LSTM**
 
 
-**Lucene**
+**Lucene (Apache Lucene)**
 
 
 **Machine bias** (see "algorithmic bias")
@@ -955,7 +1057,13 @@
 **Mixed membership model** (also called an "admixture model")
 
 
+**Mixed models**
+
+
 **Mixture model**
+
+
+**Model-based**
 
 
 **Modifiable Areal Unit Problem (MAUP)**
@@ -980,6 +1088,12 @@
 
 
 **Multidimensional scaling (MDS)**
+
+
+**Multiple imputation**
+
+
+**Multiple systems estimation (MSE)**
 
 
 **Multiscale**
@@ -1021,6 +1135,9 @@
 **NER** (see "named entity recognition")
 
 
+**Netflix Prize**
+
+
 **Neural net / artifical neural net (ANN)**
 
 
@@ -1054,6 +1171,12 @@
 **Norm / normal / normalize / normalization**
 
 
+**Normal distribution*
+
+
+**Normal form**
+
+
 **NoSQL**
 
 
@@ -1064,6 +1187,9 @@
 
 
 **NP-hard**
+
+
+**Numerical computation**
 
 
 **NumPy stack**
@@ -1127,6 +1253,9 @@
 
 
 **pandas**
+
+
+**Panel data**
 
 
 **Parallel worlds design**
@@ -1204,6 +1333,9 @@
 **Prediction**
 
 
+**Preprocessing**
+
+
 **Principal Component Analysis (PCA)**
 
 
@@ -1211,6 +1343,9 @@
 
 
 **Privacy-preserving data-mining**
+
+
+**Probabilistic data structures**
 
 
 **Procrustes (analysis)**
@@ -1244,6 +1379,9 @@
 
 
 **RDD** in context of causal inference with observational data, see "regression discontinuity design." In context of computing with Spark, see "resilient distributed dataset."
+
+
+**RDF (Resource description format)**
 
 
 **RDS (R Data Serialization format)**
@@ -1309,7 +1447,13 @@
 **ReLU**
 
 
+**Remote sensing**
+
+
 **Replicability**
+
+
+**Report**
 
 
 **Representation (of data)**
@@ -1384,6 +1528,12 @@
 **Selection bias**
 
 
+**Semantic web**
+
+
+**Semantics**
+
+
 **Semi-parametric**
 
 
@@ -1393,7 +1543,13 @@
 **Semi-supervised learning**
 
 
+**Sensors**
+
+
 **SEO** Search engine optimization.
+
+
+**Sequence modeling**
 
 
 **Serialization (of data)**
@@ -1411,6 +1567,9 @@
 **Shingle / shingling**
 
 
+**Shrinkage**
+
+
 **Sigmoid (activation function)**
 
 
@@ -1421,6 +1580,9 @@
 
 
 **Singular**
+
+
+**Singular value decomposition (SVD)**
 
 
 **Sketches**
@@ -1441,6 +1603,9 @@
 **Social data analytics**
 
 
+**Social data stack**
+
+
 **Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
 
 
@@ -1450,7 +1615,10 @@
 **Softmax**
 
 
-**Solr**
+**Software carpentry**
+
+
+**Solr (Apache)**
 
 
 **Spark**
@@ -1510,6 +1678,9 @@
 **Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
+**Structural**
+
+
 **Structured data**
 
 
@@ -1522,13 +1693,22 @@
 **SUTVA**
 
 
+**SVD** (see "singular value decomposition")
+
+
 **SVM** (see "support vector machine")
 
 
 **Tensor**
 
 
+**TensorFlow**
+
+
 **Test data / test set** (see "training data")
+
+
+**tf.idf / tf-idf**
 
 
 **Tidy data / tidyverse**
@@ -1561,6 +1741,9 @@
 **Transition matrix**
 
 
+**Transparency**
+
+
 **Transportability**
 
 
@@ -1568,6 +1751,12 @@
 
 
 **Triangle inequality**
+
+
+**Trifacta Wrangler**
+
+
+**TSCS** Time series - cross-section
 
 
 **t-SNE**
@@ -1659,6 +1848,9 @@
 
 
 **Within-subjects design**
+
+
+**word2vec** Also doc2vec, sense2vec, skip-gram, CBOW, negative sampling
 
 
 **XML**
