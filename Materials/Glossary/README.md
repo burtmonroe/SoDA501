@@ -1045,7 +1045,10 @@
 **Non-parametric**
 
 
-**Non-stationary**
+**Non-reactive (measure)**
+
+
+**Non-stationary (time series)**
 
 
 **Norm / normal / normalize / normalization**
@@ -1583,6 +1586,9 @@
 
 
 **Unicode**
+
+
+**Unobtrusive (measure)**
 
 
 **Unsupervised learning**
