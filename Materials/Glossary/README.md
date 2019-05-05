@@ -286,7 +286,7 @@
 **Data structure**
 
 
-**Data wrangling / cleaning / scrubbing)
+**Data wrangling / cleaning / scrubbing)**
 
 
 **Database**
@@ -301,7 +301,7 @@
 **De-anonymization**
 
 
-**Decomposition*
+**Decomposition**
 
 
 **Deep learning**
@@ -616,7 +616,7 @@
 **Inner product**
 
 
-**Integrated**
+**Integrated / integration**
 
 
 **Internal validity**
@@ -718,7 +718,7 @@
 **Layer**
 
 
-**Layer view (of geographic data)
+**Layer view (of geographic data)**
 
 
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
@@ -916,7 +916,7 @@
 **Object-oriented programming**
 
 
-**Object view (of geographic data)*
+**Object view (of geographic data)**
 
 
 **Observational (data, design)**
