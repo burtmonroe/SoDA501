@@ -841,6 +841,12 @@
 **IRB** Institutional Review Board.
 
 
+**IRT** (see "item response theory")
+
+
+**Item response theory (IRT) / IRT model**
+
+
 **Jaccard similarity**
 
 
