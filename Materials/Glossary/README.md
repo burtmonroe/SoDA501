@@ -187,6 +187,9 @@
 **CCA** (see "canonical correlation analysis")
 
 
+**Characteristic matrix**
+
+
 **Chunk**
 
 
@@ -242,6 +245,9 @@
 
 
 **Concurrent validity**
+
+
+**Constituency parse**
 
 
 **Construct validity**
@@ -361,6 +367,9 @@
 **Delimited file**
 
 
+**Dependency parse**
+
+
 **Difference-in-differences (DID)**
 
 
@@ -394,6 +403,9 @@
 **DOM**
 
 
+**Double sampling**
+
+
 **Drill**
 
 
@@ -407,6 +419,9 @@
 
 
 **Drift**
+
+
+**Ecological momentary assessment**
 
 
 **Edit distance**
@@ -511,6 +526,9 @@
 **Feature selection**
 
 
+**Field**
+
+
 **Field view (of geographic data)**
 
 
@@ -527,6 +545,9 @@
 
 
 **Fourier (transform, operator)**
+
+
+**FP-tree**
 
 
 **Frobenius norm**
@@ -557,6 +578,9 @@
 
 
 **Git**
+
+
+**Gold standard**
 
 
 **Google BigQuery**
@@ -593,6 +617,9 @@
 
 
 **Grid computing**
+
+
+**Ground truth**
 
 
 **Hamming distance**
@@ -734,6 +761,9 @@
 
 
 **Jupyter / Jupyter notebooks**
+
+
+**k-shingle**
 
 
 **Kagglification**
@@ -916,6 +946,9 @@
 **MinHash**
 
 
+**Minimum spanning tree**
+
+
 **Missing data / missingness**
 
 
@@ -1003,7 +1036,7 @@
 **Node**
 
 
-**Non-metric distance function**
+**Non-metric (distance / similarity function)**
 
 
 **Non-negative matrix factorization (NMF)**
@@ -1097,6 +1130,9 @@
 
 
 **Parametric**
+
+
+**Parse tree**
 
 
 **Parsing**
@@ -1235,6 +1271,9 @@
 
 
 **Redis**
+
+
+**Redundancy**
 
 
 **Regression**
@@ -1381,6 +1420,9 @@
 **Singular**
 
 
+**Sketches**
+
+
 **Smoothing**
 
 
@@ -1501,6 +1543,9 @@
 **Toponymy** The study of place names.
 
 
+**Total survey error**
+
+
 **Trace**
 
 
@@ -1616,3 +1661,4 @@
 **XSEDE** "Extreme Science and Engineering Discovery Environment"
 
 
+**Zone**
