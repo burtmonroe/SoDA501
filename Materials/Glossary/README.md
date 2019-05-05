@@ -34,7 +34,7 @@
 **AI** (see "artificial intelligence")
 
 
-**AIC**
+**AIC** Akaike Information Criterion. "AIC is an estimator of the relative quality of statistical models for a given set of data." (Wikipedia). Related and often compared to BIC. Asymptotically equivsalent to leave-one-out cross-validation in some models, including OLS.
 
 
 **Airflow / Apache Airflow**
@@ -65,6 +65,9 @@
 
 
 **Association**
+
+
+**ATE** Average treatment effect.
 
 
 **AUC** Area under curve.
@@ -166,7 +169,7 @@
 **Breadth-first search**
 
 
-**Bridges**
+**Bridges** XSEDE computing resource for large datasets, run by Pittsburgh Supercomputing Center (PSC)
 
 
 **Calibration**
@@ -586,7 +589,7 @@
 **Filter**
 
 
-**First class object**
+**First-class function / first-class citizen (in programming)**
 
 
 **Fixed effects**
@@ -722,6 +725,9 @@
 
 
 **Hierarchical**
+
+
+**Higher-order functions*
 
 
 **HITS**
@@ -907,6 +913,9 @@
 **L2-norm / L2 regularization**
 
 
+**lambda operator / function**
+
+
 **Laplace (distribution / prior)**
 
 
@@ -953,6 +962,9 @@
 
 
 **Lemma / lemmatization**
+
+
+**Levels of measurement**
 
 
 **Lifelong learning**
@@ -1493,6 +1505,9 @@
 
 
 **Ridge regression**
+
+
+**RMSE** Root mean squared error.
 
 
 **RNN** (see "recurrent neural net")
