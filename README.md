@@ -6,26 +6,26 @@
 * [PDF of partial Spring 2019 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2019.pdf)
 * [PDF of complete Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
 
-### Guest Speakers & *Talks of interest* (2019)
+### Guest Speakers & *Talks of interest* (Spring 2019)
 
-* Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters
-* Jan 29: Sarah Rajtmajer (IST / Informatics / Rock Ethics) - "Beyond the Crisis: Research Ethics in the Age of Open Data"
-* Feb 5: Scott Yabiku (Sociology) (2:40 start) - "Comparing Modes of Retrospective Activity Space Data Collection."
+* *Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters*
+* **Jan 29: Sarah Rajtmajer (IST / Informatics / Rock Ethics) - "Beyond the Crisis: Research Ethics in the Age of Open Data"**
+* **Feb 5: Scott Yabiku (Sociology) (2:40 start) - "Comparing Modes of Retrospective Activity Space Data Collection."**
 * Feb 12: (CLASS CANCELLED BY WEATHER)
-* Feb 19: Kenneth (Ting-Hao) Huang (IST / Informatics) - "Crowdsourcing and Crowd-AI Systems."
+* **Feb 19: Kenneth (Ting-Hao) Huang (IST / Informatics) - "Crowdsourcing and Crowd-AI Systems."**
 * *Feb 21 (THURSDAY): PRI Innovative Methods Working Group Speaker, Scott Yabiku - "Concepts for Big Data Analysis and Examples from Penn State’s Advanced CyberInfrastructure (ICS-ACI).”*
-* *Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan)*
+* *Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan) - "Infinite Regression Discontinuity"*
 * *Feb 26 (AFTER CLASS): BERD Recent Topics in Research Methods Seminar Series, Nilam Ram (HDFS) - "“Analysis of Experience Sampling and Ecological Momentary Assessment Data, Part 2: Using Multilevel Models of Intraindividual Covariation."* 4:00
 * Mar 5: SPRING BREAK
-* Mar 19: Anthony Robinson (Geography) (1:00 start) - "Exploring the Presence of Absence in Big Social Data."
+* **Mar 19: Anthony Robinson (Geography) (1:00 start) - "Exploring the Presence of Absence in Big Social Data."**
 * *Apr 1: (MONDAY): C-SoDA Speaker, Amelia Hoover Green (Politics, Drexel) / ICS Symposium Day*
-* Apr 9: Corina Graif (Criminology / Sociology) - "Crime, Neighborhoods, Networks, and Modern Urban Data."
+* **Apr 9: Corina Graif (Criminology / Sociology) - "Crime, Neighborhoods, Networks, and Modern Urban Data."**
 * *Apr 10 (WEDNESDAY): C-SoDA Speaker, Yu-Ru Lin (Computing & Information, Pittsburgh)*
-* Apr 16: Amulya Yadav (IST / Informatics) - "AI for Social Good." 
+* **Apr 16: Amulya Yadav (IST / Informatics) - "AI for Social Good."** 
 * *Apr 25: (THURSDAY): Clogg Lecture, Michael Sobel.
 * *Apr 27 (SATURDAY): New Faces in Political Methodology Conference*
 
-### Guest Speakers (2018)
+### Guest Speakers (Spring 2018)
 
 * Feb 1: Bing Pan (RPTM), "Big Data and Forecasting in Tourism."
 * Feb 8: Clio Andris (GEOG),  "What AirBnB and Yelp Can Teach Us about Human Behavior in Cities."
