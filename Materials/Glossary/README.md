@@ -469,6 +469,9 @@
 **Ecological momentary assessment**
 
 
+**Econometrics**
+
+
 **Edit distance**
 
 
@@ -703,7 +706,10 @@
 **HBase**
 
 
-**HDFS**
+**HCI** Human-computer interaction.
+
+
+**HDFS** Hadoop distributed file system. (also, around here, "Human Development and Family Studies")
 
 
 **Heteroskedasticity**
@@ -1000,6 +1006,9 @@
 **Machine bias** (see "algorithmic bias")
 
 
+**Machine learning**
+
+
 **Manifest**
 
 
@@ -1102,6 +1111,9 @@
 **Multithreaded**
 
 
+**Multivariate statistics**
+
+
 **Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
 
 
@@ -1163,6 +1175,9 @@
 
 
 **Non-reactive (measure)**
+
+
+**Non-rectangular data**
 
 
 **Non-stationary (time series)**
@@ -1336,10 +1351,13 @@
 **Preprocessing**
 
 
+**Principal angle**
+
+
 **Principal Component Analysis (PCA)**
 
 
-**Priors**
+**Prior**
 
 
 **Privacy-preserving data-mining**
@@ -1663,6 +1681,9 @@
 **Statistical disclosure limitations**
 
 
+**Statistical learning**
+
+
 **Stemming / stem**
 
 
@@ -1763,6 +1784,9 @@
 
 
 **tsv**
+
+
+**Tucker decomposition**
 
 
 **Turkers**
