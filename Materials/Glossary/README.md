@@ -91,7 +91,7 @@
 **Batch**
 
 
-**Bayes / Bayesian (statistics, estimation, theory)**
+**Bayes / Bayesian (statistics, estimation, theory, updating)**
 
 
 **Between-subjects design**
@@ -110,6 +110,9 @@
 
 
 **Big-O notation**
+
+
+**Bigram** An n-gram of length two. (See "n-gram.")
 
 
 **Bit sampling**
@@ -133,10 +136,16 @@
 **Breadth-first search**
 
 
+**Bridges**
+
+
 **Calibration**
 
 
 **Canonical correlation analysis (CCA)**
+
+
+**CAPCHA**
 
 
 **Case-folding**
@@ -164,6 +173,9 @@
 
 
 **Classification / classifier**
+
+
+**Clojure**
 
 
 **Cloud**
@@ -236,6 +248,9 @@
 
 
 **Covariance / covariance matrix**
+
+
+**Cross entropy**
 
 
 **Cross product**
@@ -332,6 +347,9 @@
 
 
 **Distributed sensors**
+
+
+**DOM**
 
 
 **Dropout**
@@ -436,6 +454,9 @@
 **Feature selection**
 
 
+**Field view (of geographic data)**
+
+
 **Filter**
 
 
@@ -508,10 +529,19 @@
 **Hash / hashing**
 
 
+**Haskell**
+
+
 **HDFS**
 
 
+**Heteroskedasticity**
+
+
 **Hidden layer / hidden nodes**
+
+
+**Hierarchical**
 
 
 **HITS**
@@ -545,6 +575,9 @@
 
 
 **Identification / identification problem**
+
+
+**Identity matrix**
 
 
 **Ill-posed (problem)**
@@ -604,10 +637,19 @@
 **Jaccard similarity**
 
 
+**Javascript**
+
+
+**Jetstream**
+
+
 **Johnson-Lindenstrauss lemma**
 
 
 **JSON**
+
+
+**Julia**
 
 
 **Kagglification**
@@ -637,10 +679,10 @@
 **Key-value store**
 
 
-**KL-divergence**
+**KL-divergence** (see "Kullback-Leibler divergence")
 
 
-**Leakage (of data)**
+**Kullback-Liebler divergence** (aka "relative entropy")
 
 
 **L1-norm / L1 regulariation**
@@ -676,7 +718,13 @@
 **Layer**
 
 
+**Layer view (of geographic data)
+
+
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
+
+
+**Leakage (of data)**
 
 
 **Leave-one-out cross-validation (LOOCV)**
@@ -721,6 +769,9 @@
 **Loss function**
 
 
+**LSTM**
+
+
 **Machine bias** (see "algorithmic bias")
 
 
@@ -760,6 +811,9 @@
 **MinHash**
 
 
+**Missing data / missingness**
+
+
 **Mixed membership model** (also called an "admixture model")
 
 
@@ -775,6 +829,9 @@
 **Moore-Penrose pseudoinverse**
 
 
+**Morpheme / morphology**
+
+
 **MPI**
 
 
@@ -788,6 +845,9 @@
 
 
 **Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
+
+
+**MWE** Multiword entity. (See "entity.")
 
 
 **Naive Bayes (classifier)**
@@ -848,6 +908,15 @@
 
 
 **NP-hard**
+
+
+**Object**
+
+
+**Object-oriented programming**
+
+
+**Object view (of geographic data)*
 
 
 **Observational (data, design)**
@@ -1086,6 +1155,9 @@
 **Sampling**
 
 
+**Scala**
+
+
 **Scatter matrix**
 
 
@@ -1128,6 +1200,9 @@
 **Sigmoid (activation function)**
 
 
+**Signal processing**
+
+
 **Smoothing**
 
 
@@ -1135,6 +1210,12 @@
 
 
 **Social**
+
+
+**Social data**
+
+
+**Social data analytics**
 
 
 **Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
@@ -1230,6 +1311,9 @@
 **Topic model**
 
 
+**Toponymy** The study of place names.
+
+
 **Trace**
 
 
@@ -1312,6 +1396,9 @@
 
 
 **Virtualization**
+
+
+**Visual analytics**
 
 
 **Voronoi diagram / tesselation** aka "proximity polygons"
