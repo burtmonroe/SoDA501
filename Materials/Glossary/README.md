@@ -37,6 +37,9 @@
 **AIC**
 
 
+**Airflow / Apache Airflow**
+
+
 **Algorithmic bias / algorithmic fairness / machine bias**
 
 
@@ -50,6 +53,9 @@
 
 
 **Anonymous function**
+
+
+**Apache Software Foundation**
 
 
 **API** Application programming interface.
@@ -68,6 +74,9 @@
 
 
 **AWS** Amazon Web Services.
+
+
+**Azure**
 
 
 **B-tree**
@@ -94,6 +103,9 @@
 **Bayes / Bayesian (statistics, estimation, theory, updating)**
 
 
+**Beam**
+
+
 **Between-subjects design**
 
 
@@ -112,10 +124,19 @@
 **Big-O notation**
 
 
+**BigQuery** see "Google BigQuery"
+
+
 **Bigram** An n-gram of length two. (See "n-gram.")
 
 
+**Bigtable**
+
+
 **Bit sampling**
+
+
+**Blind source separation**
 
 
 **Blocking**
@@ -196,10 +217,16 @@
 **Coding**
 
 
-**Column-oriented database**
+**Collaborative filtering**
+
+
+**Column-oriented database / column store**
 
 
 **Community / community detection**
+
+
+**Compositional / compositional data**
 
 
 **Compression**
@@ -242,6 +269,12 @@
 
 
 **Cosine similarity**
+
+
+**Couchbase**
+
+
+**CouchDB**
 
 
 **Counterfactual**
@@ -295,7 +328,13 @@
 **Database management system**
 
 
+**Dataflow**
+
+
 **Data-intensive**
+
+
+**data.table**
 
 
 **De-anonymization**
@@ -349,7 +388,13 @@
 **Distributed sensors**
 
 
+**Docker**
+
+
 **DOM**
+
+
+**Drill**
 
 
 **Dropout**
@@ -377,6 +422,9 @@
 
 
 **Elastic net**
+
+
+**Elasticsearch**
 
 
 **EM algorithm**
@@ -412,7 +460,13 @@
 **ERGM** (see "Exponential Random Graph Model.") 
 
 
+**ETL** (see "Extract, transform, load")
+
+
 **Euclidean (distance, norm)**
+
+
+**Event data**
 
 
 **Exceed OnDemand** Software -- remote access client for X-windowing, recommended / provided by ICS for use on the ACI systems. Not to be confused with "XSEDE", the consortium of remote computing resources funded by NSF (and generally facilitiated by ICS-ACI).
@@ -422,6 +476,9 @@
 
 
 **External validity**
+
+
+**Extract, transform, load (ETL)**
 
 
 **F1**
@@ -493,7 +550,25 @@
 **Gibbs sampling**
 
 
+**Giraph / Apache Giraph**
+
+
 **GIS**
+
+
+**Git**
+
+
+**Google BigQuery**
+
+
+**Google Correlate**
+
+
+**Google Ngram Viewer**
+
+
+**Google Trends**
 
 
 **GPU**
@@ -530,6 +605,9 @@
 
 
 **Haskell**
+
+
+**HBase**
 
 
 **HDFS**
@@ -572,6 +650,9 @@
 
 
 **IDE** Integrated development environment.
+
+
+**Impala**
 
 
 **Identification / identification problem**
@@ -652,6 +733,9 @@
 **Julia**
 
 
+**Jupyter / Jupyter notebooks**
+
+
 **Kagglification**
 
 
@@ -724,16 +808,22 @@
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
 
 
+**Leaflet**
+
+
 **Leakage (of data)**
 
 
 **Leave-one-out cross-validation (LOOCV)**
 
 
-**Lemmatization / lemma**
+**Lemma / lemmatization**
 
 
 **Lifelong learning**
+
+
+**Likelihood**
 
 
 **Linear subspace**
@@ -772,6 +862,9 @@
 **LSTM**
 
 
+**Lucene**
+
+
 **Machine bias** (see "algorithmic bias")
 
 
@@ -781,7 +874,13 @@
 **Manifold**
 
 
+**Mahout**
+
+
 **Map/reduce, MapReduce**
+
+
+**MariaDB**
 
 
 **Markov (process, chain, model)**
@@ -808,6 +907,12 @@
 **Measurement model**
 
 
+**Memcached**
+
+
+**Metric**
+
+
 **MinHash**
 
 
@@ -826,6 +931,9 @@
 **Moments**
 
 
+**MongoDB**
+
+
 **Moore-Penrose pseudoinverse**
 
 
@@ -841,6 +949,9 @@
 **Multidimensional scaling (MDS)**
 
 
+**Multiscale**
+
+
 **Multithreaded**
 
 
@@ -848,6 +959,9 @@
 
 
 **MWE** Multiword entity. (See "entity.")
+
+
+**MySQL**
 
 
 **Naive Bayes (classifier)**
@@ -868,6 +982,9 @@
 **Negative sampling**
 
 
+**Neo4j**
+
+
 **NER** (see "named entity recognition")
 
 
@@ -884,6 +1001,9 @@
 
 
 **Node**
+
+
+**Non-metric distance function**
 
 
 **Non-negative matrix factorization (NMF)**
@@ -908,6 +1028,9 @@
 
 
 **NP-hard**
+
+
+**NumPy stack**
 
 
 **Object**
@@ -940,6 +1063,9 @@
 **Open science**
 
 
+**OpenStreetMap**
+
+
 **Orthogonal**
 
 
@@ -958,10 +1084,13 @@
 **Over-determined**
 
 
-**Over-fitting*
+**Over-fitting**
 
 
 **PageRank**
+
+
+**pandas**
 
 
 **Parallel worlds design**
@@ -976,6 +1105,9 @@
 **Pasteur's quadrant**
 
 
+**Pattern**
+
+
 **Pattern recognition**
 
 
@@ -985,7 +1117,7 @@
 **Pickle (pkl)**
 
 
-**Pipe operator**
+**Pipe / pipe operator**
 
 
 **Pipelines**
@@ -1000,10 +1132,22 @@
 **POS (in NLP)** Part of speech. A "POS tagger" attempts to annotate the tokens/words of input sentences / text with their part of speech.
 
 
+**Positive definite**
+
+
+**Posterior**
+
+
+**PostGIS**
+
+
+**PostgreSQL**
+
+
 **Posting**
 
 
-**PostSQL**
+**Post-SQL**
 
 
 **Post-stratification**
@@ -1042,7 +1186,13 @@
 **Quasi-experiment**
 
 
+**QGIS**
+
+
 **Query**
+
+
+**R**
 
 
 **Random forests**
@@ -1058,6 +1208,7 @@
 
 
 **RDS (R Data Serialization format)**
+
 
 **Record linkage** - (see "linkage")
 
@@ -1081,6 +1232,9 @@
 
 
 **Red-team dynamics / blue-team dynamics**
+
+
+**Redis**
 
 
 **Regression**
@@ -1149,6 +1303,9 @@
 **Rotation**
 
 
+**RStudio**
+
+
 **SAC** (see "Split-Apply-Combine")
 
 
@@ -1158,13 +1315,25 @@
 **Scala**
 
 
+**Scale**
+
+
+**Scaling**
+
+
 **Scatter matrix**
 
 
 **Schema**
 
 
+**scikit-learn**
+
+
 **Script**
+
+
+**SciPy**
 
 
 **Segmentation**
@@ -1197,10 +1366,19 @@
 **Shell**
 
 
+**Shingle / shingling**
+
+
 **Sigmoid (activation function)**
 
 
 **Signal processing**
+
+
+**Simplex**
+
+
+**Singular**
 
 
 **Smoothing**
@@ -1225,6 +1403,9 @@
 
 
 **Softmax**
+
+
+**Solr**
 
 
 **Spark**
@@ -1257,6 +1438,9 @@
 **SQL**
 
 
+**SQLite**
+
+
 **Stationarity**
 
 
@@ -1269,7 +1453,7 @@
 **Stemming / stem**
 
 
-**STM** Structured Topic Model
+**STM** Structural Topic Model
 
 
 **Stochastic gradient descent / SGD**
@@ -1308,6 +1492,9 @@
 **Tikhonov regularization**
 
 
+**Tile**
+
+
 **Topic model**
 
 
@@ -1330,6 +1517,9 @@
 
 
 **Treatment / treatment effect**
+
+
+**Triangle inequality**
 
 
 **t-SNE**
@@ -1395,6 +1585,10 @@
 **Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
 
 
+
+**Virtual machine**
+
+
 **Virtualization**
 
 
@@ -1402,6 +1596,9 @@
 
 
 **Voronoi diagram / tesselation** aka "proximity polygons"
+
+
+**Wavelet**
 
 
 **Web driver**
