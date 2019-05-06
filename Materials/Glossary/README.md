@@ -10,25 +10,31 @@
 **ACI** Advanced Cyber-infrastructure. The cluster computing resources provided on Penn State's campus by ICS.
 
 
-**Activation function**
+**activation function**
 
 
-**Active learning**
+**active learning**
 
 
-**Adjacency matrix**
+**adjacency matrix**
 
 
-**Admixture model** (see "mixed membership model")
+**admixture model** (see "mixed membership model")
 
 
-**Administrative records**
+**administrative data / records**
 
 
-**Adversarial (learning, examples)**
+**adversarial (learning, examples)**
 
 
-**Aggregation**
+**affine transformation**
+
+
+**affinity**
+
+
+**aggregation**
 
 
 **AI** (see "artificial intelligence")
@@ -40,19 +46,19 @@
 **Airflow / Apache Airflow**
 
 
-**Algorithmic bias / algorithmic fairness / machine bias**
+**algorithmic bias / algorithmic fairness / machine bias**
 
 
-**Algorithmic confounding**
+**algorithmic confounding**
 
 
-**Amplified asking**
+**amplified asking**
 
 
 **ANN** -- Artificial neural net (see "neural net")
 
 
-**Anonymous function**
+**anonymous function**
 
 
 **Apache Software Foundation**
@@ -61,19 +67,19 @@
 **API** Application programming interface.
 
 
-**Artificial intelligence (AI)**
+**artificial intelligence (AI)**
 
 
-**Association**
+**association**
 
 
 **ATE** Average treatment effect.
 
 
-**AUC** Area under curve.
+**AUC** Area under the ROC curve.
 
 
-**Autoencoder**
+**autoencoder**
 
 
 **awk**
@@ -82,10 +88,10 @@
 **AWS** Amazon Web Services.
 
 
-**Azure**
+**Azure / Microsoft Azure**
 
 
-**B-tree**
+**B-tree** "... a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children ... It is commonly used in databases and file systems." (https://en.wikipedia.org/wiki/B-tree). See explainer on "data structures."
 
 
 **Backpropagation**
@@ -730,6 +736,9 @@
 **Higher-order functions*
 
 
+**Hilbert space**
+
+
 **HITS**
 
 
@@ -1312,6 +1321,9 @@
 **Pattern recognition**
 
 
+**pdf** (stands for "portable desription format.") "Where data goes to die." -- Simon Rogers (Data editor, Google News Lab).
+
+
 **Persistence**
 
 
@@ -1480,7 +1492,7 @@
 **Reliability**
 
 
-**ReLU**
+**ReLU (Rectified Linear Unit)**
 
 
 **Remote sensing**
@@ -1676,6 +1688,9 @@
 
 
 **Spatial autocorrelation**
+
+
+**Spectrum / spectral theory**
 
 
 **Spider trap**
