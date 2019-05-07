@@ -271,6 +271,9 @@
 **collaborative filtering**
 
 
+**collective intelligence**
+
+
 **column-oriented database / column store**
 
 
