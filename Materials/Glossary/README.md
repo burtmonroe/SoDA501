@@ -184,6 +184,9 @@
 **blue-team dynamics** (see "red-team dynamics")
 
 
+**Bonferroni correction**
+
+
 **Boolean**
 
 
@@ -284,6 +287,9 @@
 
 
 **computational social science**
+
+
+**confounder / confounding**
 
 
 **confusion matrix**
@@ -451,6 +457,9 @@
 **delimited file**
 
 
+**demand effect**
+
+
 **dependency parse**
 
 
@@ -601,6 +610,9 @@
 **exclusion restriction**
 
 
+**experiment**
+
+
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
 
 
@@ -697,6 +709,9 @@
 **GAN** (see "generative adversarial network")
 
 
+**garden of forking paths**
+
+
 **Gaussian**
 
 
@@ -788,6 +803,9 @@
 
 
 **Haskell**
+
+
+**Hawthorne effect**
 
 
 **HBase**
@@ -941,6 +959,9 @@
 
 
 **Inverted index**
+
+
+**intervening variable**
 
 
 **IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
@@ -1105,6 +1126,9 @@
 **Linked data**
 
 
+**list experiment**
+
+
 **Literate programming**
 
 
@@ -1135,10 +1159,16 @@
 **Lucene (Apache Lucene)**
 
 
+**Luigi**
+
+
 **Machine bias** (see "algorithmic bias")
 
 
 **Machine learning**
+
+
+**makefile**
 
 
 **Manifest**
@@ -1183,6 +1213,9 @@
 **mechanism**
 
 
+**mediator / mediating variable**
+
+
 **Memcached**
 
 
@@ -1210,6 +1243,9 @@
 **Model-based**
 
 
+**moderator / moderating variable**
+
+
 **Modifiable Areal Unit Problem (MAUP)**
 
 
@@ -1223,6 +1259,9 @@
 
 
 **Morpheme / morphology**
+
+
+**MovieLens**
 
 
 **MPI** Message Passing Interface.
@@ -1240,6 +1279,9 @@
 **multilevel modeling**
 
 
+**multiple comparisons**
+
+
 **Multiple imputation**
 
 
@@ -1253,6 +1295,9 @@
 
 
 **Multivariate statistics**
+
+
+**MusicLab**
 
 
 **Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
@@ -1310,6 +1355,9 @@
 
 
 **noise**
+
+
+**noncompliance**
 
 
 **Non-metric (distance / similarity function)**
@@ -1419,6 +1467,9 @@
 **Over-fitting**
 
 
+**p-hacking**
+
+
 **PageRank**
 
 
@@ -1453,6 +1504,9 @@
 
 
 **persistence**
+
+
+**perturb-and-observe experiment**
 
 
 **pickle (pkl)**
@@ -1512,6 +1566,9 @@
 **preprocessing**
 
 
+**pre-registration**
+
+
 **principal angle**
 
 
@@ -1557,7 +1614,13 @@
 **Random projections**
 
 
+**randomized controlled experiment / trial**
+
+
 **Raster**
+
+
+**RCT** randomized controlled trial.
 
 
 **RDD** in context of causal inference with observational data, see "regression discontinuity design." In context of computing with Spark, see "resilient distributed dataset."
@@ -1630,6 +1693,9 @@
 
 
 **Remote sensing**
+
+
+**replace, refine, reduce**
 
 
 **Replicability**
@@ -1794,6 +1860,9 @@
 **SNA** Social network analysis
 
 
+**snakemake**
+
+
 **Social**
 
 
@@ -1849,6 +1918,9 @@
 
 
 **Split-Apply-Combine (SAC)**
+
+
+**spurious**
 
 
 **SQL**
@@ -2076,6 +2148,8 @@
 
 **Weights**
 
+
+**WEIRD** Western, Educated, Industrialized, Rich, and Democratic. A critique of the typical pool of participants for lab experiments.
 
 **Within-subjects design**
 
