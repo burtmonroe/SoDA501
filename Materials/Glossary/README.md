@@ -7,6 +7,9 @@
 **A/B testing**
 
 
+**accuracy**
+
+
 **ACI** Advanced Cyber-infrastructure. The cluster computing resources provided on Penn State's campus by ICS.
 
 
@@ -25,7 +28,7 @@
 **administrative data / records**
 
 
-**adversarial (learning, examples)**
+**adversarial (learning, examples, network)**
 
 
 **affine transformation**
@@ -50,6 +53,9 @@
 
 
 **algorithmic confounding**
+
+
+**AlphaGo**
 
 
 **amplified asking**
@@ -80,6 +86,9 @@
 
 
 **autoencoder**
+
+
+**auxiliary information**
 
 
 **awk**
@@ -158,6 +167,9 @@
 
 
 **bit sampling**
+
+
+**black box**
 
 
 **blind source separation**
@@ -326,6 +338,12 @@
 
 
 **covariance / covariance matrix**
+
+
+**coverage bias**
+
+
+**coverage error**
 
 
 **cross entropy**
@@ -643,6 +661,9 @@
 **flat file**
 
 
+**floating point**
+
+
 **forecasting**
 
 
@@ -653,6 +674,12 @@
 
 
 **FP-tree**
+
+
+**frame**
+
+
+**frame population**
 
 
 **Frobenius norm**
@@ -667,10 +694,16 @@
 **Games with a purpose / gamification**
 
 
+**GAN** (see "generative adversarial network")
+
+
 **Gaussian**
 
 
 **Generalization error**
+
+
+**generative adversarial network (GAN)**
 
 
 **Generative model**
@@ -766,7 +799,10 @@
 **HDFS** Hadoop distributed file system. (also, around here, "Human Development and Family Studies")
 
 
-**heterogeneity / heterogeneous**
+**heterogeneity**
+
+
+**heterogeneous treatment effects**
 
 
 **Heteroskedasticity**
@@ -791,6 +827,9 @@
 
 
 **Hive**
+
+
+**homogeneous-response-propensities-within-group assumption**
 
 
 **Homophily**
@@ -911,6 +950,9 @@
 
 
 **IRT** (see "item response theory")
+
+
+**item nonresponse**
 
 
 **Item response theory (IRT) / IRT model**
@@ -1183,13 +1225,19 @@
 **Morpheme / morphology**
 
 
-**MPI**
+**MPI** Message Passing Interface.
+
+
+**MRP / "Mister P"** Multilevel regression and poststratification.
 
 
 **MTurk**
 
 
 **Multidimensional scaling (MDS)**
+
+
+**multilevel modeling**
 
 
 **Multiple imputation**
@@ -1273,10 +1321,16 @@
 **Non-parametric**
 
 
+**non-probability sample**
+
+
 **Non-reactive (measure)**
 
 
 **Non-rectangular data**
+
+
+**Nonresponse bias**
 
 
 **Non-stationary (time series)**
@@ -1629,7 +1683,16 @@
 **SAC** (see "Split-Apply-Combine")
 
 
-**Sampling**
+**sample population**
+
+
+**sampling**
+
+
+**sampling error**
+
+
+**sampling frame**
 
 
 **Scala**
@@ -1815,6 +1878,9 @@
 **Stochastic gradient descent / SGD**
 
 
+**strata**
+
+
 **Stratified sampling**
 
 
@@ -1840,6 +1906,9 @@
 
 
 **SVM** (see "support vector machine")
+
+
+**systematic sample**
 
 
 **systemic drift**
@@ -1927,6 +1996,9 @@
 
 
 **Unicode**
+
+
+**unit nonresponse**
 
 
 **Unobtrusive (measure)**
