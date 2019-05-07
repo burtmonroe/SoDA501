@@ -217,6 +217,9 @@
 **case-folding**
 
 
+**cast**
+
+
 **causal discovery**
 
 
@@ -775,6 +778,9 @@
 **Gram matrix**
 
 
+**granularity**
+
+
 **Graph**
 
 
@@ -791,6 +797,9 @@
 
 
 **Ground truth**
+
+
+**grouped summaries**
 
 
 **H2O**
@@ -994,6 +1003,9 @@
 **Johnson-Lindenstrauss lemma**
 
 
+**join**
+
+
 **JSON**
 
 
@@ -1150,6 +1162,9 @@
 **Logistic regression / logit**
 
 
+**long data**
+
+
 **Longitudinal**
 
 
@@ -1219,7 +1234,16 @@
 **mediator / mediating variable**
 
 
+**melt**
+
+
 **Memcached**
+
+
+**merge**
+
+
+**metadata**
 
 
 **Metric**
@@ -1521,6 +1545,9 @@
 **pipelines**
 
 
+**pivot table**
+
+
 **placebo / placebo test**
 
 
@@ -1590,6 +1617,9 @@
 **Procrustes (analysis)**
 
 
+**profiling (data profiling)** "Data profiling is the process of examining the data available from an existing information source ... and collecting statistics or informative summaries about that data." (Wikipedia) This is also known as "data archeology", "data assessment". Individual records profiling can consist of syntactic profiling (making sure entries fit broad format constraints) or semantic profiling (making sure entries make sense). Set-based profiling involves examining the distribution of values of a variable/field, and parallels the social science practice of providing "descriptive statistics." See Rattenbury, et al. (2017) Principles of Data Wrangling. 
+
+
 **projection**
 
 
@@ -1639,6 +1669,9 @@
 
 
 **Recall**
+
+
+**recast**
 
 
 **Recommender system**
@@ -2153,6 +2186,10 @@
 
 
 **WEIRD** Western, Educated, Industrialized, Rich, and Democratic. A critique of the typical pool of participants for lab experiments.
+
+
+**wide data**
+
 
 **Within-subjects design**
 
