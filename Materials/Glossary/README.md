@@ -121,6 +121,12 @@
 **Beam**
 
 
+**behavioral drift**
+
+
+**behavioral science**
+
+
 **Berkeley Data Analytics Stack (BDAS)**
 
 
@@ -430,6 +436,9 @@
 **Directed acyclic graph / DAG**
 
 
+**dirty (data)**
+
+
 **Discriminant validity**
 
 
@@ -451,10 +460,16 @@
 **Docker**
 
 
+**document-term-matrix / document-frequency matrix**
+
+
 **DOM**
 
 
 **Double sampling**
+
+
+**drift**
 
 
 **Drill**
@@ -470,6 +485,9 @@
 
 
 **Drift**
+
+
+**DTM** (see "document-term matrix")
 
 
 **Duplicate detection**
@@ -544,6 +562,9 @@
 **Exceed OnDemand** Software -- remote access client for X-windowing, recommended / provided by ICS for use on the ACI systems. Not to be confused with "XSEDE", the consortium of remote computing resources funded by NSF (and generally facilitiated by ICS-ACI).
 
 
+**exclusion restriction**
+
+
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
 
 
@@ -602,6 +623,9 @@
 
 
 **Flat file**
+
+
+**forecasting**
 
 
 **Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
@@ -721,6 +745,9 @@
 **HDFS** Hadoop distributed file system. (also, around here, "Human Development and Family Studies")
 
 
+**heterogeneity / heterogeneous**
+
+
 **Heteroskedasticity**
 
 
@@ -790,7 +817,7 @@
 **Image filter / image kernel**
 
 
-**Imputation**
+**imputation**
 
 
 **Incidence matrix**
@@ -827,6 +854,9 @@
 
 
 **Instance construction**
+
+
+**instrumental variable (IV)**
 
 
 **Integrated / integration**
@@ -1075,6 +1105,9 @@
 **Measurement model**
 
 
+**mechanism**
+
+
 **Memcached**
 
 
@@ -1270,6 +1303,8 @@
 **OpenStreetMap**
 
 
+**operationalize / operationalization**
+
 **Orthogonal**
 
 
@@ -1297,58 +1332,61 @@
 **pandas**
 
 
-**Panel data**
+**panel data**
 
 
-**Parallel worlds design**
+**parallel worlds design**
 
 
-**Parametric**
+**parametric**
 
 
-**Parse tree**
+**parse tree**
 
 
-**Parsing**
+**parsing**
 
 
 **Pasteur's quadrant**
 
 
-**Pattern**
+**pattern**
 
 
-**Pattern recognition**
+**pattern recognition**
 
 
 **pdf** (stands for "portable desription format.") "Where data goes to die." -- Simon Rogers (Data editor, Google News Lab).
 
 
-**Persistence**
+**persistence**
 
 
-**Pickle (pkl)**
+**pickle (pkl)**
 
 
-**Pipe / pipe operator**
+**pipe / pipe operator**
 
 
-**Pipelines**
+**pipelines**
 
 
-**Placebo / placebo test**
+**placebo / placebo test**
 
 
 **PMI** Pointwise mutual information. (See "mutual information")
 
 
+**population drift**
+
+
 **POS (in NLP)** Part of speech. A "POS tagger" attempts to annotate the tokens/words of input sentences / text with their part of speech.
 
 
-**Positive definite**
+**positive definite**
 
 
-**Posterior**
+**posterior**
 
 
 **PostGIS**
@@ -1357,25 +1395,25 @@
 **PostgreSQL**
 
 
-**Posting**
+**posting**
 
 
-**Post-SQL**
+**post-SQL**
 
 
-**Post-stratification**
+**post-stratification**
 
 
-**Potential outcomes model**
+**potential outcomes model**
 
 
 **PPMI** Positive pointwise mutual information. (See "mutual information")
 
 
-**Precision**
+**precision**
 
 
-**Prediction**
+**prediction**
 
 
 **Preprocessing**
@@ -1435,7 +1473,7 @@
 **RDS (R Data Serialization format)**
 
 
-**Record linkage** - (see "linkage")
+**reactivity**
 
 
 **Recall**
@@ -1447,10 +1485,10 @@
 **Reconstruction error**
 
 
-**Record**
+**record**
 
 
-**Record linkage** (see "linkage")
+**record linkage** - (see "linkage")
 
 
 **Recurrent neural net (RNN)**
@@ -1505,6 +1543,9 @@
 
 
 **Representation (of data)**
+
+
+**representative / representativeness**
 
 
 **Reproducibility**
@@ -1592,6 +1633,9 @@
 
 
 **Semi-supervised learning**
+
+
+**sensitive / sensitivity**
 
 
 **Sensors**
@@ -1756,6 +1800,9 @@
 **SVM** (see "support vector machine")
 
 
+**systemic drift**
+
+
 **Tensor**
 
 
@@ -1801,7 +1848,7 @@
 **Transparency**
 
 
-**Transportability**
+**transportability**
 
 
 **Treatment / treatment effect**
@@ -1843,7 +1890,7 @@
 **Unsupervised learning**
 
 
-**User-attribute inference**
+**user-attribute inference**
 
 
 **UTF-8**
