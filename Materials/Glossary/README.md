@@ -94,25 +94,25 @@
 **B-tree** "... a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children ... It is commonly used in databases and file systems." (https://en.wikipedia.org/wiki/B-tree). See explainer on "data structures."
 
 
-**Backpropagation**
+**backpropagation**
 
 
-**Bag of words**
+**bag of words**
 
 
-**Bagging**
+**bagging**
 
 
-**Balance**
+**balance**
 
 
 **bash**
 
 
-**Basis**
+**basis**
 
 
-**Batch**
+**batch**
 
 
 **Bayes / Bayesian (statistics, estimation, theory, updating)**
@@ -130,22 +130,22 @@
 **Berkeley Data Analytics Stack (BDAS)**
 
 
-**Between-subjects design**
+**between-subjects design**
 
 
-**Bias**
+**bias**
 
 
-**Bias-variance tradeoff**
+**bias-variance tradeoff**
 
 
 **BIC** Bayesian Information Criterion
 
 
-**Big data**
+**big data**
 
 
-**Big-O notation**
+**Big O notation**
 
 
 **BigQuery** see "Google BigQuery"
@@ -157,157 +157,163 @@
 **Bigtable**
 
 
-**Bit sampling**
+**bit sampling**
 
 
-**Blind source separation**
+**blind source separation**
 
 
-**Blocking**
+**block diagonal**
 
 
-**Blue-team dynamics** (see "red-team dynamics")
+**blocking**
+
+
+**blue-team dynamics** (see "red-team dynamics")
 
 
 **Boolean**
 
 
-**Boosting**
+**boosting**
 
 
-**Bot**
+**bot**
 
 
-**Breadth-first search**
+**breadth-first search**
 
 
 **Bridges** XSEDE computing resource for large datasets, run by Pittsburgh Supercomputing Center (PSC)
 
 
-**Calibration**
+**calibration**
 
 
-**Canonical correlation analysis (CCA)**
+**canonical correlation analysis (CCA)**
 
 
-**CAPCHA**
+**CAPTCHA**
 
 
-**Case-folding**
+**capture-recapture**
 
 
-**Causal discovery**
+**case-folding**
 
 
-**Causal effect**
+**causal discovery**
 
 
-**Causal inference**
+**causal effect**
 
 
-**Causal graph**
+**causal inference**
+
+
+**causal graph**
 
 
 **CCA** (see "canonical correlation analysis")
 
 
-**Change of basis**
+**change of basis**
 
 
-**Characteristic matrix**
+**characteristic matrix**
 
 
-**Chunk**
+**chunk**
 
 
-**Citizen science**
+**citizen science**
 
 
-**Classification / classifier**
+**classification / classifier**
 
 
 **Clojure**
 
 
-**Cloud**
+**cloud**
 
 
-**Cluster analysis**
+**cluster analysis**
 
 
-**Cluster computing**
+**cluster computing**
 
 
-**Clustered sampling**
+**clustered sampling**
 
 
 **CNN** (see "convolutional neural net")
 
 
-**Coding**
+**coding**
 
 
-**Collaborative filtering**
+**collaborative filtering**
 
 
-**Column-oriented database / column store**
+**column-oriented database / column store**
 
 
 **Common Rule / Revised Common Rule**
 
 
-**Community / community detection**
+**community / community detection**
 
 
-**Compositional / compositional data**
+**compositional / compositional data**
 
 
-**Compression**
+**compression**
 
 
-**Computational social science**
+**computational social science**
 
 
-**Confusion matrix**
+**confusion matrix**
 
 
-**Conjugate prior**
+**conjugate prior**
 
 
-**Concurrent validity**
+**concurrent validity**
 
 
-**Constituency parse**
+**constituency parse**
 
 
-**Construct validity**
+**construct validity**
 
 
-**Content validity**
+**content validity**
 
 
-**Control (group, variable)**
+**control (group, variable)**
 
 
-**Convergent validty**
+**convergent validty**
 
 
-**Convolution**
+**convolution**
 
 
-**Convolutional neural net (CNN)**
+**convolutional neural net (CNN)**
 
 
-**Core-sets**
+**core-sets**
 
 
-**Correlation**
+**correlation**
 
 
-**Correspondence analysis**
+**correspondence analysis**
 
 
-**Cosine similarity**
+**cosine similarity**
 
 
 **Couchbase**
@@ -316,25 +322,25 @@
 **CouchDB**
 
 
-**Counterfactual**
+**counterfactual**
 
 
-**Covariance / covariance matrix**
+**covariance / covariance matrix**
 
 
-**Cross entropy**
+**cross entropy**
 
 
-**Cross product**
+**cross product**
 
 
-**Curse of dimensionality**
+**curse of dimensionality**
 
 
-**Cross-validation**
+**cross-validation**
 
 
-**Crowd-sourcing**
+**crowdsourcing**
 
 
 **csv**
@@ -346,163 +352,172 @@
 **DAG** (see Directed acyclic graph)
 
 
-**Data augmentation**
+**data augmentation**
 
 
-**Data deluge**
+**data deluge**
 
 
-**Data exhaust**
+**data exhaust**
 
 
-**Data fusion**
+**data fusion**
 
 
-**Data mapping**
+**data mapping**
 
 
-**Data mining**
+**data mining**
 
 
-**Data privacy**
+**data privacy**
 
 
-**Data science**
+**data science**
 
 
-**Data squashing**
+**data squashing**
 
 
-**Data streams**
+**data streams**
 
 
-**Data structure**
+**data structure**
 
 
-**Data wrangling / cleaning / scrubbing)**
+**data type**
 
 
-**Database**
+**data wrangling / cleaning / scrubbing / munging**
 
 
-**Database management system**
+**database**
+
+
+**database management system**
 
 
 **Dataflow**
 
 
-**Data-intensive**
+**data-intensive**
 
 
 **data.table**
 
 
-**De-anonymization**
+**de-anonymization**
 
 
-**Decomposition**
+**decomposition**
 
 
-**Deep learning**
+**de-duplication**
 
 
-**Degeneracy (of labels; of ERGMs)**
+**deep learning**
 
 
-**Degree**
+**degeneracy (of labels; of ERGMs)**
 
 
-**Degree centrality**
+**degree**
 
 
-**Dehydrated data**
+**degree centrality**
 
 
-**Delimited file**
+**dehydrated data**
 
 
-**Dependency parse**
+**delimited file**
 
 
-**Difference-in-differences (DID)**
+**dependency parse**
 
 
-**Differential privacy**
+**difference-in-differences (DID)**
 
 
-**Dimensionality reduction**
+**differential privacy**
 
 
-**Directed acyclic graph / DAG**
+**digital traces / digital footprints / digital fingerprints**
+
+
+**dimensionality reduction**
+
+
+**directed acyclic graph / DAG**
 
 
 **dirty (data)**
 
 
-**Discriminant validity**
+**discriminant validity**
 
 
-**Dissimilarity**
+**dissimilarity**
 
 
-**Distance**
+**distance**
 
 
-**Distributed computing/processing**
+**distributed computing/processing**
 
 
-**Distributed data collection**
+**distributed data collection**
 
 
-**Distributed sensors**
+**distributed representation**
+
+
+**distributed sensors**
 
 
 **Docker**
 
 
+**document-oriented database**
+
+
 **document-term-matrix / document-frequency matrix**
+
+
+**dot product**
 
 
 **DOM**
 
 
-**Double sampling**
+**double sampling**
 
 
 **drift**
 
 
-**Drill**
+**drill**
 
 
-**Dropout**
-
-
-**Document-oriented database**
-
-
-**Dot product**
-
-
-**Drift**
+**dropout**
 
 
 **DTM** (see "document-term matrix")
 
 
-**Duplicate detection**
+**duplicate detection**
 
 
-**Ecological momentary assessment**
+**ecological momentary assessment (EMA)**
 
 
-**Econometrics**
+**econometrics**
 
 
-**Edit distance**
+**edit distance**
 
 
-**Edge**
+**edge**
 
 
 **Eigen- (value, vector, decomposition)**
@@ -511,7 +526,7 @@
 **Eigenvector centrality**
 
 
-**Elastic net**
+**elastic net**
 
 
 **Elasticsearch**
@@ -520,31 +535,34 @@
 **EM algorithm**
 
 
-**Embarrassingly parallel / parallelizable**
+**embarrassingly parallel / parallelizable**
 
 
-**Embedding(s)**
+**embedding(s)**
 
 
-**Enriched asking**
+**encouragement design**
 
 
-**Ensembling / ensembles**
+**enriched asking**
 
 
-**Entity**
+**ensembling / ensembles**
 
 
-**Entity resolution / disambiguation**
+**entity**
 
 
-**Entropy**
+**entity resolution / disambiguation**
 
 
-**Environment**
+**entropy**
 
 
-**Epoch**
+**environment**
+
+
+**epoch**
 
 
 **ERGM** (see "Exponential Random Graph Model.") 
@@ -556,7 +574,7 @@
 **Euclidean (distance, norm)**
 
 
-**Event data**
+**event data**
 
 
 **Exceed OnDemand** Software -- remote access client for X-windowing, recommended / provided by ICS for use on the ACI systems. Not to be confused with "XSEDE", the consortium of remote computing resources funded by NSF (and generally facilitiated by ICS-ACI).
@@ -568,67 +586,67 @@
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
 
 
-**External validity**
+**external validity**
 
 
-**Extract, transform, load (ETL)**
+**Extract, Transform, Load (ETL)**
 
 
 **F1**
 
 
-**Face validity**
+**face validity**
 
 
-**Factor analysis (FA)**
+**factor analysis (FA)**
 
 
-**Factorial design**
+**factorial design**
 
 
-**Factorization (of a matrix)**
+**factorization (of a matrix)**
 
 
-**Feature**
+**feature**
 
 
-**Feature engineering**
+**feature engineering**
 
 
-**Feature extraction**
+**feature extraction**
 
 
-**Feature learning**
+**feature learning**
 
 
-**Feature selection**
+**feature selection**
 
 
-**Feedforward networks**
+**feedforward networks**
 
 
-**Field**
+**field**
 
 
-**Field view (of geographic data)**
+**field view (of geographic data)**
 
 
-**Filter**
+**filter**
 
 
-**First-class function / first-class citizen (in programming)**
+**first-class function / first-class citizen (in programming)**
 
 
-**Fixed effects**
+**fixed effects**
 
 
-**Flat file**
+**flat file**
 
 
 **forecasting**
 
 
-**Formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
+**formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
 
 
 **Fourier (transform, operator)**
@@ -640,7 +658,10 @@
 **Frobenius norm**
 
 
-**Functional programming**
+**functional programming**
+
+
+**Fundamental Problem of Causal Inference**
 
 
 **Games with a purpose / gamification**
@@ -856,10 +877,19 @@
 **Instance construction**
 
 
+**instance detection**
+
+
+**instrument**
+
+
 **instrumental variable (IV)**
 
 
 **Integrated / integration**
+
+
+**intention to treat (ITT)**
 
 
 **Internal validity**
@@ -1039,6 +1069,9 @@
 **Load / loadings**
 
 
+**local average treatment effect (LATE)** aka "complier average causal effect (CACE)"
+
+
 **Locality-sensitive hashing**
 
 
@@ -1186,6 +1219,9 @@
 **Naive Bayes (classifier)**
 
 
+**name matching**
+
+
 **Named entity recognition / NER**
 
 
@@ -1225,6 +1261,9 @@
 **Node**
 
 
+**noise**
+
+
 **Non-metric (distance / similarity function)**
 
 
@@ -1261,7 +1300,7 @@
 **Nowcasting**
 
 
-**NP-hard**
+**NP-hard / NP-complete**
 
 
 **Numerical computation**
@@ -1416,31 +1455,34 @@
 **prediction**
 
 
-**Preprocessing**
+**preprocessing**
 
 
-**Principal angle**
+**principal angle**
 
 
 **Principal Component Analysis (PCA)**
 
 
-**Prior**
+**prior**
 
 
-**Privacy-preserving data-mining**
+**privacy-preserving data-mining**
 
 
-**Probabilistic data structures**
+**probabilistic data structures**
 
 
 **Procrustes (analysis)**
 
 
-**Projection**
+**projection**
 
 
-**Provenance (of data)**
+**provenance (of data)**
+
+
+**pruning**
 
 
 **Quasi-experiment**
@@ -1815,6 +1857,9 @@
 **tf.idf / tf-idf**
 
 
+**threats to validity**
+
+
 **Tidy data / tidyverse**
 
 
@@ -1890,6 +1935,9 @@
 **Unsupervised learning**
 
 
+**uptake rate**
+
+
 **user-attribute inference**
 
 
@@ -1946,6 +1994,9 @@
 
 
 **Wavelet**
+
+
+**weak instrument**
 
 
 **Web driver**
