@@ -394,6 +394,9 @@
 **data fusion**
 
 
+**data lineage**
+
+
 **data mapping**
 
 
@@ -401,6 +404,12 @@
 
 
 **data privacy**
+
+
+**data profiling**
+
+
+**data provenance**
 
 
 **data science**
@@ -1252,7 +1261,7 @@
 **metadata**
 
 
-**Metric**
+**metric**
 
 
 **MinHash**
@@ -1479,6 +1488,7 @@
 
 **operationalize / operationalization**
 
+
 **Orthogonal**
 
 
@@ -1501,6 +1511,9 @@
 
 
 **p-hacking**
+
+
+**Pachyderm**
 
 
 **PageRank**
