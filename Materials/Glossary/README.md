@@ -82,7 +82,7 @@
 **ATE** Average treatment effect.
 
 
-**AUC** Area under the ROC curve.
+**AUC** Area under curve. A diagnostic for the performance of a binary classifier. Can refer to area under the Receiver Operating Characteristic curve ("ROC curve") or area under Precision-Recall curve ("PR curve"). Usual advice is to use ROC AUC except in cases of class imbalance, in which case PR AUC is preferred. That is, PR curve is preferable when one case (say, the positive case) is much rarer than the other, or where you care much more about one case than the other. (This is debatable given mathematical relationships between the two.) ROC curve plots true positive rate (aka "sensitivity", aka "recall", aka "hit rate", aka "probability of detection") against false positive rate (aka "fall-out," aka "probability of false alarm," = 1- "specificity") for different thresholds. PR curve plots precision (aka "positive predictive value") against recall. Each is a summary of how the "confusion matrix" changes as a function of decision threshold. A perfect classifier will have an AUC of 1.
 
 
 **autoencoder**
@@ -955,7 +955,10 @@
 **instrumental variable (IV)**
 
 
-**Integrated / integration**
+**integer**
+
+
+**integrated / integration**
 
 
 **intention to treat (ITT)**
@@ -1139,6 +1142,9 @@
 
 
 **Linked data**
+
+
+**list**
 
 
 **list experiment**
