@@ -1642,7 +1642,7 @@
 **profiling (of code)**
 
 
-**profiling (of data)** "Data profiling is the process of examining the data available from an existing information source ... and collecting statistics or informative summaries about that data." (Wikipedia) This is also known as "data archeology", "data assessment". Individual records profiling can consist of syntactic profiling (making sure entries fit broad format constraints) or semantic profiling (making sure entries make sense). Set-based profiling involves examining the distribution of values of a variable/field, and parallels the social science practice of providing "descriptive statistics." See Rattenbury, et al. (2017) Principles of Data Wrangling. 
+**profiling (of data)** "Data profiling is the process of examining the data available from an existing information source ... and collecting statistics or informative summaries about that data." (Wikipedia) This is an information science concept, where it is also known as "data archeology", "data assessment". I know of no literature overlap, but it is essentially the same as the precursors to the process of "data editing" used by official statistics agencies. Individual records profiling can consist of syntactic profiling (making sure entries fit broad format constraints) or semantic profiling (making sure entries make sense). Set-based profiling involves examining the distribution of values of a variable/field, and parallels the social science practice of providing "descriptive statistics." See Rattenbury, et al. (2017) Principles of Data Wrangling. 
 
 
 **projection**
