@@ -448,6 +448,9 @@
 **data.table**
 
 
+**DCA** Discrete Component Analysis.
+
+
 **de-anonymization**
 
 
@@ -479,6 +482,9 @@
 
 
 **dependency parse**
+
+
+**DFT** Discrete Fourier Transform (see Fourier)
 
 
 **difference-in-differences (DID)**
@@ -673,6 +679,9 @@
 **feedforward networks**
 
 
+**FFT** Fast Fourier Transform (see Fourier).
+
+
 **field**
 
 
@@ -700,7 +709,7 @@
 **formal theory** - used in political science to mean theorizing through mathematically coherent models ... usually means use of microeconomics-style models or game theory to model some political phenomenon. Main usage is to distinguish from another subfield of political science, political theory, which in most instances bears closer resemblance to philosophy than economics. 
 
 
-**Fourier (transform, operator)**
+**Fourier (anaylsis, operator, series, transform) / Fast Fourier Transform (FFT) / Discrete Fourier Transform (DFT)**
 
 
 **FP-tree**
@@ -1825,97 +1834,97 @@
 **Scala**
 
 
-**Scale**
+**scale**
 
 
-**Scaling**
+**scaling**
 
 
-**Scatter matrix**
+**scatter matrix**
 
 
-**Schema**
+**schema**
 
 
 **scikit-learn**
 
 
-**Script**
+**script**
 
 
 **SciPy**
 
 
-**Segmentation**
+**segmentation**
 
 
-**Selection bias**
+**selection bias**
 
 
-**Semantic web**
+**semantic web**
 
 
-**Semantics**
+**semantics**
 
 
-**Semi-parametric**
+**semi-parametric**
 
 
-**Semi-structured data**
+**semi-structured data**
 
 
-**Semi-supervised learning**
+**semi-supervised learning**
 
 
 **sensitive / sensitivity**
 
 
-**Sensors**
+**sensors**
 
 
 **SEO** Search engine optimization.
 
 
-**Sequence modeling**
+**sequence modeling**
 
 
-**Serialization (of data)**
+**serialization (of data) / serialization formats**
 
 
 **SGD** (see "stochastic gradient descent")
 
 
-**Shapefile**
+**shapefile**
 
 
-**Shell**
+**shell**
 
 
-**Shingle / shingling**
+**shingle / shingling**
 
 
-**Shrinkage**
+**shrinkage**
 
 
-**Sigmoid (activation function)**
+**sigmoid (activation function)**
 
 
-**Signal processing**
+**signal processing**
 
 
-**Simplex**
+**simplex**
 
 
-**Singular**
+**singular**
 
 
-**Singular value decomposition (SVD)**
+**singular value decomposition (SVD)**
 
 
-**Sketches**
+**sketches**
 
 
-**Smoothing**
+**smoothing**
 
 
 **SNA** Social network analysis
@@ -1924,28 +1933,28 @@
 **snakemake**
 
 
-**Social**
+**social**
 
 
-**Social data**
+**social data**
 
 
-**Social data analytics**
+**social data analytics**
 
 
-**Social data stack**
+**social data stack**
 
 
-**Social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
+**social network** I'd prefer if this were only used to refer to networks in which the nodes are people or groups of people and the edges indicate some kind of "social" relationship. It is sometimes used in reference to networks more generally. It is also, of course, a term of art used to refer to social media sites or platforms, e.g., Facebook. 
 
 
-**Social science**
+**social science**
 
 
-**Softmax**
+**softmax**
 
 
-**Software carpentry**
+**Software Carpentry**
 
 
 **Solr (Apache)**
@@ -1954,31 +1963,31 @@
 **Spark**
 
 
-**Sparse coding**
+**sparse coding**
 
 
-**Sparse matrix**
+**sparse matrix**
 
 
-**Sparsity**
+**sparsity**
 
 
-**Spatial**
+**spatial**
 
 
-**Spatial autocorrelation**
+**spatial autocorrelation**
 
 
-**Spectrum / spectral theory**
+**spectrum / spectral theory**
 
 
-**Spider trap**
+**spider trap**
 
 
-**Spillover**
+**spillover**
 
 
-**Split-Apply-Combine (SAC)**
+**split-apply-combine (SAC)**
 
 
 **spurious**
@@ -1990,46 +1999,46 @@
 **SQLite**
 
 
-**Stationarity**
+**stationarity**
 
 
-**Statistical conclusion validity**
+**statistical conclusion validity**
 
 
-**Statistical disclosure limitations**
+**statistical disclosure limitations**
 
 
-**Statistical learning**
+**statistical learning**
 
 
-**Stemming / stem**
+**stemming / stem**
 
 
 **STM** Structural Topic Model
 
 
-**Stochastic gradient descent / SGD**
+**stochastic gradient descent / SGD**
 
 
 **strata**
 
 
-**Stratified sampling**
+**stratified sampling**
 
 
-**Streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
+**streaming / stream processing** Could be used in regular meaning like "streaming video" but can also mean data is being passed through an algorithm sequentially, with the algorithm updating after each observation.
 
 
-**Structural**
+**structural**
 
 
-**Structured data**
+**structured data**
 
 
-**Supervised learning**
+**supervised learning**
 
 
-**Support vector machine (SVM)**
+**support vector machine (SVM)**
 
 
 **SUTVA**
@@ -2047,13 +2056,16 @@
 **systemic drift**
 
 
-**Tensor**
+**tensor**
 
 
 **TensorFlow**
 
 
-**Test data / test set** (see "training data")
+**tesselation**
+
+
+**test data / test set** (see "training data")
 
 
 **tf.idf / tf-idf**
@@ -2062,46 +2074,46 @@
 **threats to validity**
 
 
-**Tidy data / tidyverse**
+**tidy data / tidyverse**
 
 
 **Tikhonov regularization**
 
 
-**Tile**
+**tile**
 
 
-**Topic model**
+**topic model**
 
 
-**Toponymy** The study of place names.
+**toponymy** The study of place names.
 
 
-**Total survey error**
+**total survey error**
 
 
-**Trace**
+**trace**
 
 
-**Training data/set; test data/set; validation data/set**
+**training data/set; test data/set; validation data/set**
 
 
-**Transfer learning**
+**transfer learning**
 
 
-**Transition matrix**
+**transition matrix**
 
 
-**Transparency**
+**transparency**
 
 
 **transportability**
 
 
-**Treatment / treatment effect**
+**treatment / treatment effect**
 
 
-**Triangle inequality**
+**triangle inequality**
 
 
 **Trifacta Wrangler**
