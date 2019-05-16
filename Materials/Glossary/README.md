@@ -142,6 +142,9 @@
 **between-subjects design**
 
 
+**betweenness centrality**
+
+
 **bias**
 
 
@@ -233,6 +236,9 @@
 
 
 **CCA** (see "canonical correlation analysis")
+
+
+**centrality**
 
 
 **change of basis**
@@ -730,7 +736,7 @@
 **Fundamental Problem of Causal Inference**
 
 
-**Games with a purpose / gamification**
+**games with a purpose / gamification**
 
 
 **GAN** (see "generative adversarial network")
@@ -835,7 +841,7 @@
 **Hadoop**
 
 
-**Hash / hashing**
+**hash / hashing / hash table**
 
 
 **Haskell**
@@ -859,19 +865,19 @@
 **heterogeneous treatment effects**
 
 
-**Heteroskedasticity**
+**heteroskedasticity**
 
 
-**Hidden layer / hidden nodes**
+**hidden layer / hidden nodes**
 
 
-**Hidden Markov model (HMM)**
+**Hidden Markov Model (HMM)**
 
 
-**Hierarchical**
+**hierarchical / hierarchy**
 
 
-**Higher-order functions*
+**higher-order functions*
 
 
 **Hilbert space**
@@ -886,22 +892,22 @@
 **homogeneous-response-propensities-within-group assumption**
 
 
-**Homophily**
+**homophily**
 
 
-**Honeytrap (for web scrapers)**
+**honeytrap (for web scrapers)**
 
 
-**Human computing / human-in-the-loop computation**
+**human computing / human-in-the-loop computation**
 
 
-**Human subjects**
+**human subjects**
 
 
-**Hyperparameters**
+**hyperparameters**
 
 
-**Hypothesis space**
+**hypothesis space**
 
 
 **ICA** (see Independent Component Analysis)
@@ -916,58 +922,58 @@
 **Impala**
 
 
-**Identification / identification problem**
+**identification / identification problem**
 
 
-**Identity matrix**
+**identity matrix**
 
 
-**Ill-posed (problem)**
+**ill-posed (problem)**
 
 
-**Image**
+**image**
 
 
-**Image filter / image kernel**
+**image filter / image kernel**
 
 
 **imputation**
 
 
-**Incidence matrix**
+**incidence matrix**
 
 
 **Independent Component Analysis (ICA)**
 
 
-**Index**
+**index**
 
 
-**Indirect effects**
+**indirect effects**
 
 
-**Influence maximization**
+**influence maximization**
 
 
-**Information**
+**information**
 
 
-**Information retrieval**
+**information retrieval**
 
 
-**Information theory**
+**information theory**
 
 
-**Informed consent**
+**informed consent**
 
 
-**Ingestion (of data)**
+**ingestion (of data)**
 
 
-**Inner product**
+**inner product**
 
 
-**Instance construction**
+**instance construction**
 
 
 **instance detection**
@@ -988,16 +994,16 @@
 **intention to treat (ITT)**
 
 
-**Internal validity**
+**internal validity**
 
 
-**Interrupted time series**
+**interrupted time series**
 
 
-**Inverse (of a matrix)**
+**inverse (of a matrix)**
 
 
-**Inverted index**
+**inverted index**
 
 
 **intervening variable**
@@ -1015,7 +1021,7 @@
 **item nonresponse**
 
 
-**Item response theory (IRT) / IRT model**
+**item response theory (IRT) / IRT model**
 
 
 **Jaccard similarity**
@@ -1057,28 +1063,28 @@
 **Keras**
 
 
-**Kernel**
+**kernel**
 
 
-**Kernel density estimation**
+**kernel density estimation**
 
 
-**Kernel PCA**
+**Kernel PCA (KPCA)**
 
 
-**Kernel smoothing**
+**kernel smoothing**
 
 
-**Kernel trick**
+**kernel trick**
 
 
-**Key**
+**key**
 
 
-**Key-value pair**
+**key-value pair**
 
 
-**Key-value store**
+**key-value store**
 
 
 **KL-divergence** (see "Kullback-Leibler divergence")
@@ -1108,7 +1114,7 @@
 **LASSO**
 
 
-**Latency**
+**latency**
 
 
 **Latent Dirichlet Allocation (LDA)**
@@ -1120,13 +1126,13 @@
 **Latent Semantic Indexing (LSI)**
 
 
-**Latent variables**
+**latent variables**
 
 
-**Layer**
+**layer**
 
 
-**Layer view (of geographic data)**
+**layer view (of geographic data)**
 
 
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
@@ -1135,37 +1141,37 @@
 **Leaflet**
 
 
-**Leakage (of data)**
+**leakage (of data)**
 
 
-**Leave-one-out cross-validation (LOOCV)**
+**leave-one-out cross-validation (LOOCV)**
 
 
-**Lemma / lemmatization**
+**lemma / lemmatization**
 
 
-**Levels of measurement**
+**levels of measurement**
 
 
-**Lifelong learning**
+**lifelong learning**
 
 
-**Likelihood**
+**likelihood**
 
 
-**Linear subspace**
+**linear subspace**
 
 
-**Linear transformation**
+**linear transformation**
 
 
-**Link**
+**link**
 
 
-**Linkage ("record linkage")**
+**linkage ("record linkage")**
 
 
-**Linked data**
+**linked data**
 
 
 **list**
@@ -1174,31 +1180,31 @@
 **list experiment**
 
 
-**Literate programming**
+**literate programming**
 
 
-**Load / loadings**
+**load / loadings**
 
 
 **local average treatment effect (LATE)** aka "complier average causal effect (CACE)"
 
 
-**Locality-sensitive hashing**
+**locality-sensitive hashing**
 
 
-**Locally linear embedding**
+**locally linear embedding (LLE)**
 
 
-**Logistic regression / logit**
+**logistic regression / logit**
 
 
 **long data**
 
 
-**Longitudinal**
+**longitudinal**
 
 
-**Loss function**
+**loss function**
 
 
 **LSTM**
@@ -1210,25 +1216,28 @@
 **Luigi**
 
 
-**Machine bias** (see "algorithmic bias")
+**machine bias** (see "algorithmic bias")
 
 
-**Machine learning**
+**machine learning**
 
 
 **makefile**
 
 
-**Manifest**
+**manifest**
 
 
-**Manifold**
+**manifold**
 
 
 **Mahout**
 
 
-**Map/reduce, MapReduce**
+**map**
+
+
+**map/reduce, MapReduce**
 
 
 **MariaDB**
@@ -1240,10 +1249,10 @@
 **Markov Chain Monte Carlo / MCMC**
 
 
-**Matching** In causal inference, matching is a process for analysis of observational data, under which treated units are matched with control units that are otherwise similar by some measure on observable pretreatment variables. In information sciences, matching is another term for "record linkage."
+**matching** In causal inference, matching is a process for analysis of observational data, under which treated units are matched with control units that are otherwise similar by some measure on observable pretreatment variables. In information sciences, matching is another term for "record linkage."
 
 
-**Max norm**
+**max norm**
 
 
 **MaxEnt**
@@ -1255,7 +1264,7 @@
 **MDS** (see "multidimensional scaling")
 
 
-**Measurement model**
+**measurement model**
 
 
 **mechanism**
@@ -1282,22 +1291,22 @@
 **MinHash**
 
 
-**Minimum spanning tree**
+**minimum spanning tree**
 
 
-**Missing data / missingness**
+**missing data / missingness**
 
 
-**Mixed membership model** (also called an "admixture model")
+**mixed membership model** (also called an "admixture model")
 
 
-**Mixed models**
+**mixed models**
 
 
-**Mixture model**
+**mixture model**
 
 
-**Model-based**
+**model-based**
 
 
 **moderator / moderating variable**
@@ -1306,7 +1315,7 @@
 **Modifiable Areal Unit Problem (MAUP)**
 
 
-**Moments**
+**moments**
 
 
 **MongoDB**
@@ -1315,7 +1324,7 @@
 **Moore-Penrose pseudoinverse**
 
 
-**Morpheme / morphology**
+**morpheme / morphology**
 
 
 **MovieLens**
@@ -1330,7 +1339,7 @@
 **MTurk**
 
 
-**Multidimensional scaling (MDS)**
+**multidimensional scaling (MDS)**
 
 
 **multilevel modeling**
@@ -1339,25 +1348,25 @@
 **multiple comparisons**
 
 
-**Multiple imputation**
+**multiple imputation**
 
 
-**Multiple systems estimation (MSE)**
+**multiple systems estimation (MSE)**
 
 
-**Multiscale**
+**multiscale**
 
 
-**Multithreaded**
+**multithreaded**
 
 
-**Multivariate statistics**
+**multivariate statistics**
 
 
 **MusicLab**
 
 
-**Mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
+**mutual information (MI), pointwise mutual information (PMI), positive pointwise mutual information (PPMI)**
 
 
 **MWE** Multiword entity. (See "entity.")
@@ -1372,19 +1381,19 @@
 **name matching**
 
 
-**Named entity recognition / NER**
+**named entity recognition / NER**
 
 
-**Natural experiment**
+**natural experiment**
 
 
-**Natural language processing**
+**natural language processing / NLP**
 
 
-**Nearest neighbors**
+**nearest neighbors**
 
 
-**Negative sampling**
+**negative sampling**
 
 
 **Neo4j**
@@ -1396,19 +1405,19 @@
 **Netflix Prize**
 
 
-**Neural net / artifical neural net (ANN)**
+**neural net / artifical neural net (ANN)**
 
 
-**N-gram**
+**n-gram**
 
 
 **NLP** (See "natural language processing")
 
 
-**No free lunch theorem**
+**No Free Lunch Theorem**
 
 
-**Node**
+**node**
 
 
 **noise**
@@ -1417,67 +1426,67 @@
 **noncompliance**
 
 
-**Non-metric (distance / similarity function)**
+**non-metric (distance / similarity function)**
 
 
-**Non-negative matrix factorization (NMF)**
+**non-negative matrix factorization (NMF)**
 
 
-**Non-parametric**
+**nonparametric**
 
 
 **non-probability sample**
 
 
-**Non-reactive (measure)**
+**nonreactive (measure)**
 
 
-**Non-rectangular data**
+**non-rectangular data**
 
 
-**Nonresponse bias**
+**nonresponse bias**
 
 
-**Non-stationary (time series)**
+**non-stationary (time series)**
 
 
-**Norm / normal / normalize / normalization**
+**norm / normal / normalize / normalization**
 
 
-**Normal distribution*
+**normal distribution*
 
 
-**Normal form**
+**normal form**
 
 
 **NoSQL**
 
 
-**Notebooks**
+**notebooks**
 
 
-**Nowcasting**
+**nowcasting**
 
 
 **NP-hard / NP-complete**
 
 
-**Numerical computation**
+**numerical computation**
 
 
 **NumPy stack**
 
 
-**Object**
+**object**
 
 
-**Object-oriented programming**
+**object-oriented programming**
 
 
-**Object view (of geographic data)**
+**object view (of geographic data)**
 
 
-**Observational (data, design)**
+**observational (data, design)**
 
 
 **OCR** Optical character recognition. The task of turning images into alphabetic (or similar) characters.
@@ -1486,16 +1495,16 @@
 **OLS** Ordinary least squares
 
 
-**One-hot**
+**one-hot**
 
 
-**Online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
+**online** Could be used in regular meaning like "on the web" but can also be used like "streaming" as a modifier to "data" or "algorithm" or "processing" to indicate data is being processed sequentially, with one pass through the data, or even in real-time as data is generated.
 
 
-**Open data**
+**open data**
 
 
-**Open science**
+**open science**
 
 
 **OpenStreetMap**
@@ -1504,25 +1513,25 @@
 **operationalize / operationalization**
 
 
-**Orthogonal**
+**orthogonal**
 
 
-**Orthogonalize**
+**orthogonalize**
 
 
-**Orthonormal**
+**orthonormal**
 
 
 **OSEMN workflow**
 
 
-**Out-of-sample prediction**
+**out-of-sample prediction**
 
 
-**Over-determined**
+**over-determined**
 
 
-**Over-fitting**
+**over-fitting**
 
 
 **p-hacking**
@@ -1555,6 +1564,9 @@
 **Pasteur's quadrant**
 
 
+**path**
+
+
 **pattern**
 
 
@@ -1562,6 +1574,9 @@
 
 
 **pdf** (stands for "portable desription format.") "Where data goes to die." -- Simon Rogers (Data editor, Google News Lab).
+
+
+**Penrose inverse**
 
 
 **persistence**
@@ -1666,28 +1681,31 @@
 **pruning**
 
 
-**Quasi-experiment**
+**pseudo-inverse**
+
+
+**quasi-experiment**
 
 
 **QGIS**
 
 
-**Query**
+**query**
 
 
 **R**
 
 
-**Random forests**
+**random forests**
 
 
-**Random projections**
+**random projections**
 
 
 **randomized controlled experiment / trial**
 
 
-**Raster**
+**raster**
 
 
 **RCT** randomized controlled trial.
@@ -1705,16 +1723,16 @@
 **reactivity**
 
 
-**Recall**
+**recall**
 
 
 **recast**
 
 
-**Recommender system**
+**recommender system**
 
 
-**Reconstruction error**
+**reconstruction error**
 
 
 **record**
@@ -1723,82 +1741,85 @@
 **record linkage** - (see "linkage")
 
 
-**Recurrent neural net (RNN)**
+**recurrent neural net (RNN)**
 
 
-**Red-team dynamics / blue-team dynamics**
+**red-team dynamics / blue-team dynamics**
 
 
 **Redis**
 
 
-**Redundancy**
+**redundancy**
 
 
-**Regression**
+**regression**
 
 
-**Regression discontinuity design (RDD)**
+**regression discontinuity design (RDD)**
 
 
-**Regression trees**
+**regression to the mean**
 
 
-**Regex** (see "regular expression")
+**regression trees**
 
 
-**Regular expressions**
+**regex** (see "regular expression")
 
 
-**Regularization / regularize**
+**regular expressions**
 
 
-**Reinforcement learning**
+**regularization / regularize**
 
 
-**Relation / relational data / relational database**
+**reinforcement learning**
 
 
-**Reliability**
+**relation / relational data / relational database**
+
+
+**reliability**
 
 
 **ReLU (Rectified Linear Unit)**
 
 
-**Remote sensing**
+**remote sensing**
 
 
 **replace, refine, reduce**
 
 
-**Replicability**
+**replicability**
 
 
-**Report**
+**report**
 
 
-**Representation (of data)**
+**representation (of data)**
 
 
 **representative / representativeness**
 
 
-**Reproducibility**
+**reproducibility**
 
 
-**Repurposing (of data)**
+**repurposing (of data)**
 
 
-**Resilient distributed dataset (RDD)**
+**resilient distributed dataset (RDD)**
 
 
-**Respondent-driven sampling**
+**respondent-driven sampling**
 
 
 **RESTful / REST API**
 
 
-**Ridge regression**
+**ridge regression**
 
 
 **RMSE** Root mean squared error.
@@ -1813,7 +1834,7 @@
 **ROC curve**
 
 
-**Rotation**
+**rotation**
 
 
 **RStudio**
