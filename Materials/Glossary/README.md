@@ -88,6 +88,9 @@
 **autoencoder**
 
 
+**auxiliary data**
+
+
 **auxiliary information**
 
 
@@ -236,6 +239,9 @@
 
 
 **CCA** (see "canonical correlation analysis")
+
+
+**centered**
 
 
 **centrality**
@@ -547,7 +553,14 @@
 **DOM**
 
 
-**double sampling**
+**double centered**
+
+
+**double sampling** Used in at least three distinct ways in the sampling literature. One describes a two-phase sampling procedure in which a sample is taken and then, if inconclusive, a second sample is taken. (cite).
+
+The second, as used by Thompson, is the more relevant for SoDA. This describes a two-phase procedure in which a sample is taken to measure some variable auxiliary to our variable of interest, and then a smaller sample of those is taken to measure our (presumably more expensive or intrusive) variable of interest. The auxiliary variable is presumed to occur at a constant ratio to the variable of interest, so then we can use the auxiliary variable to improve our estimate of the variable of interest. This is very similar to the sort of procedure Salganik calls *amplified asking* in which an expensive survey is combined with cheaper "big data," except that the relationship between the two is estimated by a more general process of supervised learning rather than a ratio assumption.
+
+A third type of double sampling is also a two-phase sampling procedure. Here we want to do stratified sampling, but don't know the size of the strata. An initial sample is used to estimate the size of a strata, and then a second stratified sample is taken to measure the variable of interest.
 
 
 **drift**
@@ -755,6 +768,9 @@
 
 
 **generative model**
+
+
+**geometric mean**
 
 
 **GIA** Geographic Information Analysis
