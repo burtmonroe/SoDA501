@@ -94,6 +94,9 @@
 **auxiliary information**
 
 
+**Avro / Apache Avro**
+
+
 **awk**
 
 
@@ -1529,6 +1532,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **operationalize / operationalization**
 
 
+**ORC** Optimized Row Columnar
+
+
 **orthogonal**
 
 
@@ -1569,6 +1575,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **parametric**
+
+
+**Parquet**
 
 
 **parse tree**
