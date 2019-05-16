@@ -742,16 +742,16 @@
 **Gaussian**
 
 
-**Generalization error**
+**generalization error**
 
 
 **generative adversarial network (GAN)**
 
 
-**Generative model**
+**generative model**
 
 
-**GIA**
+**GIA** Geographic Information Analysis
 
 
 **Gibbs sampling**
@@ -760,19 +760,22 @@
 **Giraph / Apache Giraph**
 
 
-**GIS**
+**GIS** Geographic Information System
 
 
-**Git**
+**git / github**
 
 
 **GloVe**
 
 
-**Gold standard**
+**gold standard**
 
 
 **Google BigQuery**
+
+
+**Google Books**
 
 
 **Google Correlate**
@@ -787,13 +790,13 @@
 **Google Trends**
 
 
-**GPU**
+**GPU** Graphics Processing Unit
 
 
-**Gradient boosting**
+**gradient boosting**
 
 
-**Gradient descent** see also "stochastic gradient descent"
+**gradient descent** see also "stochastic gradient descent"
 
 
 **Gram matrix**
@@ -802,22 +805,22 @@
 **granularity**
 
 
-**Graph**
+**graph**
 
 
-**Graph mining**
+**graph mining**
 
 
-**Graphical database**
+**graphical database**
 
 
-**Graphical models**
+**graphical models**
 
 
-**Grid computing**
+**grid computing**
 
 
-**Ground truth**
+**ground truth**
 
 
 **grouped summaries**
@@ -2134,10 +2137,10 @@
 **Turkers**
 
 
-**Uncertainty**
+**uncertainty**
 
 
-**Unfolding** Lots of disciplines have something they call "unfolding" (e.g., music, biochemistry). Here, it's most likely to refer to a type of data analysis closely related to multidimensional scaling, which maps individuals and objects over which they have preferences in the same space. The next most likely usage is as "deconvolution", the reversing of a convolution operation.
+**unfolding** Lots of disciplines have something they call "unfolding" (e.g., music, biochemistry). Here, it's most likely to refer to a type of data analysis closely related to multidimensional scaling, which maps individuals and objects over which they have preferences in the same space. The next most likely usage is as "deconvolution", the reversing of a convolution operation.
 
 
 **Unicode**
@@ -2146,10 +2149,13 @@
 **unit nonresponse**
 
 
-**Unobtrusive (measure)**
+**unobtrusive (measure)**
 
 
-**Unsupervised learning**
+**unpivot**
+
+
+**unsupervised learning**
 
 
 **uptake rate**
@@ -2164,62 +2170,64 @@
 **"V"s of big data** Traditional "three Vs of big data" - volume, velocity, variety. There are many "fourth V's" including Monroe's "five Vs of big data social science"
 
 
-**Validation / validity**
+**validation / validity**
 
 
-**Variance**
+**variance**
 
 
-**Variational inference**
+**variational inference / variational Bayesian methods**
 
 
-**Variety** One of the conventional "three Vs" of "Big Data"
+**variety** One of the conventional "three Vs" of "Big Data"
 
 
-**Varimax**
+**varimax / VARIMAX**
 
 
-**Vector**
+**vector**
 
 
-**Vector quantization (VQ)**
+**vector quantization (VQ)**
 
 
-**Vector space / vector space model**
+**vector space / vector space model**
 
 
-**Version control**
+**VEM** Variational Expectation Maximization
 
 
-**Vertex**
+**version control**
 
 
-**Vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
+**vertex**
 
 
-
-**Virtual machine**
-
-
-**Virtualization**
+**vinculation** - the tendency for social data to display interconnectedness (e.g., tied through network edges, exhibiting spatial correlation) that complicates inference and/or is itself the target of inference. Vinculated data may be small in N, but still require computationally intensive methods. One of Monroe's (2013) "five Vs." A [vinculum](https://www.dictionary.com/browse/vincula) is a "bond" or "tie"; used in anatomy, chemistry, and math.
 
 
-**Visual analytics**
+**virtual machine**
+
+
+**virtualization**
+
+
+**visual analytics**
 
 
 **Voronoi diagram / tesselation** aka "proximity polygons"
 
 
-**Wavelet**
+**wavelet**
 
 
 **weak instrument**
 
 
-**Web driver**
+**web driver**
 
 
-**Weights**
+**weights**
 
 
 **WEIRD** Western, Educated, Industrialized, Rich, and Democratic. A critique of the typical pool of participants for lab experiments.
@@ -2228,7 +2236,7 @@
 **wide data**
 
 
-**Within-subjects design**
+**within-subjects design**
 
 
 **word2vec** Also doc2vec, sense2vec, skip-gram, CBOW, negative sampling
@@ -2240,4 +2248,4 @@
 **XSEDE** "Extreme Science and Engineering Discovery Environment"
 
 
-**Zone**
+**zone**
