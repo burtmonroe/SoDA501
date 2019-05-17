@@ -19,6 +19,9 @@
 **active learning**
 
 
+**additive smoothing**
+
+
 **adjacency matrix**
 
 
@@ -499,6 +502,9 @@
 **dependency parse**
 
 
+**design matrix**
+
+
 **DFT** Discrete Fourier Transform (see Fourier)
 
 
@@ -576,6 +582,12 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **DTM** (see "document-term matrix")
+
+
+**dummy observations** see "pseudo-observations."
+
+
+**dummy variable**
 
 
 **duplicate detection**
@@ -660,6 +672,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **Exponential Random Graph Model (ERGM)**  A generative model of link formation in networks. Extensions include TERGM, GERGM.
+
+
+**exponential family**
 
 
 **external validity**
@@ -857,7 +872,13 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **Hamming distance**
 
 
+**Hadamard product**
+
+
 **Hadoop**
+
+
+**harmonic mean**
 
 
 **hash / hashing / hash table**
@@ -876,6 +897,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **HDFS** Hadoop distributed file system. (also, around here, "Human Development and Family Studies")
+
+
+**Hessian**
 
 
 **heterogeneity**
@@ -941,6 +965,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **Impala**
 
 
+**idempotent**
+
+
 **identification / identification problem**
 
 
@@ -966,6 +993,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **index**
+
+
+**indicator variable**
 
 
 **indirect effects**
@@ -1022,10 +1052,16 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **inverse (of a matrix)**
 
 
+**inverse problem**
+
+
 **inverted index**
 
 
 **intervening variable**
+
+
+**invertible**
 
 
 **IR** Usually in this field "information retrieval." Also used for "international relations", "infrared"
@@ -1212,6 +1248,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **locally linear embedding (LLE)**
+
+
+**logarithm**
 
 
 **logistic regression / logit**
@@ -1707,6 +1746,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **pseudo-inverse**
+
+
+**pseudo-observations / pseudo-counts**
 
 
 **quasi-experiment**
