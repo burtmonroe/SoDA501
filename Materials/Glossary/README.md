@@ -286,6 +286,9 @@
 **CNN** (see "convolutional neural net")
 
 
+**codes / codebook**
+
+
 **coding**
 
 
