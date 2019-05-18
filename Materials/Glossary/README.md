@@ -91,7 +91,7 @@
 **autoencoder**
 
 
-**auxiliary data**
+**auxiliary data** At least three meanings. One in double / two-phase sampling. One in statistical privacy. One in Bayesian estimation.
 
 
 **auxiliary information**
@@ -2163,6 +2163,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **threats to validity**
+
+
+**Thrift / Apache Thrift**
 
 
 **tidy data / tidyverse**
