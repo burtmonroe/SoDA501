@@ -1193,6 +1193,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **LDA** either "Latent Dirichlet Allocation" or (Fisher's) "Linear Discriminant Analysis"
 
 
+**LDC** Linguistic Data Consortium.
+
+
 **Leaflet**
 
 
