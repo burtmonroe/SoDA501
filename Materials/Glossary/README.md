@@ -286,7 +286,7 @@
 **CNN** (see "convolutional neural net")
 
 
-**codes / codebook**
+**codes / codebook** At least three meanings of codebook. Social science meaning. Data compression meaning. Cryptography meaning.
 
 
 **coding**
