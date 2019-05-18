@@ -424,6 +424,9 @@
 **data mining**
 
 
+**data munging**
+
+
 **data privacy**
 
 
@@ -443,6 +446,9 @@
 
 
 **data structure**
+
+
+**data transformations**
 
 
 **data type**
@@ -2196,6 +2202,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **transfer learning**
+
+
+**transformation**
 
 
 **transition matrix**
