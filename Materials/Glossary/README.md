@@ -827,6 +827,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **Google Books**
 
 
+**Google Colab**
+
+
 **Google Correlate**
 
 
@@ -1119,6 +1122,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **k-shingle**
+
+
+**Kaggle.com kernels**
 
 
 **Kagglification**
@@ -2196,6 +2202,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **total survey error**
+
+
+**TPU** Tensor processing unit. Currently proprietary chips from Google, but available as an option in Google Colab.
 
 
 **trace**
