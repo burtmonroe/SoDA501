@@ -109,7 +109,9 @@
 **Azure / Microsoft Azure**
 
 
-**B-tree** "... a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children ... It is commonly used in databases and file systems." (https://en.wikipedia.org/wiki/B-tree). See explainer on "data structures."
+**B-tree** "... a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children ... It is commonly used in 
+
+s and file systems." (https://en.wikipedia.org/wiki/B-tree). See explainer on "data structures."
 
 
 **backpropagation**
@@ -313,6 +315,9 @@
 **compression**
 
 
+**compression artifact**
+
+
 **computational social science**
 
 
@@ -424,6 +429,9 @@
 **data mapping**
 
 
+**data marshalling**
+
+
 **data mining**
 
 
@@ -436,6 +444,9 @@
 **data profiling**
 
 
+**data prototyping**
+
+
 **data provenance**
 
 
@@ -443,6 +454,9 @@
 
 
 **data squashing**
+
+
+**data store**
 
 
 **data streams**
@@ -523,6 +537,9 @@
 **differential privacy**
 
 
+**differentially private query**
+
+
 **digital traces / digital footprints / digital fingerprints**
 
 
@@ -548,6 +565,9 @@
 
 
 **distributed data collection**
+
+
+**distributed data store**
 
 
 **distributed representation**
@@ -1592,7 +1612,7 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **operationalize / operationalization**
 
 
-**ORC** Optimized Row Columnar. Big data format. Like Parquet, a columnar database (contrast with Avro - row-based).
+**ORC** Optimized Columnar. Big data format. Like Parquet, a columnar database (contrast with Avro - row-based).
 
 
 **orthogonal**
@@ -1926,6 +1946,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **rotation**
+
+
+**row-centered**
 
 
 **RStudio**
