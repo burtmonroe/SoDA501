@@ -911,6 +911,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **HDFS** Hadoop distributed file system. (also, around here, "Human Development and Family Studies")
 
 
+**HDF5** Hierarchical Data Format, version 5
+
+
 **Hessian**
 
 
@@ -1589,7 +1592,7 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **operationalize / operationalization**
 
 
-**ORC** Optimized Row Columnar
+**ORC** Optimized Row Columnar. Big data format. Like Parquet, a columnar database (contrast with Avro - row-based).
 
 
 **orthogonal**
@@ -1725,6 +1728,9 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 
 
 **preprocessing**
+
+
+**Presto**
 
 
 **pre-registration**
@@ -1979,7 +1985,7 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **semi-parametric**
 
 
-**semi-structured data**
+**semi-structured data** Often used to reference data not in relational normalized form. Commonly used to describe JSON and XML. In big data contexts, can refer to things like ORC, Parquet, Avro. 
 
 
 **semi-supervised learning**
@@ -2366,6 +2372,7 @@ A third type of double sampling is also a two-phase sampling procedure. Here we 
 **XSEDE** "Extreme Science and Engineering Discovery Environment"
 
 
-**YAML**
+**YAML** ("YAML Ain't Markup Language") A human-readable text-based serialization format (and markup language).
+
 
 **zone**
