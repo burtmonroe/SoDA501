@@ -6,6 +6,18 @@
 * [PDF of partial Spring 2019 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2019.pdf)
 * [PDF of complete Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
 
+### Guest Speakers & *Talks of interest* (Spring 2020)
+
+* **Jan 28: Nilam Ram (Human Development) - "Screenomics"**
+* *Jan 31 (FRIDAY): C-SoDA Research Roundup*
+* *Feb 14 (FRIDAY): C-SoDA Speaker: Alexandra Chouldechova (Statistics & Public Policy, CMU)
+* **Feb 18: Suzanna Linn (Political Science) - "Automated Text Classification of News Articles: A Practical Guide."**
+* **Feb 25: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"
+* *Mar 2 (MONDAY): C-SoDA Speaker: Adriana Crespo Tenorio (Facebook)
+* **Mar 3: Guangqing Chi (Rural Sociology) - "The Representativeness of Twitter Data"
+* Mar 10: SPRING BREAK
+* *Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)
+
 ### Guest Speakers & *Talks of interest* (Spring 2019)
 
 * *Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters*
