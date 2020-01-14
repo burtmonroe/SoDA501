@@ -10,8 +10,8 @@
 
 * **Jan 28: Nilam Ram (Human Development & Family Studies) - "Screenomics: A Framework to Capture and Analyze Personal Life Experiences and the Ways that Technology Shapes Them."**
 * *Jan 31 (FRIDAY): C-SoDA Research Roundup*
-* **Feb 4: Kari Lock Morgan (Statistics) -- Innovations in Research Design for Causal Inference
-* **Feb 11: Timothy Brick (Human Development & Family Studies) - "Associations Between Slow-and Fast-Timescale Indicators of Emotional Functioning."
+* **Feb 4: Kari Lock Morgan (Statistics) -- Innovations in Research Design for Causal Inference**
+* **Feb 11: Timothy Brick (Human Development & Family Studies) - "Associations Between Slow-and Fast-Timescale Indicators of Emotional Functioning."**
 * *Feb 14 (FRIDAY): C-SoDA Speaker: Alexandra Chouldechova (Statistics & Public Policy, CMU)*
 * **Feb 18: Suzanna Linn (Political Science) - "Automated Text Classification of News Articles: A Practical Guide."**
 * **Feb 25: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**
