@@ -10,13 +10,13 @@
 
 * **Jan 28: Nilam Ram (Human Development) - "Screenomics"**
 * *Jan 31 (FRIDAY): C-SoDA Research Roundup*
-* *Feb 14 (FRIDAY): C-SoDA Speaker: Alexandra Chouldechova (Statistics & Public Policy, CMU)
+* *Feb 14 (FRIDAY): C-SoDA Speaker: Alexandra Chouldechova (Statistics & Public Policy, CMU)*
 * **Feb 18: Suzanna Linn (Political Science) - "Automated Text Classification of News Articles: A Practical Guide."**
-* **Feb 25: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"
-* *Mar 2 (MONDAY): C-SoDA Speaker: Adriana Crespo Tenorio (Facebook)
-* **Mar 3: Guangqing Chi (Rural Sociology) - "The Representativeness of Twitter Data"
+* **Feb 25: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**
+* *Mar 2 (MONDAY): C-SoDA Speaker: Adriana Crespo Tenorio (Facebook)*
+* **Mar 3: Guangqing Chi (Rural Sociology) - "The Representativeness of Twitter Data"**
 * Mar 10: SPRING BREAK
-* *Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)
+* *Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)*
 
 ### Guest Speakers & *Talks of interest* (Spring 2019)
 
@@ -101,11 +101,3 @@
 
 ## [Exercises](https://burtmonroe.github.io/SoDA501/Exercises/)
 
-### [Squinting at Google Trends & Google Ngrams (Exercise 1, 2019)](https://burtmonroe.github.io/SoDA501/Exercises/)
-
-### [Data Wrangling Exercise (Exercise 3, 2018)](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/)
-
-1. [Tidyverse (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution)
-2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/data.tableSolution)
-3. pandas (Python) Solution
-4. Trifacta Wrangler Solution
