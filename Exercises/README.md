@@ -14,9 +14,9 @@ You'll do this in assigned teams of two or three.
 
 Submit your team's answer, and the code, as an R Notebook or Jupyter (Python) notebook. 
 
-** R: create an R Markdown file (.Rmd) in RStudio, with `output: html_notebook` in the preamble. This will create a notebook file (.nb.html) when you "Preview" or "Knit". Submit - or provide in a github repository - both files. 
-** Python: Create your notebook in Jupyter and submit -- or provide in a github repository -- your .ipynb file OR create your notebook on Google Colab and send me a link. 
-** IN BOTH CASES ... if your code works directly on the two data files as downloaded (compressed or uncompressed) -- that is, if your cleaning / subsetting / etc. is in your notebook code -- assume they are in the same directory as your code and don't submit them. (I DON'T WANT MULTIPLE COPIES OF THE 283M  OR 2.4G FILE !!!) If instead your code works directly on a small subset cleaned outside of the notebook, submit -- or provide in the github repository -- the altered files and the cleaning code. 
+* R: create an R Markdown file (.Rmd) in RStudio, with `output: html_notebook` in the preamble. This will create a notebook file (.nb.html) when you "Preview" or "Knit". Submit - or provide in a github repository - both files. 
+* Python: Create your notebook in Jupyter and submit -- or provide in a github repository -- your .ipynb file OR create your notebook on Google Colab and send me a link. 
+* IN BOTH CASES ... if your code works directly on the two data files as downloaded (compressed or uncompressed) -- that is, if your cleaning / subsetting / etc. is in your notebook code -- assume they are in the same directory as your code and don't submit them. (I DON'T WANT MULTIPLE COPIES OF THE 283M  OR 2.4G FILE !!!) If instead your code works directly on a small subset cleaned outside of the notebook, submit -- or provide in the github repository -- the altered files and the cleaning code. 
 
 ----
 
