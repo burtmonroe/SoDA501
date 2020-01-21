@@ -1,5 +1,30 @@
 # Exercises
 
+## Exercise #1 - 2020 - Michel et al. Replication
+
+Due Thursday, Jan 30 (which is defined operationally as before Friday, Jan 31, 7:00 am)
+
+Complete the replication and discussion of Michel, et al., in Bit by Bit, Chapter 2, Exercise 6, parts (a) through (g).
+
+Technical note: So that we don't have anyone blowing up their hard drives / bandwidth etc., please note that when Salganik says "Please read all parts of the question before you begin coding" and "Get the raw data from the Google Books NGram Viewer," he is telling you to get the data *you need to answer this question.* For part (a) you need counts of single words (unigrams or 1-grams) like "1875" or "1932." You only need to download the data from a single link on the page he provides. The file at that link is 283M compressed and 2.4G uncompressed. If you've downloaded more than that, you've downloaded more than you need. Moreover, the data you actually need is a tiny fraction of that 2.4G, so you don't need to keep all of it, or load all of it into memory -- figure out how to load just the part you need. Do all the cleaning / subsetting with code ... don't open a 2.4G file in Excel and delete 2.3G+ of rows. (Hint: If using R or Python, process the file line by line, discarding the ones you don't need. Or use a shell like bash -- a couple of the commands listed in Goist and Monroe's "Taking Data Seriously" will work wonders.)
+
+(For part b, you also need the tiny "total_counts" file.)
+
+You'll do this in assigned teams of two or three.
+
+Submit your team's answer, and the code, as an R Notebook or Jupyter (Python) notebook. 
+
+** R: create an R Markdown file (.Rmd) in RStudio, with `output: html_notebook` in the preamble. This will create a notebook file (.nb.html) when you "Preview" or "Knit". Submit - or provide in a github repository - both files. 
+** Python: Create your notebook in Jupyter and submit -- or provide in a github repository -- your .ipynb file OR create your notebook on Google Colab and send me a link. 
+** IN BOTH CASES ... if your code works directly on the two data files as downloaded (compressed or uncompressed) -- that is, if your cleaning / subsetting / etc. is in your notebook code -- assume they are in the same directory as your code and don't submit them. (I DON'T WANT MULTIPLE COPIES OF THE 283M  OR 2.4G FILE !!!) If instead your code works directly on a small subset cleaned outside of the notebook, submit -- or provide in the github repository -- the altered files and the cleaning code. 
+
+----
+
+
+
+# Archive
+
+
 ## Exercise #1 - 2019 - Squinting at Google Trends and Google Ngrams
 Due Monday, Jan 14 (which is defined operationally as before Tuesday, 7:00 am)
 
@@ -36,22 +61,6 @@ What the hell is going on here? Use any evidence you want, or just conjecture. W
 
 
 
-## Exercise #2 - 2019 - Michel et al. Replication
-Due Monday, Jan 28 (which is defined operationally as before Tuesday, 7:00 am)
-
-Complete the replication and discussion of Michel, et al., in Bit by Bit, Chapter 2, Exercise 6, parts (a) through (g).
-
-Technical note: So that we don't have anyone blowing up their hard drives / bandwidth etc., please note that when Salganik says "Please read all parts of the question before you begin coding" and "Get the raw data from the Google Books NGram Viewer," he is telling you to get the data *you need to answer this question.* For part (a) you need counts of single words (unigrams or 1-grams) like "1875" or "1932." You only need to download the data from a single link on the page he provides. The file at that link is 283M compressed and 2.4G uncompressed. If you've downloaded more than that, you've downloaded more than you need. Moreover, the data you actually need is a tiny fraction of that 2.4G, so you don't need to keep all of it, or load all of it into memory at any one time. (For part b, you also need the tiny "total_counts" file.)
-
-You'll do this in assigned teams of three.
-
-Submit your team's answer, and the code, as an R Notebook. (Create an R Markdown file, .Rmd, with output: html_notebook, which will create a notebook file, .nb.html . Submit - or provide in a github repository - both files. If your code works directly on the two data files as downloaded, assume they are in the same directory as your code and don't submit them. If your code works directly on a small subset cleaned outside of R, submit those altered files. If you used code in another language (like Python or bash) at some point, submit that too. Here are two excellent sources / tutorials / resources on R Markdown and R Notebooks: <https://rmarkdown.rstudio.com> and [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown) )
-
-----
-
-
-
-# Archive
 
 ### Data Wrangling Exercise (Exercise 3 - 2018)
 
