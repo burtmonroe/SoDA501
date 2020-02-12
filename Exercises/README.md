@@ -18,6 +18,21 @@ Submit your team's answer, and the code, as an R Notebook or Jupyter (Python) no
 * Python: Create your notebook in Jupyter and submit -- or provide in a github repository -- your .ipynb file OR create your notebook on Google Colab and send me a link. 
 * IN BOTH CASES ... if your code works directly on the two data files as downloaded (compressed or uncompressed) -- that is, if your cleaning / subsetting / etc. is in your notebook code -- assume they are in the same directory as your code and don't submit them. (I DON'T WANT MULTIPLE COPIES OF THE 283M  OR 2.4G FILE !!!) If instead your code works directly on a small subset cleaned outside of the notebook, submit -- or provide in the github repository -- the altered files and the cleaning code. 
 
+## Exercise #2 - 2020 - Michel et al. Replication
+
+Due Friday, Feb 21, 5:00pm (Groups as assigned in class)
+
+This exercise is based on Salganik, 2.7, and involves a semi-replication of Penney (2016): Penney, J.W., 2016. Chilling effects: Online surveillance and Wikipedia use. Berkeley Tech. LJ, 31, p.117.
+
+Consider Figure 2, which demonstrates a "chilling effect" around the Snowden revelations on June 6, 2013: ![Penney Figure 2]("Penney2016RegressionDiscontinuity.jpeg")
+
+1. Get wikipedia page view data using R package wikipediatrend. Calculate and redraw the monthly observations in this figure using just the "Terrorism" page. (It will not be exactly the same -- Penney aggregated a lot of terms and "removed outliers.") (You don't need to recalculate or show the regression lines.) 
+2. Redraw Figure 2 using longer time period and finer grain of time.
+3. Select a comparison page that would help diagnose problems in the page view data (effects on *all* pages, like server going down or internet slowdowns for some part of the world). Make an informative plot about what this reveals.
+4. Select a comparison page that would help diagnose whether Wikipedia view data for “Terrorism” also display the college freshman effect we saw in Google Trends (see discussion in Goist and Monroe 2020 if you don't remember this). Make an informative plot about what this reveals.
+5. Compare Google Trends data for searches in the US for “terrorism” over the same period you used in #2. Are Google Trends and Wikipedia views measuring similar constructs?
+6. Do you buy Penney’s conclusion that the Snowden revelations had a “chilling effect”? Why or why not?
+
 
 ----
 
