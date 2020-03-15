@@ -1,26 +1,31 @@
 ---
 title: "SoDA 501, Exercise 3 - data.table Solution"
+author: "Burt L. Monroe"
 output:
   html_document:
     df_print: paged
     toc: yes
   html_notebook:
     code_folding: show
+    df_print: paged
     highlight: tango
     theme: united
     toc: yes
 ---
 
 
-This document addresses one solution to the data-wrangling exercise described in [Exercise3.pdf](https://burtmonroe.github.io/SoDA501/Exercise3-2018/Exercise3.pdf). For the accompanying R Notebook with executable code, download the Rmd file from the pulldown "Code" menu on the upper right.  
+This document addresses one solution to the data-wrangling exercise described in [Exercise3.pdf](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3.pdf).
 
-The input to the exercise is the raw data on 2016 Centre County, PA, precinct level votes found in ["CentreCountyPrecinctResults2016GeneralElection.txt"](https://burtmonroe.github.io/SoDA501/Exercise3-2018/CentreCountyPrecinctResults2016GeneralElection.txt), which were retrieved from [http://centrecountypa.gov/Index.aspx?NID=802](http://centrecountypa.gov/Index.aspx?NID=802).
+The `data.table` format does not print nicely -- not easily anyway -- within the usual format, so the R Notebook with executable code -- the Rmd file -- must be downloaded separately here: [Exercise3-data.tableSolution.Rmd](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3-data.tableSolution.Rmd).  
+
+The input to the exercise is the raw data on 2016 Centre County, PA, precinct level votes found in ["CentreCountyPrecinctResults2016GeneralElection.txt"](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/CentreCountyPrecinctResults2016GeneralElection.txt), which were retrieved from [http://centrecountypa.gov/Index.aspx?NID=802](http://centrecountypa.gov/Index.aspx?NID=802). (Update - 2020: This link is no longer accurate, and the original file does not appear to be available there any more. You can, however, find it on the Internet Archive's Wayback Machine, for example, here: [http://web.archive.org/web/20181106161514/centrecountypa.gov/index.aspx?NID=802](http://web.archive.org/web/20181106161514/centrecountypa.gov/index.aspx?NID=802). The file is no longer available due to the website being "updated" to provide the data in even less accessible form (pdf).)
+
 
 The exercise asks you to extract the data on votes cast by precinct in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
 
 This solution uses the R `data.table` library. For alternative solutions see [https://burtmonroe.github.io/SoDA501/Exercise3-2018](https://burtmonroe.github.io/SoDA501/Exercise3-2018).
 
-# Solving with the `data.table`
+# Solving with `data.table`
 
 We will proceed with the same general strategy as with the tidyverse solution, creating three tables -- total votes, rolloffs, and two party shares -- that we then merge in the final step.
 
@@ -30,8 +35,9 @@ First we read in the raw data (this time using the `fread` command to read into 
 library(data.table)
 rawdata.dt <- fread("CentreCountyPrecinctResults2016GeneralElection.txt") # 3520 rows, 16 columns
 dim(rawdata.dt)
-head(rawdata.dt, n=50)
+rawdata.dt
 ```
+
 These data have, roughly, 39 rows for each of 91 precincts in Centre County, PA, identified by the variables `PrecNo` (which ranges from `0001` to `0091`) and `PrecName` (which ranges from `01 BELLEFONTE NORTH` to `91 FERGUSON NORTH CENTRAL`). Each precinct starts with three rows for summary information, identified in the `Contest` variable by values `REGISTERED VOTERS - TOTAL`, `BALLOTS CAST - TOTAL`, `VOTER TURNOUT - TOTAL`, followed by five rows with information on straight ticket voting for each of five parties (which can be ignored for our purposes here). From there, each row contains information for a single candidate in a particular contest. We care specifically about the statewide contests that are held in every precinct here: President (`Contest=="PRESIDENTIAL ELECTORS"`), US Senator (`Contest=="UNITED STATES SENATOR"`), Attorney General (`Contest=="ATTORNEY GENERAL"`), Auditor General (`Contest=="AUDITOR GENERAL"`), and Treasurer (`Contest=="STATE TREASURER"`). All of our calculations are based on the number in the `Count` variable.
 
 ## Solve in three pieces
@@ -49,7 +55,7 @@ Tot.dt
 
 ### Table 2: Rolloffs in down-ballot races
 
-As with the tidyverse solution, there are two nontrivial steps here. The first is the grouped summary step (the third assignment below), where vote counts are summed by Precinct Number and Contest. This is more or less the core process in `data.table`, so its implementation is very compact. The second is the `dcast` command which does the equivalent of what `spread` does in the tidyverse. The notation here uses a formula (here `PrecNo ~ Con`) to define the "key" on which the table is cast.
+As with the tidyverse solution, there are two nontrivial steps here. The first is the grouped summary step (the third assignment below), where vote counts are summed by Precinct Number and Contest. This is more or less the core process in `data.table`, so its implementation is very compact. The second is the `dcast` command which does the equivalent of what `pivot_wider` (`spread`) does in the tidyverse. The notation here uses a formula (here `PrecNo ~ Con`) to define the "key" on which the table is cast.
 
 ```{r}
 # Create data.table with just vars PrecNo, Count, and Con (abbreviated Contest)
