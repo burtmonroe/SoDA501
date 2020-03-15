@@ -1,23 +1,22 @@
 ---
-title: "SoDA 501, Exercise 3 - `tidyverse` Solution"
+title: "SoDA 501, Exercise 3 (2018) - `tidyverse` Solution"
+author: "Burt L. Monroe"
 output:
-  html_document:
-    df_print: paged
-    toc: yes
   html_notebook:
     code_folding: show
     highlight: tango
     theme: united
+    df_print: paged
     toc: yes
 ---
 
-This document addresses one solution to the data-wrangling exercise described in [Exercise3.pdf](https://burtmonroe.github.io/SoDA501/Exercise3-2018/Exercise3.pdf). For the accompanying R Notebook with executable code, download the Rmd file from the pulldown "Code" menu on the upper right.  
+This document addresses one solution to the data-wrangling exercise described in [Exercise3.pdf](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3.pdf). For the accompanying R Notebook with executable code, download the Rmd file from the pulldown "Code" menu on the upper right.  
 
-The input to the exercise is the raw data on 2016 Centre County, PA, precinct level votes found in ["CentreCountyPrecinctResults2016GeneralElection.txt"](https://burtmonroe.github.io/SoDA501/Exercise3-2018/CentreCountyPrecinctResults2016GeneralElection.txt), which were retrieved from [http://centrecountypa.gov/Index.aspx?NID=802](http://centrecountypa.gov/Index.aspx?NID=802).
+The input to the exercise is the raw data on 2016 Centre County, PA, precinct level votes found in ["CentreCountyPrecinctResults2016GeneralElection.txt"](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/CentreCountyPrecinctResults2016GeneralElection.txt), which were retrieved from [http://centrecountypa.gov/Index.aspx?NID=802](http://centrecountypa.gov/Index.aspx?NID=802). (Update - 2020: This link is no longer accurate, and the original file does not appear to be available there any more. You can, however, find it on the Internet Archive's Wayback Machine, for example, here: [http://web.archive.org/web/20181106161514/centrecountypa.gov/index.aspx?NID=802](http://web.archive.org/web/20181106161514/centrecountypa.gov/index.aspx?NID=802). The file is no longer available due to the website being "updated" to provide the data in even less accessible form (pdf).)
 
 The exercise asks you to extract the data on votes cast by precinct in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
 
-This solution uses the R `tidyverse`. For alternative solutions see [https://burtmonroe.github.io/SoDA501/Exercise3-2018](https://burtmonroe.github.io/SoDA501/Exercise3-2018).
+This solution uses the R `tidyverse`. For alternative solutions see [https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018).
 
 # Solving with the `tidyverse` (mainly `dplyr`)
 
@@ -38,7 +37,7 @@ This solution creates three dataframes (tables) that it joins together in the la
 
 ### Table 1: Total votes by precinct
 
-The total vote numbers are already in the data, we just need to `filter` rows down to just the 91 we need (the ones that list `"BALLOTS CAST - TOTAL"` in the `Contest` column, and then `select` the columns we need. We'll keep the precinct number, the precinct name, and the total votes
+The total vote numbers are already in the data, we just need to `filter` rows down to just the 91 we need (the ones that list `"BALLOTS CAST - TOTAL"` in the `Contest` column, and then `select` the columns we need. We'll keep the precinct number, the precinct name, and the total votes.
 
 ```{r}
 Tot <- rawdata %>% 
@@ -71,10 +70,32 @@ dim(Rolloffs) # 91 rows, 5 columns
 head(Rolloffs)
 ```
 
+#### NB. 2020 Update
+
+Since the original posting of this exercise / solution, the `spread` and `gather` commands have been superceded by `pivot_wider` and `pivot_longer`. The code above still works, but the preferred formulation would now be:
+
+```{r}
+Rolloffs <- rawdata %>%                  # Start with the raw data
+  select(PrecNo, Contest, Count) %>%     # For rolloff we need the data by precinct & contest
+  mutate(Con=substr(Contest,1,3)) %>%    # For cleanliness, create an abbreviated contest variable
+  filter(Con %in% c("PRE","UNI","ATT","AUD","STA")) %>%  # Pick the rows with just the statewide contests
+  group_by(PrecNo,Con) %>%               # Group into Precinct-Contest units
+  summarise(ConTot=sum(Count)) %>%       # Calculate total vote by Precinct-Contest
+  pivot_wider(names_from = Con, values_from = ConTot) %>% 
+  # replaces
+  # spread(Con, ConTot) %>%           # Spread the data by Contest
+  mutate(ROSen=100*(1-UNI/PRE),         # Rolloff for Senator (UNI TED STATES SENATOR)
+         ROAtt=100*(1-ATT/PRE),         # Rolloff for Attorney General (ATT ORNEY GENERAL)
+         ROAud=100*(1-AUD/PRE),         # Rolloff for Auditor General (AUD ITOR GENERAL)
+         ROTre=100*(1-STA/PRE)) %>%     # Rolloff for Treasurer (STA TE TREASURER)
+  select(PrecNo,ROSen,ROAtt,ROAud,ROTre) # Keep just the Precinct Number and Rolloff variables
+dim(Rolloffs) # 91 rows, 5 columns
+head(Rolloffs)
+```
 
 ### Table 3: Democratic share of two-party vote
 
-This is similar to rolloff in that we need to calculate two intermediate quantities along the way: total vote for Republican and Democrat in each race, by precinct. With rolloff, we needed to spread the data to create contest data by precinct. With party shares, we need to spread the data to create contest-party data by precinct, so we need to create a contest-party indicator variable to act as a "key" for spreading.
+This is similar to rolloff in that we need to calculate two intermediate quantities along the way: total vote for Republican and Democrat in each race, by precinct. With rolloff, we needed to spread the data to create contest data by precinct. With party shares, we need to spread the data to create contest-party data by precinct, so we need to create a contest-party indicator variable to act as a "key" for spreading. (2020 note: again, `spread` should be replaced by `pivot_wider`.)
 
 ```{r}
 DemTwoPartyVotes <- rawdata %>%            # Start with the raw data
@@ -85,7 +106,9 @@ DemTwoPartyVotes <- rawdata %>%            # Start with the raw data
   filter(Pty %in% c('DEM','REP')) %>%      # Pick just Democratic and Republican candidates
   mutate(ConPty = paste(Con,Pty,sep="")) %>%  #### CREATE CONTEST-PARTY TO ACT AS KEY FOR SPREAD
   select(PrecNo,ConPty,Count) %>%          # Get rid of columns we don't need.
-  spread(ConPty,Count) %>%                 ##### SPREAD THE DATA BY THE CONTEST-PARTY KEY
+  pivot_wider(names_from = ConPty, values_from = Count) %>%
+  # replaces
+  #  spread(ConPty,Count) %>%         ##### SPREAD THE DATA BY THE CONTEST-PARTY KEY
   mutate(D2Pre=100*(PREDEM/(PREDEM+PREREP)),     # D2Pre = Dem share of 2 party vote for President
          D2Sen=100*(UNIDEM/(UNIDEM+UNIREP)),     # D2Sen = Dem share of 2 party vote for US Senator
          D2Att=100*(ATTDEM/(ATTDEM+ATTREP)),     # D2Att = Dem share of 2 party vote for Attorney Genl
