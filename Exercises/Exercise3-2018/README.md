@@ -12,5 +12,5 @@ The exercise asks you to extract the data on votes cast by precinct in statewide
 There are three alternative solutions provided:
 
 1. [R - tidyverse (dplyr)](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution/)
-2. [R - data.table](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/data.tableSolution/)
+2. [R - data.table](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution/Exercise3-datatableSolution.html)
 3. Python - pandas
