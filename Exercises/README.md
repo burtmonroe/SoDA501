@@ -81,6 +81,6 @@ What the hell is going on here? Use any evidence you want, or just conjecture. W
 ### Data Wrangling Exercise (Exercise 3 - 2018)
 
 1. [Tidyverse (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution)
-2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution)
+2. [data.table (R) Solution](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution/Exercise3-datatableSolution.html)
 3. pandas (Python) Solution
 4. Trifacta Wrangler Solution
