@@ -2,9 +2,16 @@
 
 ## https://burtmonroe.github.io/SoDA501
 
+## COVID-19 REMOTE LEARNING 2020
+* Synchronous meetings will occur via [Zoom](https://psu.zoom.us) at the regularly scheduled course time.
+* Slides, recordings, lecture notes, and readings will be available via the course [Canvas](https://canvas.psu.edu) site (as will grades).
+* Tutorials / notebooks / exercise solutions will generally still be hosted here.
+* Course discussion chat is hosted on [Slack](https://www.slack.com), under team name SODA-501-2020.
+
 ## Syllabus
-* [PDF of partial Spring 2019 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2019.pdf)
-* [PDF of complete Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
+* PDF of Spring 2020 syllabus - undergoing COVID 19 REMOTE LEARNING REVISION
+* [PDF of Spring 2019 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2019.pdf)
+* [PDF of Spring 2018 syllabus](https://burtmonroe.github.io/SoDA501/Materials/syllabusSoDA501Spring2018.pdf) 
 
 ### Guest Speakers & *Talks of interest* (Spring 2020)
 
@@ -21,9 +28,10 @@
 * **I ANTICIPATE ALL OF THE FOLLOWING TO BE CANCELED DUE TO COVID-19 SHIFT TO REMOTE DELIVERY**
 * ~~**Mar 24: Bruce Desmarais (Political Science) - "Latent Space Networks."**~~
 * ~~*Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)*~~
-* **Apr 7: Luke Glowacki (Anthropology) - "Surveying Nomadic Pastoralists"**
-* **Apr 14: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**
-* **Apr 21: Soundar Kumara (Industrial & Mechanical Eng) - "Uncovering the Effect of Dominant Attributes on Community Topology: A Case of Facebook Networks"
+* ~~**Apr 7: Luke Glowacki (Anthropology) - "Surveying Nomadic Pastoralists"**~~
+* ~~**Apr 14: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**~~
+* ~~**Apr 21: Soundar Kumara (Industrial & Mechanical Eng) - "Uncovering the Effect of Dominant Attributes on Community Topology: A Case of Facebook Networks"**~~
+* ~~*May 2 (SATURDAY): New Faces in Political Methodology Conference*~~
 
 ### Guest Speakers & *Talks of interest* (Spring 2019)
 
