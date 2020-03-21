@@ -14,18 +14,23 @@
 * **Feb 11: Timothy Brick (Human Development & Family Studies) - "Associations Between Slow-and Fast-Timescale Indicators of Emotional Functioning."**
 * *Feb 14 (FRIDAY): C-SoDA Speaker: Alexandra Chouldechova (Statistics & Public Policy, CMU)*
 * **Feb 18: Suzanna Linn (Political Science) - "Automated Text Classification of News Articles: A Practical Guide."**
-* **Feb 25: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**
+* Feb 25: (SPEAKER POSTPONED)
 * *Mar 2 (MONDAY): C-SoDA Speaker: Adriana Crespo Tenorio (Facebook)*
 * **Mar 3: Guangqing Chi (Rural Sociology) - "The Representativeness of Twitter Data"**
 * Mar 10: SPRING BREAK
-* *Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)*
+* **I ANTICIPATE ALL OF THE FOLLOWING TO BE CANCELED DUE TO COVID-19 SHIFT TO REMOTE DELIVERY**
+* ~~**Mar 24: Bruce Desmarais (Political Science) - "Latent Space Networks."**~~
+* ~~*Mar 27 (FRIDAY): C-SoDA Speaker: Sandra González-Bailón (Communication, UPenn)*~~
+* **Apr 7: Luke Glowacki (Anthropology) - "Surveying Nomadic Pastoralists"**
+* **Apr 14: Lee Giles (IST / Informatics / CSE) - "Deep Learning and Automata"**
+* **Apr 21: Soundar Kumara (Industrial & Mechanical Eng) - "Uncovering the Effect of Dominant Attributes on Community Topology: A Case of Facebook Networks"
 
 ### Guest Speakers & *Talks of interest* (Spring 2019)
 
 * *Jan 28 (MONDAY): C-SoDA Open House / Lightning Talks / Posters*
 * **Jan 29: Sarah Rajtmajer (IST / Informatics / Rock Ethics) - "Beyond the Crisis: Research Ethics in the Age of Open Data"**
 * **Feb 5: Scott Yabiku (Sociology) (2:40 start) - "Comparing Modes of Retrospective Activity Space Data Collection."**
-* Feb 12: (CLASS CANCELLED BY WEATHER)
+* Feb 12: (CLASS CANCELED BY WEATHER)
 * **Feb 19: Kenneth (Ting-Hao) Huang (IST / Informatics) - "Crowdsourcing and Crowd-AI Systems."**
 * *Feb 21 (THURSDAY): PRI Innovative Methods Working Group Speaker, Scott Yabiku - "Concepts for Big Data Analysis and Examples from Penn State’s Advanced CyberInfrastructure (ICS-ACI).”*
 * *Feb 25 (MONDAY): C-SoDA Speaker, Ben Hansen (Statistics, Michigan) - "Infinite Regression Discontinuity"*
