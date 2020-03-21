@@ -6,9 +6,6 @@ The input to the exercise is the raw data on 2016 Centre County, PA, precinct le
 The exercise asks you to extract the data on votes cast by precinct in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
 
 
-The exercise asks you to extract the data on votes cast by precinct in statewide elections, and process them into a new table with precinct level data on total votes, Democratic share of two-party vote, and ballot rolloff from presidential votes to votes in other statewide races.
-
-
 There are three alternative solutions provided:
 
 1. [R - tidyverse (dplyr)](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/TidyverseSolution/)
