@@ -4,7 +4,7 @@ The notebook in this folder provides a solution to the data-wrangling exercise d
 
  For alternative solutions see [https://burtmonroe.github.io/SoDA501/Exercise3-2018](https://burtmonroe.github.io/SoDA501/Exercise3-2018).
  
-The `data.table` format does not seem to display consistently -- or I'm missing something -- within the usual `nb.html` format [here](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3-datatableSolution.nb.html). The `html` version [here](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3-datatableSolution.html) may be prettier. The R Notebook with executable code -- the Rmd file -- should be downloadable from the pulldown at upper right of the `nb.html` file or can be downloaded separately here: [Exercise3-datatableSolution.Rmd](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/Exercise3-datatableSolution.Rmd).  
+The `data.table` format does not seem to display consistently -- or I'm missing something -- within the usual `nb.html` format [here](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution/Exercise3-datatableSolution.nb.html). The `html` version [here](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution/Exercise3-datatableSolution.html) may be prettier. The R Notebook with executable code -- the Rmd file -- should be downloadable from the pulldown at upper right of the `nb.html` file or can be downloaded separately here: [Exercise3-datatableSolution.Rmd](https://burtmonroe.github.io/SoDA501/Exercises/Exercise3-2018/datatableSolution/Exercise3-datatableSolution.Rmd).  
 
 #### General info on the exercise:
 
