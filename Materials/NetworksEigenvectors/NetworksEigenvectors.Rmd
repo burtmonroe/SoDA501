@@ -1,0 +1,628 @@
+---
+title: "Networks and Eigenvectors"
+author: "Burt L. Monroe"
+subtitle: SoDA 501 (Penn State)
+output:
+  html_notebook:
+    code_folding: show
+    df_print: paged
+    highlight: tango
+    theme: united
+    toc: yes
+  html_document:
+    df_print: paged
+    toc: yes
+---
+Continuing my loving ode to eigenstuff, this notebook lays out some ways in which eigenvectors play a role in network analysis and, conversely, ways in which thinking about data as networks helps to understand eigenvectors.
+
+This notebook references readings in "MMDS" -- "Mining of Massive Datasets" by Jure Leskovec, Anand Rajaraman, & Jeff Ullman. The book, along with slides and videos from their class is available here: http://www.mmds.org.
+
+This notebook uses the R package `igraph`, a network analysis package that is available also in Python, Mathematica, and C++: https://igraph.org. For more or less definitive tutorials on igraph in R, I highly recommend the tutorials put together by Katherine Ognyanova of Rutgers: https://kateto.net/tutorials.
+
+
+# Some refreshers
+
+There are a few setup points from previous classes I'd like you to keep in mind while you proceed through this notebook.
+
+## The connection between matrices and networks
+
+
+  1. Many of the datasets we see in this class can be thought of in *matrix* form, with rows usually "observations" and columns usually "features", all measured in the same units and scales ... word counts, 5-star ratings, and so on.
+  
+  2. We can reinterpret such matrices as *networks*, with cell entries indicating presence, absence, or weight of the connection between observation $i$ and feature $j$. This can typically be interpreted as a *bipartite* network with two types of nodes, but in the special case where the observations and features are the same objects, the data matrix is square and it can be interpreted as a *monopartite* network. The latter is the case with all examples here.
+
+## Definitions and intuition about matrices and eigenvectors   
+  3. An $n \times m$ matrix can be interpreted as a *linear transformation* -- a transformation that keeps straight lines straight -- which maps points in $n$-dimensional space into $m$-dimensional space. An $m \times m$ matrix can be interpreted as a linear transformation within $m$-dimensional space, which will be a combination of scaling, reflection, rotation,  or shear.
+  
+  4. An *eigenvector* of a square matrix, $\textbf{M}$ is a vector that does not change direction -- it is only scaled and/or reflected -- when the transformation is applied. In most settings, eigenvectors are defined as $m \times 1$ column vectors such that 
+  $$\textbf{Me} = \lambda\textbf{e}\text{,}$$
+where $\lambda$ is the *eigenvalue* associated with that eigenvector. We can call those "right eigenvectors" and also define "left eigenvectors" -- row vectors or transposed column vectors -- such that
+  $$\textbf{e'M} = \lambda\textbf{e'}\text{.}$$
+  The left eigenvectors of $\textbf{M}$ are the right eigenvectors of its transpose, $\textbf{M'}$.
+
+  5. The *eigendecomposition* of a square matrix $\textbf{M}$ is
+  $$\textbf{M} = \textbf{Q}\Lambda\textbf{Q}^{-1}\text{,}$$
+  where $\textbf{Q}$ is a square matrix with its columns making up the (right) eigenvectors of $\textbf{M}$ and $\Lambda$ is a (square) diagonal matrix with the diagonal consisting of the eigenvalues associated with each eigenvector. In the case of a symmetric matrix, like a covariance matrix or an undirected monopartite network, $\textbf{Q}$ is orthogonal and $$\textbf{M} = \textbf{Q}\Lambda\textbf{Q'}\text{,}$$
+  so it can be interpreted as a rotation, $\textbf{Q}$, followed by a rescaling, $\Lambda$, followed by a reverse of the previous rotation, $\textbf{Q'}$.
+  
+# Paths and Centrality in Networks
+
+If necesssary, install the igraph package. Load it.
+```{r}
+#install.packages("igraph")
+library(igraph)
+```
+
+We're going to create a seven node undirected network by defining its *adjacency matrix*: a $7 \times 7$ matrix in which a 1 in cell $i,j$ indicates that node $i$ and node $j$ are connected. An undirected network is symmetric -- a 1 in cell $i,j$ means a 1 in cell $j,i$. I'll do this row by row to make it clearer.
+
+```{r}
+A <- matrix(0,7,7)
+A[1,] <- c(0,1,1,0,0,0,0)
+A[2,] <- c(1,0,1,0,1,0,0)
+A[3,] <- c(1,1,0,1,1,0,0)
+A[4,] <- c(0,0,1,0,0,0,0)
+A[5,] <- c(0,1,1,0,0,1,1)
+A[6,] <- c(0,0,0,0,1,0,0)
+A[7,] <- c(0,0,0,0,1,0,0)
+A
+```
+
+Now we'll use the `graph_from_adjacency_matrix` function to make this an igraph `graph` (network) object.
+
+```{r}
+g7 <- graph_from_adjacency_matrix(A, mode="undirected")
+g7
+```
+
+I'll use the generic plotting function to show you the network. (The default layout involves some arbitrary randomness, so I set the seed to ensure it looks the same to you when you plot it as it does to me.)
+
+```{r, ,fig.height=3,fig.width=3}
+set.seed(3)
+plot(g7)
+```
+
+The *degree* of each node is the number of connections it has. There is a degree function to calculate that in `igraph`:
+
+```{r}
+degree(g7)
+```
+
+You can get also get degree for each node from the adjacency matrix by summing the rows (or columns):
+```{r}
+degree.A <- rowSums(A)
+degree.A
+```
+
+One measure of *centrality* of nodes is *degree centrality* ... that is, the higher a node's degree, the higher its centrality. This measure rates nodes 3 and 5 as equally the most central.
+
+You can also think of a node's degree as the number of *paths* or *walks* of length one leading from the node.
+
+How many paths of length 2 are there from node 1 to node 5? 
+
+There's 1 -> 3 -> 5 and 1 -> 2 -> 5, so two.
+
+Let's look at that adjacency matrix again. Row 1 is $[0,1,1,0,0,0,0]$ indicating connection from node 1 to nodes 2 and 3. Column 5 is $[0,1,1,0,0,1,1]$ indicating connections from nodes 2, 3, 6, and 7 to node 5.
+
+Now, calculate the dot product of those two: $0 \cdot 0 + 1 \cdot 1  + 1 \cdot 1  + 0 \cdot 0   + 0 \cdot 0   + 0 \cdot 1   + 0 \cdot 1 = 2$! That's not a coincidence. There are two places where nodes connect to both node 1 and node 5: node 2 and node 3. That's the necessary and sufficient condition for a path of length two. Every other node connects to only one of them, or neither, putting a zero in the dot product summation.
+
+And we generalize the dot product to all rows and columns with matrix multiplication to get $\textbf{A}^2$:
+
+```{r}
+A2 <- A %*% A
+A2
+```
+
+Other than the diagonal, there is only one other pair of nodes connected by two paths of length two: nodes 2 and 3 are connected through nodes 1 and 5.
+
+Recognize the diagonal? It's the degrees of the nodes. Why? Every entry in $\textbf{A}^2$ in position $(i,j)$ represents the number of paths of length two from node $i$ to node $j$. So, an entry in position $(i,i)$ represents the number of paths of length two from node $i$ to itself. So, node 1, for example, has two paths of length two leading back to itself. The first is down the link with node 2 and back up that same link; the second is down the link with node 3 and back up again. In this network, degree-of-node-$i$ and paths-of-length-two-connecting-node-$i$-to-itself are the same thing.
+
+If we look at the row sums, we get the total degrees of the nodes that node $i$ is connected to:
+
+```{r}
+rowSums(A2)
+```
+
+That could be taken as a different measure of centrality, one that values the connectedness of your connections. This views nodes 2 and 3 as equally the most central.
+
+What about paths of length three?
+
+Just do it again!
+
+```{r}
+A3 <- A2 %*% A
+A3
+```
+
+So, for example, there are seven paths of length three connecting node 2 to node 5: 2-1-3-5, 2-1-2-5, 2-3-2-5, 2-5-2-5, 2-5-3-5, 2-5-6-5, 2-5-7-5. 
+
+Now, row sums give total connections of the connections of connections:
+
+```{r}
+rowSums(A3)
+```
+
+Now, node 3 is the most central.
+
+(Another neat feature of $A^3$ is that the number of *triangles* in the network can be calculated as the *trace* -- the sum of the diagonal -- divided by 6. In this case, two. This is because a triangle is the only path of length three from a node to itself, but each one is counted six times: starting at each of its three nodes and walking the triangle clockwise and counterclockwise.)
+
+If all we care about is the totals, we can multiply the matrix by the previous totals rather than doing the full matrix multiply and rowSum operation:
+
+```{r}
+A %*% rowSums(A) # should equal rowSums(A2)
+A %*% rowSums(A2) # should equal rowSums(A3)
+```
+
+Since it's symmetric, it works with either post- or pre-multiplying:
+
+```{r}
+rowSums(A) %*% A # should equal rowSums(A2)
+rowSums(A2) %*% A # should equal rowSums(A3)
+```
+
+So, if 3's good, maybe 4 is better. If all we care about is the relative path-$n$ centrality (probably has a real name -- I just made that up), then we can normalize them. The standard in this most contexts is the L2 norm (the square root of the sum of the squared elements). So, let's call the total path count of $n$-length paths (the row sums of the $A_n$ matrix) $C_n$, and the normalized version, $c_n=C_n/\Vert C_n \rVert _2$. What happens to $c_n$ as $n$ grows?
+
+```{r}
+N <- 20
+cnmat <- matrix(0,nrow(A),N)
+colnames(cnmat) <- paste("c",1:20)
+rownames(cnmat) <- paste("Node",1:nrow(A))
+C1 <- rowSums(A)
+cnmat[,1] <- C1/sqrt(sum(C1^2))
+for (n in 2:N) {
+  Cn <- A %*% cnmat[,n-1]
+  cnmat[,n] <- Cn/sqrt(sum(Cn^2))
+}
+cnmat
+```
+
+You notice they seem to be stabilizing at a particular set of values. That set of values is the first (or "leading") *eigenvector* and is the same as the *eigenvector centrality*:
+
+```{r}
+eigen_centrality(g7, scale=F)$vector
+```
+
+That is, eigenvector centrality is (proportional to) the relative number of paths of *all* lengths from (or to) each node. It's degree centrality where each connection is weighted by the importance of the nodes it connects to, which in turn are weighted by the importance of nodes they are connected to, etc., ad infinitum.
+
+This method of calculating the first eigenvector / eigenvector centrality is called the *power method*.
+
+R has a generic eigendecomposition function, `eigen` which you can use on matrices generally, not just in the network context. The `eigen` function returns an object that contains the eigenvalues in the `values` attribute and the corresponding matrix of (right) eigenvectors as its columns, or $\textbf{Q}$:
+
+```{r}
+eigen(A)
+```
+
+Sidebar to show you $\textbf{Q}\Lambda \textbf{Q}' = \textbf{A}$:
+
+
+```{r}
+eigenA <- eigen(A)
+A_decomposed <- eigenA$vectors %*% diag(eigenA$values) %*% t(eigenA$vectors)
+```
+
+```{r}
+print(A_decomposed,digits=1)
+```
+It may take your eyes a minute to adjust to that, but that is a matrix of ones and very very very tiny numbers ... as close to zero as we can get within the precision of the computing here.
+
+OK, back to eigenvectors. We care here about the first eigenvector, which is in the first column of the `vector` attribute.
+
+```{r}
+eigen(A)$vector[,1]
+```
+
+This is identical to the eigencentrality scores from both methods above, except for the negative sign. Remember, eigenvectors can be scaled by any constant, including a negative.
+
+So, eigenvectors can be used to provide an intuitive measure of centrality in a network. 
+
+
+# Markov Chains
+
+Consider a different kind of network, a *Markov chain* defined by a *stochastic matrix*.
+
+Imagine there are three states of mind you might be in while sitting in my class: "Enlightened","Bored","Confused". Let's say you're in one of these states during each slide. When the next slide comes up, depending on your current state, there is some probability of staying in that state and some probability of moving to the other states.
+
+This is a "Markov" process, because the probability you are in any particular state depends only on the previous state. It doesn't matter what path you took to get there, it only "remembers" one step back.
+
+We can define this by a *stochastic matrix*. For example:
+
+```{r}
+P <- matrix(c(.5,0,.5,0,.8,.2,.3,.3,.4),3,3,byrow=TRUE)
+rownames(P) <- colnames(P) <- c("E","B","C")
+P
+```
+
+This is a "stochastic matrix" because each row is a probability distribution (sums to one, etc.). Technically, it's a "row stochastic matrix." The stochastic matrices in the PageRank discussion in MMDS, and in many discussions of Markov processes, use "column stochastic" matrices, so be careful.
+
+We can picture this like a *weighted* and *directed* network. The edges have direction ... they can connect from C to B, or from B to C, or both. The edges also have weights, in this case equal to the probability of making that particular transition. Note also that this network has *self loops*, edges that connect a node to itself.
+
+```{r, fig.height=3,fig.width=4}
+gmc <- graph_from_adjacency_matrix(P, mode="directed", weighted=T)
+plot(gmc, edge.curved=.3,edge.label=edge_attr(gmc)$weight, layout=layout_in_circle)
+```
+
+So, imagine you start out in B. The next step there's an 80% chance you stay at B, and 20% chance of moving to C. So say you stay at B (follow the self loop) a few steps and then move to C. Now you have a 40% chance of staying at C, a 30% chance of moving to E, and a 30% chance of going back to B. And so on.
+
+At some arbitrary step down the road, what is the probability you're in each of the states?
+
+So, we start in B. Our probability across {E,B,C} at step 0 is $[0,1,0]$. After one step, our probability is $[0, 0.8, 0.2]$. After two steps, our probability of being in B is the probability of staying in B twice, $0.8 \times 0.8$, or of moving to C and back to B, $0.2 \times 0.3$, co $.64 + .06 = .70$. Our probability of being in C is the probability of moving to C and staying there, $0.2 \times 0.4$, or of staying at B one step and then moving to C, $0.8 \times 0.2$: $.08+.16=.24$. Finally, the probability of being at E is the probability of moving to C in step one and E in step two, or $0.2 \times 0.3 = .06$. So, after two steps, we're at $[0.06, 0.70, 0.24]$. 
+
+We could keep going, but that's pretty cumbersome. There's got to be a better way. There is! We could get there by the same kind of matrix operations we did before when counting paths.
+
+Let's define our initial state, "Bored", using a row vector showing our distribution across states.
+```{r}
+p0 <- matrix(c(0,1,0),1,3)
+colnames(p0) <- rownames(P) # 
+p0
+```
+
+That says that when we start, we're in state B with certainty.
+
+We can then multiply this by the transition matrix to get the expected distribution across states after one step.
+
+Because this matrix is not symmetric like the undirected example, it matters whether you post- or pre-multiply here. For a row stochastic matrix, you postmultiply by the stochastic matrix.
+
+```{r}
+p1 <- p0 %*% P
+p1
+```
+
+So far, so good. To get the expectation after the second step we do it again.
+
+```{r}
+p2 <- p1 %*% P
+p2
+```
+
+Exactly what we calculated by hand: 70% chance we're in B, 24% chance we're in C, 6% chance we're in E.
+
+We could have done that in one step, starting from our initial state:
+
+```{r}
+p2 <- p0 %*% P %*% P
+p2
+```
+
+I'll introduce here a more compact version as well. The library `expm` provides a matrix exponentiation operator `%^%`. So if we want to calculate $\textbf{P}^2$ we say `P %^% 2`:
+
+```{r}
+library(expm)
+p2 <- p0 %*% (P %^% 2)
+p2
+```
+
+What if we let it go for a long time, say 100 steps?
+
+```{r}
+p100 <- p0 %*% (P %^% 100)
+p100
+```
+
+How about one more after that?
+
+```{r}
+p101 <- p0 %*% (P %^% 101)
+p101
+```
+
+Identical (up to the precision of the numbers displayed). We have reached a *steady state*.
+
+What if we instead start out not Bored but Confused?
+
+```{r}
+p0c <- matrix(c(0,0,1),1,3)
+colnames(p0c) <- rownames(P)  
+p0c
+p100c <- p0c %*% (P %^% 100)
+p100c
+```
+
+Identical!
+
+
+What if we instead start out Enlightened?
+
+```{r}
+p0e <- matrix(c(1,0,0),1,3)
+colnames(p0e) <- rownames(P)  
+p0e
+p100e <- p0e %*% (P %^% 100)
+p100e
+```
+
+Identical! 
+
+No matter where we start, in the long run, we reach the same steady state distribution.
+
+If we let the chain run for long enough, we will find ourselves in state E 19.35% of the time, state B 48.39% of the time, and state C 32.26% of the time.
+
+We can get there more directly with eigendecomposition. You do need to be careful in settings where the matrix is asymmetrical, as is the case here. With an asymmetrical (but square) matrix, $\mathbf{M} \neq \mathbf{M}'$, the left eigenvectors and right eigenvectors are different. For a row stochastic matrix, the steady state is the first of the left eigenvectors.
+
+(You are more likely to see column stochastic matrices and right eigenvectors in discussions of this. This, however, transposes the expected directionality of the arrows when we interpret the Markov chain as an adjacency matrix. To keep the network intuition, I use row stochastic matrices here.)
+
+In R, the function `eigen` provides the right eigenvectors. To get the left eigenvectors, you apply `eigen` to the transpose of $\mathbf{P}$:
+
+```{r}
+eigen(t(P))$vector[,1]
+```
+
+These are scaled to be L2-normed (the sum of squared values equals one) and the sign is arbitrary. To get a probability distribution, rescale to L1-norm (the sum of the values is one).
+
+```{r}
+le1.P <- eigen(t(P))$vector[,1]
+le1.P/sum(le1.P)
+```
+
+Identical!
+
+So ... the steady state of a Markov chain can be calculated as the (scaled) leading [left/right] eigenvector of the [row/column] stochastic matrix defining the process. 
+
+# PageRank
+
+PageRank is the core original idea behind Google. A multi-billion dollar idea.
+
+The core of PageRank is the same as the Markov chain example.
+
+Consider a web with four websites. We'll consider those websites as nodes and draw a directed edge between node A and node B if website A links to website B. We'll use the MMDS example in Figure 5.1:
+
+```{r, fig.height=3, fig.weight=3}
+W1 <- matrix(c(0,1,1,1,1,0,0,1,1,0,0,0,0,1,1,0),4,4,byrow=TRUE)
+rownames(W1) <- colnames(W1) <- c("A","B","C","D")
+gw1 <- graph_from_adjacency_matrix(W1,mode="directed")
+plot(gw1, edge.curved=.2, layout=layout.grid)
+```
+
+
+Now, we think of this as a Markov chain, where every transition out of each state is equally probable. That is, the weights we give each link are equal to one divided by the *out-degree* -- number of outgoing links.
+
+```{r, fig.height=3, fig.weight=3}
+W2 <- W1/rowSums(W1)
+gw2 <- graph_from_adjacency_matrix(W2,mode="directed", weighted=TRUE)
+plot(gw2, edge.curved=.2, edge.label=sprintf("%1.2f",edge_attr(gw2)$weight), layout=layout.grid)
+```
+
+This captures the *random surfer* metaphor. Our surfer starts at one website, then randomly picks a link to follow at the next step. 
+
+This defines a transition matrix that is, here, row-stochastic:
+
+```{r}
+W2
+```
+
+Note again: making this row-stochastic keeps this discussion consistent with igraph plotting syntax and the Markov example above. The MMDS discussion uses transition matrices that are column-stochastic (these are transposed from theirs).
+
+PageRank assumes an initial state in which each starting node is equally possible, and then pushes that probability around the network by the random surfer process until it stabilizes. In other words, it uses the power method.
+
+```{r}
+w0 <- matrix(rep(.25,4),1,4)
+w0 %*% (W2 %^% 100)
+```
+
+This should be the same as calculating the first (left) eigenvector directly:
+
+```{r}
+le1.W2 <- eigen(t(W2))$vector[,1]
+le1.W2/sum(le1.W2)
+
+(W2 %^% 100)[1,]
+```
+
+That's PageRank, ranking A as the most important website. At its core, it's just eigenvector centrality or Markov steady state.
+
+Now, we'll look at a variant of this network, with the link from C to A removed (Figure 5.3 MMDS). This makes C a dead-end.
+
+```{r, fig.height=3,fig.width=3}
+W3 <- matrix(c(0,1,1,1,1,0,0,1,0,0,0,0,0,1,1,0),4,4,byrow=TRUE)
+rownames(W3) <- colnames(W3) <- c("A","B","C","D")
+gw3 <- graph_from_adjacency_matrix(W3,mode="directed")
+plot(gw3, edge.curved=.2, layout=layout.grid)
+```
+
+Our random surfer chain now looks like this:
+```{r, fig.height=3, fig.weight=3}
+W4 <- W3/rowSums(W3)
+W4[is.na(W4)] <- 0
+gw4 <- graph_from_adjacency_matrix(W4,mode="directed", weighted=TRUE)
+plot(gw4, edge.curved=.2, edge.label=sprintf("%1.2f",edge_attr(gw4)$weight), layout=layout.grid)
+```
+
+Our transition matrix is no longer stochastic, and therefore no longer characterizes a Markov chain, since there's no probability distribution for transitioning out of C once you get there.
+
+If we try to use the power method, what happens if we, say, start with an even probability of being at any page?
+```{r}
+c(.25,.25,.25,.25) %*% (W4 %^% 1) # After one step
+c(.25,.25,.25,.25) %*% (W4 %^% 2) # After two steps
+c(.25,.25,.25,.25) %*% (W4 %^% 3) # After three steps
+c(.25,.25,.25,.25) %*% (W4 %^% 4) # After four steps
+c(.25,.25,.25,.25) %*% (W4 %^% 5) # After five steps
+c(.25,.25,.25,.25) %*% (W4 %^% 6) # After six steps
+```
+
+There's a leak. Whenever our random surfer ends up at C, she disappears at the next step.
+
+PageRank deals with this deflation of the total probability the same way we dealt with inflation in our path counts above, by norming after each step:
+
+```{r}
+W4.1 <- c(.25,.25,.25,.25) %*% W4 
+W4.1.n <- W4.1/sum(W4.1) # After one step, normed
+W4.1.n
+W4.2 <- W4.1.n %*% W4
+W4.2.n <- W4.2/sum(W4.2) # After two steps, normed
+W4.2.n
+W4.3 <- W4.2.n %*% W4
+W4.3.n <- W4.3/sum(W4.3) # After three steps, normed
+W4.3.n
+W4.4 <- W4.3.n %*% W4
+W4.4.n <- W4.4/sum(W4.4) # After four steps, normed
+W4.4.n
+W4.5 <- W4.4.n %*% W4
+W4.5.n <- W4.5/sum(W4.5) # After five steps, normed
+W4.5.n
+W4.6 <- W4.5.n %*% W4
+W4.6.n <- W4.6/sum(W4.6) # After six steps, normed
+W4.6.n
+```
+
+And again, this converges to the leading left eigenvector.
+
+```{r}
+eigen_W4 <- eigen(t(W4))$vector[,1]
+eigen_W4/sum(eigen_W4)
+```
+
+We can similarly create a *spider trap*, or what Brin and Page called a *rank sink*, by removing a couple of links out of node A.
+
+```{r, fig.height=3, fig.weight=3}
+W5 <- matrix(c(0,0,1,0,1,0,0,1,1,0,0,0,0,1,1,0),4,4,byrow=TRUE)
+rownames(W5) <- colnames(W5) <- c("A","B","C","D")
+gw5 <- graph_from_adjacency_matrix(W5,mode="directed")
+plot(gw5, edge.curved=.2, layout=layout.grid)
+```
+
+```{r, fig.height=3, fig.weight=3}
+W6 <- W5/rowSums(W5)
+gw6 <- graph_from_adjacency_matrix(W6,mode="directed", weighted=TRUE)
+plot(gw6, edge.curved=.2, edge.label=sprintf("%1.2f",edge_attr(gw6)$weight),layout=layout.grid)
+```
+
+Our random surfer is stuck going between A and C forever once she arrives at one of them. This is more problematic. Even with rescaling at each stage, all of the probability collects in the spider trap.
+
+```{r}
+W6.1 <- c(.25,.25,.25,.25) %*% W6 
+W6.1.n <- W6.1/sum(W6.1) # After one step, normed
+W6.1.n
+W6.2 <- W6.1.n %*% W6
+W6.2.n <- W6.2/sum(W6.2) # After two steps, normed
+W6.2.n
+W6.3 <- W6.2.n %*% W6
+W6.3.n <- W6.3/sum(W6.3) # After three steps, normed
+W6.3.n
+W6.4 <- W6.3.n %*% W6
+W6.4.n <- W6.4/sum(W6.4) # After four steps, normed
+W6.4.n
+W6.5 <- W6.4.n %*% W6
+W6.5.n <- W6.5/sum(W6.5) # After five steps, normed
+W6.5.n
+W6.6 <- W6.5.n %*% W6
+W6.6.n <- W6.6/sum(W6.6) # After six steps, normed
+W6.6.n
+```
+
+This remains true if we calculate the eigenvector directly:
+```{r}
+eigen_W6 <- eigen(t(W6))$vector[,1]
+eigen_W6/sum(eigen_W6)
+```
+
+This may not look so terrible in this four website network. But imagine the two node spider trap connected to a network of millions of other sites, including Wikipedia, Amazon, Twitter, and so on. The results would be the same, a PageRank of .5 for the two spider trap sites and zeros for everything else. Google's search engine wouldn't have been worth a dime if that's how its rankings worked.
+
+A quick toy example:
+
+```{r, fig.height=3,fig.width=3}
+W7 <- matrix(c(0,1,1,1,1,1,0,0,rep(c(1,0,0,0,0,0,0,0),4),1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0),8,8,byrow=TRUE)
+rownames(W7) <- colnames(W7) <- c("A","B","C","D","E","F","G","H")
+gw7 <- graph_from_adjacency_matrix(W7,mode="directed")
+set.seed(1)
+plot(gw7, edge.curved=.3)
+```
+
+```{r}
+W8.1 <- rep(1/8,8) %*% W8 
+W8.1.n <- W8.1/sum(W8.1) # After one step, normed
+W8.1.n
+W8.2 <- W8.1.n %*% W8
+W8.2.n <- W8.2/sum(W8.2) # After two steps, normed
+W8.2.n
+W8.3 <- W8.2.n %*% W8
+W8.3.n <- W8.3/sum(W8.3) # After three steps, normed
+W8.3.n
+W8.4 <- W8.3.n %*% W8
+W8.4.n <- W8.4/sum(W8.4) # After four steps, normed
+W8.4.n
+W8.5 <- W8.4.n %*% W8
+W8.5.n <- W8.5/sum(W8.5) # After five steps, normed
+W8.5.n
+W8.6 <- W8.5.n %*% W8
+W8.6.n <- W8.6/sum(W8.6) # After six steps, normed
+W8.6.n
+```
+
+There's some oscillating that we haven't seen before (the eigendecomposition involves complex numbers), but the overall pattern is clear ... probability drains out of the main network and away from the clearly most central node, A, and collects in the sink formed by nodes G and H.
+
+
+The element that solves this problem was referred to in the original paper as *dampening*. In MMDS they refer to it as *taxation* and, in the random surfer metaphor, as *teleportation*. I want to convince you it's another example of *regularization* of a sort you've seen before.
+
+The teleportation metaphor is easiest to understand I think. Now, our random surfer has a probability $\lambda$ of following the process described above, i.e., randomly follow a link out. We "dampen" the impact of the main process. Then, with probability $1-\lambda$, the surfer randomly "teleports" to another node in the network, whether connected or not. In the original, Brin and Page say they use a value of about $\lambda = .85$.
+
+Let's revisit our original network and see what effect that has. 
+
+```{r}
+lambda <- .85
+D <- matrix(1/3,4,4)
+diag(D) <- 0
+rownames(D) <- colnames(D) <- rownames(W2)
+W2.pr <- lambda * W2 + (1-lambda)* D
+W2.pr
+```
+
+In effect, we've rewired the network to be a dense, completely connected one with at least very light connections (here, .05) between every pair of nodes.
+
+```{r, fig.height=3, fig.width=4}
+gw2.pr <- graph_from_adjacency_matrix(W2.pr,mode="directed", weighted=TRUE)
+plot(gw2.pr, edge.curved=.2, edge.label=sprintf("%1.2f",edge_attr(gw2.pr)$weight), edge.layout=layout.grid)
+```
+
+And our new steady state:
+```{r}
+le1.W2.pr <- eigen(t(W2.pr))$vectors[,1]
+le1.W2.pr/sum(le1.W2.pr)
+```
+This differs slightly from the original answer of [.33, .22, .22, .22]. All the numbers have been "shrunk" (or "damped") toward equality at .25. (This "take from the rich, give to the poor" effect is the metaphorical "taxation.")
+
+This is very similar to regularization we have seen in other contexts, effectively "adding a little bit to the zeros" in the adjacency matrix.
+
+Now let's revisit our four-node spider trap network. ... 
+```{r}
+lambda <- .85
+D <- matrix(1/3,4,4)
+diag(D) <- 0
+rownames(D) <- colnames(D) <- rownames(W6)
+W6.pr <- lambda * W6 + (1-lambda)* D
+W6.pr
+```
+
+```{r}
+le1.W6.pr <- eigen(t(W6.pr))$vectors[,1]
+le1.W6.pr/sum(le1.W6.pr)
+```
+
+Now our pages outside the spider trap have some probability/rank attached to them.
+
+This is more dramatic in our 8 node network:
+```{r}
+lambda <- .85
+D <- matrix(1/7,8,8)
+diag(D) <- 0
+rownames(D) <- colnames(D) <- rownames(W8)
+W8.pr <- lambda * W8 + (1-lambda)* D
+W8.pr
+```
+
+The dampening, makes the eigendecomposition better-behaved now, so we'll just show that:
+```{r}
+le1.W8.pr <- eigen(t(W8.pr))$vectors[,1]
+le1.W8.pr/sum(le1.W8.pr)
+```
+That's a more reasonable answer. A is the most central, followed by G, then H, and then a tie for B through F.
+
+Of course, that's not all there is to PageRank. We need an extra step to make it rank the most important *relevant* websites to any specific search query. Moreover, we need to implement the computation of PageRank in a way that works for a network with millions of nodes.
+
+PageRank is the basis of other related data science algorithms that reimagine data in a network structure. For example, a text summarization algorithm called LexRank takes a chunk of text, makes a network with sentences as nodes and shared words as links, does calculations like those of PageRank, and returns the top-ranked sentence or sentences as an "extractive summary." (There is an R package called lexRankr that implements this.)
+
+# Discussion
+
+There are yet other applications of eigenstuff to network analysis -- community detection based on eigendecomposition of the "Laplacian" of a network (sort of a network turned inside out), locally linear embeddings of nearest neighbors networks, and on and on -- but we'll leave it there. Hopefully, this discussion, alongside our discussion of things like Principal Components Analysis, has given you some insight into eigenvectors and why they come up so much.
+
+More broadly, matrices and networks offer closely related, and often interchangeable, approaches to conceptualizing data, and each can provide insight into the other. 
+
+
+
