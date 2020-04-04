@@ -2,13 +2,15 @@
 
 ## Tutorials / Notebooks
 
-* Regular expressions
+* Regular expressions [Tutorial in R](https://burtmonroe.github.io/TextAsDataCourse/Tutorials/TADA-IntroToTextManipulation.nb.html) and [Tutorial in Python](https://burtmonroe.github.io/TextAsDataCourse/Tutorials/Intro%2Bto%2BString%2BManipulation%2Band%2BRegular%2BExpressions%2Bin%2BPython.html)
 * [Split-Apply-Combine and Map Reduce in R (R Notebook)](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_R/)
 * [The Logic of MapReduce in Hadoop Streaming (Bash Notebook)](https://burtmonroe.github.io/SoDA501/Materials/SplitApplyCombine_MapReduce)
 * Locality-sensitive hashing
-* Text data
+* Text data: See [Tutorials for Text as Data Course](https://burtmonroe.github.io/TextAsDataCourse/Tutorials/)
 * Geographic and space-time data
 * Network data
+  * Recommend for general overview of igraph in R, tutorials by Katya Ognyanova (Rutgers) here: https://kateto.net/tutorials/
+  * Networks and Eigenvectors
 
 ## Explainers
 * Locality-sensitive hashing
